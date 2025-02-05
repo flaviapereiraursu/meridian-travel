@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meridian Travel</title>
+    <link rel="stylesheet" href="style1.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html">
+            <img src="Assets/meridianlogo.svg" alt="Logo Meridian" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- Lista de navegação -->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home<span class="sr-only">(Página atual)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="destinos.html">Destinos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="serviços.html">Serviços</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="passagens.html">Passagens</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="pacotes.html" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Pacotes
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="pacotes.html">Pacotes</a>
+                        <a class="dropdown-item" href="pacotes.html">Monte seu pacote</a>                
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sobre.html">Sobre Nós</a>
+                </li> 
+                <li class="nav-item">
+                    <a class="nav-link" href="contato.html">Contato</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<!-- Seção Hero -->
+<section id="home" class="hero">
+    <h1>Explore o mundo com a gente!</h1>
+    <div>
+        <p>Viagens personalizadas com acompanhamento de guia brasileiro,</p> 
+        <p>em roteiros cuidadosamente planejados e hotéis bem localizados.</p>
+        <p>Conta também com o "Slow Travel", uma viagem mais tranquila,</p>
+        <p>proporcionando conhecer mais e melhor os países visitados.</p>
+        <a href="pacotes.html" class="button">Monte seu pacote</a>
+    </div>
+</section>
+
+<!-- Seção Pacotes Populares -->   
+<section id="pacotes" class="pacotes-section">
+    <h2>Conheça alguns dos nossos pacotes</h2>
+    </div>
+        <div class="pacotes-container">
+        <!-- Card 1 -->
+        <div class="card-pacotes">
+            <img src="Assets/rj.jpg" alt="Praias" class="card-img">
+            <div class="card-content">
+                <p class="badge">7 DIAS / 6 NOITES</p>
+                <h3 class="package-title">Pacotes para Rio de Janeiro</h3>
+                <p class="departure">Saindo de Salvador</p>
+                <div class="rating">
+                <div class="rating-score">9,0</div>
+                <span>⭐⭐⭐⭐⭐</span>
+            </div>
+            <p class="details">Hotel + Aéreo</p>
+            <p>A partir de</p>
+            <p class="price-pacotes">R$ 4.471</p>
+            <div>
+            <button class="reserve-btn" onclick="irParaPacotes()">Reservar</button>
+            
+            </div>
+        </div>
+    </div>
+       
+       <!-- Card 2 -->
+       <div class="card-pacotes">
+           <img src="Assets/disney.jpg" alt="Disney em Orlando" class="card-img">
+           <div class="card-content">
+               <p class="badge">15 DIAS / 14 NOITES</p>
+               <h3 class="package-title">Pacotes para Orlando e Disney</h3>
+               <p class="departure">Saindo do Rio de Janeiro</p>
+               <div class="rating">
+               <div class="rating-score">9,9</div>
+               <span>⭐⭐⭐⭐⭐</span>
+               </div>
+               <p class="details">Hotel + Aéreo + Ingressos</p>
+               <p>A partir de</p>
+               <p class="price-pacotes">R$ 10.471</p>
+               <div>
+               <button class="reserve-btn" onclick="irParaPacotes()">Reservar</button>
+               </div>
+        </div>
+    </div>
+
+      <!-- Card 3 -->
+      <div class="card-pacotes">
+           <img src="Assets/chile.jpg" alt="Montanhas em Santiago" class="card-img">
+           <div class="card-content">
+               <p class="badge">7 DIAS / 6 NOITES</p>
+               <h3 class="package-title">Pacotes para Santiago do Chile</h3>
+               <p class="departure">Saindo de São Paulo</p>
+               <div class="rating">
+               <div class="rating-score">8,9</div>
+               <span>⭐⭐⭐⭐⭐</span>
+               </div>
+               <p class="details">Hotel + Aéreo </p>
+               <p>A partir de</p>
+               <p class="price-pacotes">R$ 2.361</p>
+               <div>
+               <button class="reserve-btn" onclick="irParaPacotes()">Reservar</button>
+               </div>
+        </div>
+    </div>
+
+        <!-- Card 3 -->
+        <div class="card-pacotes">
+           <img src="Assets/TimeSquare.jpg" alt="Nova York" class="card-img">
+           <div class="card-content">
+              <p class="badge">7 DIAS / 6 NOITES</p>
+              <h3 class="package-title">Pacotes para Nova York</h3>
+              <p class="departure">Saindo do Rio de Janeiro</p>
+              <div class="rating">
+              <div class="rating-score">9,7</div>
+              <span>⭐⭐⭐⭐⭐</span>
+              </div>
+              <p class="details">Hotel + Aéreo </p>
+              <p>A partir de</p>
+              <p class="price-pacotes">R$ 5.361</p>
+              <div>
+              <button class="reserve-btn" onclick="irParaPacotes()">Reservar</button>
+              </div>
+        </div>
+    </div>
+</div> 
+</section>
+
+
+<!--Seção Passagens -->
+<section id="passagens" class="passagens">
+    <h2>Passagens Aéreas</h2>
+    <div class="carousel-container" >
+        <button id="prevBtn" class="arrow">&#10094;</button>
+        <div class="carousel">
+            <div class="carousel-track">
+                <!-- Cards de Passagens -->
+                <div class="card-passagens">
+                    <img src="Assets/salvadorba.jpeg" alt="Salvador">
+                    <div class="info">
+                        <h6>Passagem</h6>
+                        <h5>Voo para Salvador</h5>
+                        <p>Saindo do Rio de Janeiro</p>
+                        <span class="badge-passagens">Ida e Volta</span>
+                        <hr>
+                        <h3 class="price-passagens">R$ 899</h3>
+                    </div>
+                </div>
+                <div class="card-passagens">
+                    <img src="Assets/barcelona.jpeg" alt="Barcelona">
+                    <div class="info">
+                        <h6>Passagem</h6>
+                        <h5>Voo para Barcelona</h5>
+                        <p>Saindo de São Paulo</p>
+                        <span class="badge-passagens">Ida e Volta</span>
+                        <hr>
+                        <h3 class="price-passagens">R$ 3.597</h3>
+                    </div>
+                </div>
+                <div class="card-passagens">
+                    <img src="Assets/recife.jpeg" alt="Recife">
+                    <div class="info">
+                        <h6>Passagem</h6>
+                        <h5>Voo para Recife</h5>
+                        <p>Saindo do Rio de Janeiro</p>
+                        <span class="badge-passagens">Ida e Volta</span>
+                        <hr>
+                        <h3 class="price-passagens">R$ 1.272</h3>
+                    </div>
+                </div>
+                <div class="card-passagens">
+                    <img src="Assets/novayork.jpeg" alt="Nova York">
+                    <div class="info">
+                        <h6>Passagem</h6>
+                        <h5>voo para Nova York</h5>
+                        <p>Saindo de São Paulo</p>
+                        <span class="badge-passagens">Ida e Volta</span>
+                        <hr>
+                        <h3 class="price-passagens">R$ 3.229</h3>
+                    </div>
+                </div>
+                <div class="card-passagens">
+                    <img src="Assets/madrid.jpeg" alt="Madrid">
+                    <div class="info">
+                        <h6>Passagem</h6>
+                        <h5>voo para Madrid</h5>
+                        <p>Saindo de Rio de Janeiro</p>
+                        <span class="badge-passagens">Ida e Volta</span>
+                        <hr>
+                        <h3 class="price-passagens">R$ 2.190</h3>
+                    </div>
+                </div>
+                <div class="card-passagens">
+                    <img src="Assets/roma.jpeg" alt="Roma">
+                    <div class="info">
+                        <h6>Passagem</h6>
+                        <h5>Voo para Roma</h5>
+                        <p>Saindo de São Paulo</p>
+                        <span class="badge-passagens">Ida e Volta</span>
+                        <hr>
+                        <h3 class="price-passagens">R$ 3.690</h3>
+                    </div>
+                </div>
+                <div class="card-passagens">
+                    <img src="Assets/paris.jpeg" alt="Paris">
+                    <div class="info">
+                        <h6>Passagem</h6>
+                        <h5>Voo para Paris</h5>
+                        <p>Saindo do Rio de Janeiro</p>
+                        <span class="badge-passagens">Ida e Volta</span>
+                        <hr>
+                        <h3 class="price-passagens">R$ 4.090</h3>
+                    </div>
+                </div>    
+                <div class="card-passagens">
+                    <img src="Assets/paris.jpeg" alt="Paris">
+                    <div class="info">
+                        <h6>Passagem</h6>
+                        <h5>Voo para Paris</h5>
+                        <p>Saindo do Rio de Janeiro</p>
+                        <span class="badge-passagens">Ida e Volta</span>
+                        <hr>
+                        <h3 class="price-passagens">R$ 4.090</h3>
+                    </div>
+                </div>        
+                <div class="card-passagens">
+                    <img src="Assets/paris.jpeg" alt="Paris">
+                    <div class="info">
+                        <h6>Passagem</h6>
+                        <h5>Voo para Paris</h5>
+                        <p>Saindo do Rio de Janeiro</p>
+                        <span class="badge-passagens">Ida e Volta</span>
+                        <hr>
+                        <h3 class="price-passagens">R$ 4.090</h3>
+                    </div>       
+                </div>
+                <div class="card-passagens">
+                    <img src="Assets/paris.jpeg" alt="Paris">
+                    <div class="info">
+                        <h6>Passagem</h6>
+                        <h5>Voo para Paris</h5>
+                        <p>Saindo do Rio de Janeiro</p>
+                        <span class="badge-passagens">Ida e Volta</span>
+                        <hr>
+                        <h3 class="price-passagens">R$ 4.090</h3>
+                    </div>       
+            </div>
+        </div>
+        <button id="nextBtn" class="arrow">&#10095;</button>
+    </div>
+</section>
+
+
+<!-- Destinos Mais Buscados -->
+<section id="destinos" class="destinos">
+    <div class="container">
+        <h2>Destinos Mais Buscados</h2>
+        <div class="cards">
+                <!-- Card 1 -->
+                <div class="card">
+                    <img src="Assets/praias do rio.jpeg" alt="Rio de Janeiro">
+                    <div class="card-text">
+                        <h3>#1 Rio de Janeiro</h3>
+                     
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="card">
+                    <img src="Assets/orlando.jpeg" alt="Orlando">
+                    <div class="card-text">
+                        <h3>#2 Orlando</h3>
+                        
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="card">
+                    <img src="Assets/miaminoite.jpeg" alt="Miami">
+                    <div class="card-text">
+                        <h3>#3 Miami</h3>
+                      
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="card">
+                    <img src="Assets/chile.jpeg" alt="chile">
+                    <div class="card-text">
+                        <h3>#4 Santiago do Chile</h3>
+                      
+                    </div>
+               
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="beneficios">
+        <ul class="beneficios-lista">
+          <li><span class="checkmark">✔</span> AGÊNCIA CREDENCIADA</li>
+          <li><span class="checkmark">✔</span> COLETIVO OU PRIVATIVO</li>
+          <li><span class="checkmark">✔</span> PASSEIOS</li>
+          <li><span class="checkmark">✔</span> TRANSLADOS</li>
+          <li><span class="checkmark">✔</span> ÔNIBUS</li>
+          <li><span class="checkmark">✔</span> SEGURANÇA</li>
+          <li><span class="checkmark">✔</span> CONFORTO</li>
+          <li><span class="checkmark">✔</span> RAPIDEZ</li>
+        
+        </ul>
+      </section>
+
+    <section class="depoimentos">
+        <h2>Depoimentos de nossos clientes</h2>
+        <div class="depoimentos-container">
+          <div class="depoimento-card">
+            <div class="depoimento-header">
+              <img src="Assets/avatar2.png" alt="Foto de Antonio Fonteles">
+              <div>
+                <h3>Antonio Fonteles</h3>
+                <p>12/03/2024</p>
+                <span>⭐⭐⭐⭐⭐</span>
+              </div>
+            </div>
+            <p class="depoimento-titulo">“A melhor agência”</p>
+            <p class="depoimento-texto">
+              Contratei os serviços e fiquei extremamente satisfeito. O transfer foi pontual e os passeios foram organizados de maneira impecável. Uma experiência inesquecível!
+            </p>
+          </div>
+    
+          <div class="depoimento-card">
+            <div class="depoimento-header">
+              <img src="Assets/avatar1.png" alt="Foto de Adriana Farias">
+              <div>
+                <h3>Adriana Farias</h3>
+                <p>06/09/2024</p>
+                <span>⭐⭐⭐⭐⭐</span>
+              </div>
+            </div>
+            <p class="depoimento-titulo">“Vocês estão de parabéns”</p>
+            <p class="depoimento-texto">
+              Experiência incrível desde o transfer até os passeios. Recomendo para quem quer explorar o melhor com segurança e qualidade.
+            </p>
+          </div>
+    
+          <div class="depoimento-card">
+            <div class="depoimento-header">
+              <img src="Assets/avatar3.png" alt="Foto de Carla Farias">
+              <div>
+                <h3>Carla Farias</h3>
+                <p>28/11/2024</p>
+                <span>⭐⭐⭐⭐⭐</span>
+              </div>
+            </div>
+            <p class="depoimento-titulo">“Super recomendo”</p>
+            <p class="depoimento-texto">
+              Os passeios foram maravilhosos, com roteiros bem planejados. O transfer foi excelente, pontual e com veículos confortáveis.
+            </p>
+          </div>
+        </div>
+      </section>
+      
+
+    
+  
+
+ <!-- Footer -->
+ <footer>
+    <p>&copy; 2025 Meridian Agência de Viagem</p>
+</footer>
+
+<!-- Bootstrap JS e dependências -->
+<script>
+    const track = document.querySelector('.carousel-track');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let index = 0;
+    const cardWidth = document.querySelector('.card').offsetWidth + 20;
+
+    nextBtn.addEventListener('click', () => {
+        if (index < track.children.length - 3) {
+            index++;
+            track.style.transform = `translateX(-${index * cardWidth}px)`;
+        }
+    });
+
+    prevBtn.addEventListener('click', () => {
+        if (index > 0) {
+            index--;
+            track.style.transform = `translateX(-${index * cardWidth}px)`;
+        }
+    });
+
+    function irParaPacotes() {
+        window.location.href = "pacotes.html";
+    }
+    
+    document.querySelectorAll('.card-passagens').forEach(card => {
+        card.addEventListener('click', () => {
+            window.location.href = "passagens.html";
+        });
+    });
+
+</script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+

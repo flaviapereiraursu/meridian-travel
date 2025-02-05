@@ -1,0 +1,376 @@
+/* Seção Sobre Nós */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+  }
+  
+  
+  
+  /* Ajusta a logo na navbar */
+  .logo {
+    height: 80px; /* Define a altura da logo */
+    width: auto; /* Mantém a proporção */
+  }
+  
+  /* Estilo para a lista de navegação */
+  .navbar-nav {
+    margin-left: auto; /* Move a lista para o lado direito */
+  }
+  
+  .nav-link {
+    color: #020f86; /* Cor dos links */
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link :hover {
+    color: #3703bb; /* Cor ao passar o mouse */
+  }
+  
+  .navbar {
+    padding: 10px 100px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para a navbar */
+  }
+
+  :root {
+    --primary-color: #002f6c;
+    --secondary-color: #ffd700;
+    --text-color: #333;
+    --secondary-text-color: #fff; /* Cor secundária do texto */
+    --bg-color: #f4f4f4;
+}
+
+
+
+ .about-us {
+    padding: 50px 20px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ .container {
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+ .about-text {
+    flex: 1;
+    padding: 20px;
+    color: var(--text-color);
+}
+
+ .about-text h2 {
+    color: var(--primary-color);
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+ .about-text p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+ .btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+}
+
+ .btn:hover {
+    background-color: var(--secondary-color);
+}
+
+ .about-images {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+}
+
+ .about-images img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+    position: absolute;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+ .about-images img:hover {
+    transform: scale(1.1);
+}
+
+ .img1 { top: 0; left: 0; }
+ .img2 { top: 30px; left: 20px; }
+ .img3 { bottom: 20px; left: 40px; }
+ .img4 { bottom: 0; right: 0; }
+ .img5 { top: 50px; left: 50px; }
+ .img6 { bottom: 30px; right: 60px; }
+ .img7 { top: 20; left: 30; }
+
+
+
+ .differentials {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 50px 20px;
+  text-align: center;
+}
+
+ .differentials h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+ .differential-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+ .card {
+  background-color: var(--white);
+  color: var(--text-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  flex: 1;
+  max-width: 300px;
+}
+
+ .card img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+ .cta-button {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  padding: 15px 25px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 50px; /* Bordas arredondadas */
+  margin-top: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: background-color 0.3s ease;
+  
+}
+
+ .cta-button:hover {
+  background-color: #ffc100;
+}
+
+/* Remover outline ao focar */
+.cta-button:focus {
+  outline: none; /* Remove o contorno de foco */
+  box-shadow: 0 0 2px #727272; /* Adiciona um efeito visual de foco */
+}
+
+ .team-section {
+  background-color: var(--bg-color);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+ .team-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+
+}
+
+ .team-member {
+  background: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 350px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+ .member-image img {
+  width: 100%;
+  height: 200px; /* Altura fixa para todas as imagens */
+  overflow: hidden;
+}
+
+ .member-text {
+  padding: 20px;
+  font-size: 14px; /* Define um tamanho fixo para os textos */
+  line-height: 1.4;
+  flex-grow: 1; /* Permite que o texto ocupe o espaço disponível */
+}
+
+
+ .member-text h3 {
+  padding: 20px;
+  font-size: 20px; /* Define um tamanho fixo para os textos */
+  line-height: 1.4;
+  flex-grow: 1; /* Permite que o texto ocupe o espaço disponível */
+  color: #05137d;
+  text-align: center;
+}
+
+
+ .sobre-badge {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 5px 10px;
+  display: inline-flex;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px; 
+  text-align: center;
+  
+}
+
+
+
+ .member-badge {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 5px 10px;
+  display: inline-flexbox;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.about-images {
+  display: flex;
+  flex-wrap: wrap; /* Permite que as imagens quebrem para a próxima linha */
+  gap: 10px; /* Espaçamento entre as imagens */
+  justify-content: flex-end; /* Alinha as imagens à direita */
+  max-width: 100%; /* Ajuste conforme necessário */
+}
+
+.about-images img {
+  width: calc(33.33% - 10px); /* Divide em 3 colunas com espaçamento */
+  height: auto; /* Mantém a proporção das imagens */
+  border-radius: 8px; /* Bordas arredondadas (opcional) */
+}
+
+
+/* Ajuste para a sétima imagem */
+.img7 {
+  width: calc(50% - 5px); /* Centraliza a sétima imagem */
+}
+
+
+/* Rodapé */
+
+footer {
+  text-align: center;
+  background: #09084f;
+  color: var(--secondary-text-color);
+  padding: 10px 0;
+  text-align: center; /* Centraliza o conteúdo */
+  padding: 10px 10px; /* Espaçamento interno */
+  margin-top: 10px; /* Espaçamento do conteúdo acima */
+}
+
+
+@media (max-width: 768px) {
+  .logo {
+      height: 40px; /* Ajusta o tamanho da logo para telas menores */
+  }
+}
+
+
+
+/* Responsividade do Rodapé */
+@media (max-width: 768px) {
+  footer {
+      padding: 15px 5px;
+  }
+
+  footer h3 {
+      font-size: 1.2rem;
+  }
+
+  footer p {
+      font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-images img {
+    width: calc(50% - 10px); /* 2 colunas em telas menores */
+  }
+
+  .img7 {
+    width: calc(100% - 10px); /* A sétima imagem ocupa a linha inteira */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-images img {
+    width: 100%; /* 1 coluna em telas muito pequenas */
+  }
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .team-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .team-member {
+      max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-images {
+        margin-top: 20px;
+        position: static;
+    }
+    .about-images img {
+        position: static;
+        margin: 5px;
+        width: 120px;
+        height: 120px;
+    }
+}
+
+

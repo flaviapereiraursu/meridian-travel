@@ -1,0 +1,93 @@
+/* Seção Passagens */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+  }
+  
+    
+  /* Ajusta a logo na navbar */
+  .logo {
+    height: 80px; /* Define a altura da logo */
+    width: auto; /* Mantém a proporção */
+  }
+  
+  /* Estilo para a lista de navegação */
+  .navbar-nav {
+    margin-left: auto; /* Move a lista para o lado direito */
+  }
+  
+  .nav-link {
+    color: #020f86; /* Cor dos links */
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link :hover {
+    color: #3703bb; /* Cor ao passar o mouse */
+  }
+  
+  .navbar {
+    padding: 10px 100px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para a navbar */
+  }
+
+.passagens {
+    text-align: center;
+    padding: 50px;
+    background-color: #e0f7fa;
+}
+
+.passagens h2 {
+    color: #0056b3;
+}
+
+.passagens p {
+    font-size: 1.2rem;
+}
+
+
+
+
+/* Rodapé */
+
+footer {
+    text-align: center;
+    background: #09084f;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center; /* Centraliza o conteúdo */
+    padding: 10px 10px; /* Espaçamento interno */
+    margin-top: 10px; /* Espaçamento do conteúdo acima */
+  }
+  
+  
+  @media (max-width: 768px) {
+    .logo {
+        height: 40px; /* Ajusta o tamanho da logo para telas menores */
+    }
+  }
+  
+  
+  
+  /* Responsividade do Rodapé */
+  @media (max-width: 768px) {
+    footer {
+        padding: 15px 5px;
+    }
+  
+    footer h3 {
+        font-size: 1.2rem;
+    }
+  
+    footer p {
+        font-size: 0.9rem;
+    }
+  }

@@ -1,0 +1,717 @@
+*
+:root {
+  --primary-color: #002f6c;
+  --secondary-color: #ff8c00;
+  --text-color: #333;
+  --bg-color: #f4f4f4;
+}
+
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+
+
+/* Ajusta a logo na navbar */
+.logo {
+  height: 80px; /* Define a altura da logo */
+  width: auto; /* Mantém a proporção */
+}
+
+/* Estilo para a lista de navegação */
+.navbar-nav {
+  margin-left: auto; /* Move a lista para o lado direito */
+}
+
+.nav-link {
+  color: #020f86; /* Cor dos links */
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link :hover {
+  color: #3703bb; /* Cor ao passar o mouse */
+}
+
+.navbar {
+  padding: 10px 100px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para a navbar */
+}
+
+/* Seção Hero */
+.hero {
+    background: url('Assets/grecia.jpeg') no-repeat center center/cover;
+    height: 60vh;
+    text-align: left;
+    padding: 6rem 1.5rem 6rem;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: rgb(4, 18, 111);
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1rem;
+  margin: 0; /* Remove margens padrão */
+  padding: 0; /* Remove qualquer preenchimento */
+}
+
+.hero .button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #ffd700;
+  color: #333;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 5px;    
+  margin-top: 2rem; /* Espaço acima do botão */
+  transition: background-color 0.3s ease;
+}
+
+.hero .button:hover {
+  background-color: #ffc107;
+}
+
+
+
+/* Seção Pacotes */
+.pacotes-section {
+  padding: 2rem 1rem;
+  text-align: left;
+}
+
+.pacotes-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #0056b3;
+}
+
+
+/* Container de Cards */
+.pacotes-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card-pacotes {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 300px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-pacotes:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img {
+  width: 250px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1rem;    
+}
+
+
+.package-title {
+  font-size: 18px;
+  color: #333;
+  margin: 5px 0;
+}
+
+.departure {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.rating-score {
+  background-color: #1d0355;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;  /* Centraliza o grid */
+  align-items: center;
+  font-size: 14px;
+}
+
+.details {
+  font-size: 14px;
+  color: #555;
+  margin: 10px 0;
+}
+
+.price-pacotes {
+  font-size: 18px;
+  color: #210375;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* Botão Reservar */
+
+.reserve-btn {
+  text-align: center; /* Centraliza o conteúdo dentro do card */
+  outline: none; /* Remove o contorno ao focar/clicar no botão */
+  border: none; /* Remove a borda padrão */
+  background-color: #ffd700; /* Cor de fundo */
+  color: #333; /* Cor do texto */
+  padding: 10px 20px; /* Tamanho do botão */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Aponta o cursor ao passar o mouse */
+  transition: background 0.3s ease; /* Transição suave no hover */
+  justify-content: center;
+}
+
+/* Efeito ao passar o mouse */
+.reserve-btn:hover {
+  background-color: #ffc107;
+}
+
+/* Remover outline ao focar */
+.reserve-btn:focus {
+  outline: none; /* Remove o contorno de foco */
+  box-shadow: 0 0 2px #727272; /* Adiciona um efeito visual de foco */
+}
+
+
+/* Seção de Passagens */
+
+.passagens {
+  padding: 2rem 1rem;
+  background-color: #f8f9fa;
+  position: relative;
+}
+  
+.passagens h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #0056b3;   
+}
+
+.info {
+  padding: 1rem;
+  text-align: left;
+}
+
+.info h6 {
+  font-size: 14px;
+  color: #555;
+  margin: 10px 0;
+}
+
+.info p {
+  font-size: 14px;
+  color: #555;
+  margin: 10px 0;
+}
+
+.carousel-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  
+}
+
+.carousel {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  max-width: 100%;
+}
+
+.card-passagens {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 15px;
+  text-align: left;
+  min-width: 250px;
+  flex-wrap: wrap; /* Permite empilhamento em telas menores */
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.card-passagens:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.card-passagens img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.badge-passagens {
+  background: #4a22ff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.price-passagens {
+  text-align: center;
+  font-size: 18px;
+  color: #210375;
+  font-weight: bold;
+}
+
+.arrow {
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+
+#prevBtn {
+  left: 0;
+}
+
+#nextBtn {
+  right: 0;
+}
+
+
+
+/* Destinos */
+.destinos {
+  padding: 60px 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.destinos h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #021a54;
+}
+
+.cards {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap; /* Permite empilhamento em telas menores */
+  cursor: pointer;
+}
+
+.card {
+  position: relative;
+  width: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: left;
+}
+
+.card-text h3 {
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+}
+
+.card-text p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Elevação ao passar o mouse */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Setas */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #1E90FF;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
+.arrow:hover {
+background-color: #0056b3;
+}
+
+/* Seção Depoimento*/
+.depoimentos {
+text-align: center;
+padding: 2rem;
+background-color: #f9f9f9;
+}
+
+.depoimentos h2 {
+font-size: 2rem;
+margin-bottom: 2rem;
+color: #333;
+}
+
+.depoimentos-container {
+display: flex;
+justify-content: center;
+gap: 1.5rem;
+flex-wrap: wrap;
+}
+
+.depoimento-card {
+background-color: #fff;
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+width: 300px;
+padding: 1.5rem;
+text-align: left;
+}
+
+.depoimento-header {
+display: flex;
+align-items: center;
+gap: 1rem;
+margin-bottom: 1rem;
+}
+
+.depoimento-header img {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+object-fit: cover;
+}
+
+.depoimento-header h3 {
+margin: 0;
+font-size: 1.1rem;
+color: #333;
+}
+
+.depoimento-header p {
+margin: 0;
+color: #777;
+font-size: 0.9rem;
+}
+
+.depoimento-titulo {
+font-size: 1rem;
+font-weight: bold;
+margin: 0.5rem 0;
+color: #555;
+}
+
+.depoimento-texto {
+font-size: 0.9rem;
+line-height: 1.4;
+color: #666;
+}  
+
+/* Seção Benefícios */
+
+.beneficios {
+background-color: #001f3f; /* Fundo escuro (azul-marinho) */
+padding: 1rem 0;
+}
+
+.beneficios-lista {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+list-style: none;
+margin: 0;
+padding: 0;
+gap: 1.5rem; /* Espaçamento entre os itens */
+}
+
+.beneficios-lista li {
+color: white;
+font-size: 1rem;
+display: flex;
+align-items: center;
+gap: 0.5rem;
+white-space: nowrap;
+}
+
+.checkmark  {
+  color: #4CAF50; /* Cor do checkmark (verde) */
+  font-size: 22px;
+  content: "✔";
+  margin-right: 8px; /* Espaço entre o checkmark e o texto */
+}
+
+/* Seção Sobre Nós */
+.sobre-nos {
+background-color: #f9f9f9;
+padding: 50px 20px;
+}
+
+.sobre-nos-container {
+display: flex;
+align-items: center;
+gap: 30px;
+}
+
+.sobre-nos-imagem {
+width: 40%;
+border-radius: 10px;
+}
+
+.sobre-nos-texto {
+width: 60%;
+}
+
+.sobre-nos-texto h2 {
+color: #007bff;
+font-size: 2em;
+}
+
+.sobre-nos-texto p,
+.sobre-nos-texto ul {
+color: #555;
+list-style: none; /* Remove as bolinhas */
+padding: 0; /* Remove o recuo padrão */
+}
+
+.sobre-nos-texto ul li {
+margin-bottom: 10px;
+}
+
+
+
+
+.sobre-nos ul li:before {
+  content: "✔";
+  position: relative;
+  left: 0;
+  color: #ffd700;
+  font-size: 1.2em;
+}
+
+
+.contato {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 900px;
+  margin: auto;
+  background: #92c8fb;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-contato {
+  width: 40%;
+}
+
+.info-contato h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  
+}
+
+.info-contato p {
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #333;
+}
+
+.info-contato i {
+  color: rgb(3, 3, 81);
+  margin-right: 8px;
+}
+
+.pagamentos img {
+  width: 50px;
+  margin-right: 5px;
+}
+
+.certificados {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.ssl {
+  background: #1c47e3;
+  color: white;
+  padding: 8px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.ssl i {
+  margin-right: 5px;
+}
+
+.formulario {
+  width: 55%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #6acbff;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+}
+
+.linha {
+  display: flex;
+  gap: 10px;
+}
+
+.linha div {
+  width: 50%;
+}
+
+button {
+  background-color: #272ef6;
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+button:hover {
+  background-color: #3339a1;
+}
+
+button i {
+  font-size: 18px;
+}
+
+
+/* Rodapé */
+
+footer {
+  text-align: center;
+  background: #09084f;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center; /* Centraliza o conteúdo */
+  padding: 10px 10px; /* Espaçamento interno */
+  margin-top: 10px; /* Espaçamento do conteúdo acima */
+}
+
+
+@media (max-width: 768px) {
+  .logo {
+      height: 40px; /* Ajusta o tamanho da logo para telas menores */
+  }
+}
+
+
+
+/* Responsividade do Rodapé */
+@media (max-width: 768px) {
+  footer {
+      padding: 15px 5px;
+  }
+
+  footer h3 {
+      font-size: 1.2rem;
+  }
+
+  footer p {
+      font-size: 0.9rem;
+  }
+}

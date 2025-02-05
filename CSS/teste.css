@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+   body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+    }
+
+    h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+    }
+    .about-images {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+        grid-template-rows: repeat(3, 1fr); /* 3 linhas */
+        gap: 10px; /* Espaçamento entre as imagens */
+        justify-content: end; /* Alinha o grid à direita */
+        max-width: 100%; /* Ajuste conforme necessário */
+      }
+      
+      .about-images img {
+        width: 100%; /* Faz as imagens ocuparem o espaço disponível */
+        height: auto; /* Mantém a proporção das imagens */
+        border-radius: 8px; /* Bordas arredondadas (opcional) */
+      }
+      
+      /* Posicionando a sétima imagem */
+      .img7 {
+        grid-column: 2 / 3; /* Centraliza a sétima imagem na última linha */
+      }
+
+    .whatsapp-button {
+            background-color: #25D366; /* Cor verde do WhatsApp */
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 50px; /* Bordas arredondadas */
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px; /* Espaço entre ícone e texto */
+    }
+
+    .whatsapp-button:hover {
+            background-color: #128C7E; /* Cor mais escura ao passar o mouse */
+            transform: translateY(-2px); /* Efeito de levantar o botão */
+    }
+
+    .whatsapp-button:active {
+            transform: translateY(0); /* Efeito de pressionar o botão */
+        }
+
+.whatsapp-button img {
+            width: 24px; /* Tamanho do ícone */
+            height: 24px;
+}
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Clique no botão abaixo para entrar em contato via WhatsApp</h1>
+        <button class="whatsapp-button" onclick="abrirWhatsApp()">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
+            Fale conosco no WhatsApp
+        </button>
+    </div>
+
+    <script>
+        function abrirWhatsApp() {
+            const numeroTelefone = "5511999999999"; // Substitua pelo número desejado
+            const mensagem = "Olá, gostaria de mais informações!";
+            const linkWhatsApp = `https://wa.me/${numeroTelefone}?text=${encodeURIComponent(mensagem)}`;
+            window.open(linkWhatsApp, '_blank');
+        }
+    </script>
+</body>
+</html>
