@@ -1,0 +1,23 @@
+{
+  "name": "meridian-travel",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flaviapereiraursu/meridian-travel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/flaviapereiraursu/meridian-travel/issues"
+  },
+  "homepage": "https://github.com/flaviapereiraursu/meridian-travel#readme",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.83.4"
+  }
+}

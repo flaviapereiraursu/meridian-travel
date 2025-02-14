@@ -1,0 +1,149 @@
+@import "mixins";
+
+// 🔹 Navbar
+.navbar {
+    background-color: $background-color;
+    padding: 15px;
+
+    .navbar-brand img {
+        width: 120px;
+    }
+
+    .nav-link {
+        color: $text-color;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}
+
+// 🔹 Hero Section
+.hero {
+    @include flex-center;
+    flex-direction: column;
+    text-align: center;
+    background: url('../Assets/hero-bg.jpg') no-repeat center center/cover;
+    height: 400px;
+    color: white;
+    padding: 20px;
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+}
+
+// 🔹 Estilo para os pacotes
+.pacotes-section {
+    text-align: center;
+    padding: 50px 20px;
+
+    .pacotes-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .card-pacotes {
+        background: white;
+        @include border-radius(10px);
+        @include box-shadow;
+        overflow: hidden;
+        width: 300px;
+        text-align: left;
+
+        .card-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+
+            .package-title {
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            .price-pacotes {
+                font-size: 20px;
+                color: $primary-color;
+                font-weight: bold;
+            }
+
+            .reserve-btn {
+                background-color: $primary-color;
+                color: white;
+                padding: 10px;
+                border: none;
+                width: 100%;
+                cursor: pointer;
+                transition: 0.3s;
+
+                &:hover {
+                    background-color: darken($primary-color, 10%);
+                }
+
+                .reserve-btn:focus { 
+                    outline: 2px solid #128C7E; /* Contorno visível ao focar no botão */
+                }
+            }
+        }
+    }
+}
+
+// 🔹 Estilos para os depoimentos
+.depoimentos {
+    text-align: center;
+    padding: 40px;
+    background: #e9ecef;
+
+    .depoimentos-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .depoimento-card {
+        background: white;
+        padding: 20px;
+        @include border-radius(8px);
+        @include box-shadow;
+        width: 300px;
+        text-align: left;
+
+        .depoimento-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            img {
+                width: 50px;
+                height: 50px;
+                @include border-radius(50%);
+            }
+        }
+
+        .depoimento-titulo {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .depoimento-texto {
+            font-size: 14px;
+            color: $text-color;
+        }
+    }
+}
+
+// 🔹 Footer
+footer {
+    background: $secondary-color;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}

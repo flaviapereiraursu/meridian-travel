@@ -1,0 +1,16 @@
+// Mixin para centralizar elementos flex
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Mixin para bordas arredondadas
+@mixin border-radius($radius) {
+    border-radius: $radius;
+}
+
+// Mixin para sombras em cartões
+@mixin box-shadow {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
