@@ -1,3 +1,11 @@
+@mixin transition($property, $duration) {
+    transition: $property $duration ease;
+  }
+  
+
+
+
+
 // Mixin para centralizar elementos flex
 @mixin flex-center {
     display: flex;

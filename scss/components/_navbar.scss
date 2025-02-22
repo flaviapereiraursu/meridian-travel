@@ -1,0 +1,24 @@
+.navbar {
+    padding: 10px 100px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-nav {
+    margin-left: auto;
+  }
+  
+  .nav-link {
+    color: #020f86;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #3703bb;
+  }
+  
+  .logo {
+    height: 80px;
+    width: auto;
+  }
+  

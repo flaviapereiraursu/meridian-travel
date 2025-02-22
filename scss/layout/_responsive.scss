@@ -1,0 +1,68 @@
+@media (max-width: 768px) {
+    .logo {
+      height: 40px;
+    }
+  }
+  /* Responsividade do Rodapé */
+@media (max-width: 768px) {
+  footer {
+      padding: 15px 5px;
+  }
+
+  footer h3 {
+      font-size: 1.2rem;
+  }
+
+  footer p {
+      font-size: 0.9rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .about-images img {
+    width: calc(50% - 10px); /* 2 colunas em telas menores */
+  }
+
+  .img7 {
+    width: calc(100% - 10px); /* A sétima imagem ocupa a linha inteira */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-images img {
+    width: 100%; /* 1 coluna em telas muito pequenas */
+  }
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .team-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .team-member {
+      max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-images {
+        margin-top: 20px;
+        position: static;
+    }
+    .about-images img {
+        position: static;
+        margin: 5px;
+        width: 120px;
+        height: 120px;
+    }
+}
+
+
