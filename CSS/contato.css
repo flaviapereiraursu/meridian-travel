@@ -38,49 +38,70 @@
     padding: 10px 100px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para a navbar */
   }
+/* Estilos CSS para a seção de contato */
+  .contato {
+    padding: 40px 0; /* Aumenta o espaçamento vertical */
+    background-color: #f8f9fa; /* Cor de fundo suave */
+  }
 
+  .contato .container {
+    max-width: 960px; /* Largura máxima do container */
+  }
 
-.contato {
-    text-align: center;
-    padding: 50px;
-    background-color: #f5f5f5;
-}
+  .contato h2 {
+    color: #343a40; /* Cor do título */
+    margin-bottom: 20px;
+  }
 
-.contato h2 {
-    color: #007bff;
-}
+  .contato p {
+    color: #6c757d; /* Cor do parágrafo */
+    margin-bottom: 30px;
+  }
 
-.form-group {
-    margin-bottom: 15px;
-}
+  .contato .imagem {
+    text-align: left; /* Centraliza a imagem */
+    margin-bottom: 30px; /* Espaçamento inferior para a imagem */
+  }
 
-.form-control {
-    width: 100%;
+  .contato .imagem img {
+    max-width: 100%; /* Largura máxima da imagem */
+    height: auto; /* Altura automática */
+    border-radius: 8px; /* Borda arredondada */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    }
+
+  .contato .formulario {
+    margin-bottom: 30px; /* Espaçamento inferior para o formulário */
+  }
+
+  .contato .formulario label {
+    font-weight: 500; /* Peso da fonte para os rótulos */
+    color: #343a40;
+  }
+
+  .contato .formulario input,
+  .contato .formulario textarea {
+    border: 1px solid #ced4da; /* Borda mais clara */
+    border-radius: 4px; /* Borda arredondada */
     padding: 10px;
-    margin-top: 5px;
-}
+  }
 
-.btn-primary {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 15px;
-    border: none;
+  .contato .formulario button {
+    background-color: #007bff; /* Cor de fundo do botão */
+    border-color: #007bff;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 4px;
     cursor: pointer;
-    width: 100%;
-}
+    transition: background-color 0.3s ease; /* Transição suave */
+  }
 
-.btn-secondary {
-    background-color: #6c757d;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    display: block;
-    width: 200px;
-    margin: 20px auto;
-    text-align: center;
-    border-radius: 5px;
-    text-decoration: none;
-}
+  .contato .formulario button:hover {
+    background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
+  }
+
+      
+
 
 /* Rodapé */
 
@@ -97,11 +118,21 @@ footer {
   
   @media (max-width: 768px) {
     .logo {
-        height: 40px; /* Ajusta o tamanho da logo para telas menores */
+      height: 40px; /* Ajusta o tamanho da logo para telas menores */
     }
   }
   
-  
+    /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .contato {
+      flex-direction: column; /* Layout em coluna em telas menores */
+      align-items: center; /* Centraliza verticalmente */
+    }
+
+    .contato .imagem {
+      margin-bottom: 20px; /* Espaçamento inferior menor para a imagem */
+    }
+  }
   
   /* Responsividade do Rodapé */
   @media (max-width: 768px) {

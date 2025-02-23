@@ -9,7 +9,7 @@
     <meta name="author" content="Meridian Agência de Viagens">
     <title>Contato - Meridian Travel</title>
     <link rel="icon" type="image/x-icon" href="/Assets/meridianicon.ico">
-    <link rel="stylesheet" href="css/contato.css">
+    <link rel="stylesheet" href="CSS/contato.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -64,31 +64,37 @@
 
 <section class="contato">
     <div class="container">
-        <h2 class="text-center mt-4">Entre em Contato</h2>
-        <p class="text-center">Preencha o formulário abaixo e nossa equipe entrará em contato com você.</p>
-
-        <form>
-            <div class="form-group">
-                <label for="nome">Nome:</label>
-                <input type="text" class="form-control" id="nome" placeholder="Digite seu nome" required>
+        <div class="row">
+            <div class="col-md-6 imagem">
+                <img src="Assets/contato.jpeg" alt="Imagem de contato">
             </div>
-            <div class="form-group">
-                <label for="email">E-mail:</label>
-                <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" required>
+            <div class="col-md-6 formulario">
+                <h2 class="text-center">Entre em Contato</h2>
+                <p class="text-center">Preencha o formulário abaixo e nossa equipe entrará em contato com você.</p>
+                <form>
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" class="form-control" id="nome" placeholder="Digite seu nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea class="form-control" id="mensagem" rows="4" placeholder="Digite sua mensagem"
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+                </form>
             </div>
-            <div class="form-group">
-                <label for="mensagem">Mensagem:</label>
-                <textarea class="form-control" id="mensagem" rows="4" placeholder="Digite sua mensagem" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-block">Enviar</button>
-        </form>
-
-       
+        </div>
     </div>
 </section>
 
 
- <!-- Footer -->
+
+<!-- Footer -->
 <footer>
     <p>&copy; 2025 Meridian Agência de Viagem</p>
 </footer>
@@ -136,6 +142,7 @@
     });
 
 </script>
+
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
