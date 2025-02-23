@@ -7,7 +7,7 @@
     <meta name="description" content="Descubra experiências incríveis com a Meridian. Pacotes de viagem personalizados, destinos paradisíacos e suporte completo para sua jornada.">
     <meta name="keywords" content="viagens, pacotes de viagem, turismo, destinos, roteiros personalizados, agência de viagem, destinos paradisíacos, viagens personalizadas, Meridian">
     <meta name="author" content="Meridian Agência de Viagens">
-    <title>Meridian Travel</title>
+    <title>Destinos - Meridian Travel</title>
     <link rel="icon" type="image/x-icon" href="/Assets/meridianicon.ico">
     <link rel="stylesheet" href="CSS/destinos.css">
     <!-- Bootstrap CSS -->
@@ -108,6 +108,12 @@
     document.querySelectorAll('.card-passagens').forEach(card => {
         card.addEventListener('click', () => {
             window.location.href = "passagens.html";
+        });
+    });
+
+    document.querySelectorAll('.cards').forEach(card => {
+        card.addEventListener('click', () => {
+            window.location.href = "destinos.html";
         });
     });
 
