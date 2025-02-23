@@ -59,8 +59,8 @@
   }
 
   .contato .imagem {
-    text-align: left; /* Centraliza a imagem */
-    margin-bottom: 30px; /* Espaçamento inferior para a imagem */
+  text-align: left; /* Centraliza a imagem */
+  margin-bottom: 30px; /* Espaçamento inferior para a imagem */
   }
 
   .contato .imagem img {
@@ -70,37 +70,47 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
     }
 
-  .contato .formulario {
-    margin-bottom: 30px; /* Espaçamento inferior para o formulário */
-  }
+        .contato .formulario {
+            margin-bottom: 30px; /* Espaçamento inferior para o formulário */
+        }
 
-  .contato .formulario label {
-    font-weight: 500; /* Peso da fonte para os rótulos */
-    color: #343a40;
-  }
+        .contato .formulario label {
+            font-weight: 500; /* Peso da fonte para os rótulos */
+            color: #343a40;
+        }
 
-  .contato .formulario input,
-  .contato .formulario textarea {
-    border: 1px solid #ced4da; /* Borda mais clara */
-    border-radius: 4px; /* Borda arredondada */
-    padding: 10px;
-  }
+        .contato .formulario input,
+        .contato .formulario textarea {
+            border: 1px solid #ced4da; /* Borda mais clara */
+            border-radius: 4px; /* Borda arredondada */
+            padding: 10px;
+        }
 
-  .contato .formulario button {
-    background-color: #007bff; /* Cor de fundo do botão */
-    border-color: #007bff;
-    color: #fff;
-    padding: 12px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Transição suave */
-  }
+        .contato .formulario button {
+            background-color: #007bff; /* Cor de fundo do botão */
+            border-color: #007bff;
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Transição suave */
+        }
 
-  .contato .formulario button:hover {
-    background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
-  }
+        .contato .formulario button:hover {
+            background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
+        }
 
-      
+        /* Estilos responsivos */
+        @media (max-width: 768px) {
+            .contato {
+                flex-direction: column; /* Layout em coluna em telas menores */
+                align-items: center; /* Centraliza verticalmente */
+            }
+
+            .contato .imagem {
+                margin-bottom: 20px; /* Espaçamento inferior menor para a imagem */
+            }
+        }
 
 
 /* Rodapé */
@@ -118,21 +128,11 @@ footer {
   
   @media (max-width: 768px) {
     .logo {
-      height: 40px; /* Ajusta o tamanho da logo para telas menores */
+        height: 40px; /* Ajusta o tamanho da logo para telas menores */
     }
   }
   
-    /* Estilos responsivos */
-  @media (max-width: 768px) {
-    .contato {
-      flex-direction: column; /* Layout em coluna em telas menores */
-      align-items: center; /* Centraliza verticalmente */
-    }
-
-    .contato .imagem {
-      margin-bottom: 20px; /* Espaçamento inferior menor para a imagem */
-    }
-  }
+  
   
   /* Responsividade do Rodapé */
   @media (max-width: 768px) {

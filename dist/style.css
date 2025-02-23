@@ -208,10 +208,7 @@ body {
   outline: none; /* Remove o contorno de foco */
   box-shadow: 0 0 2px #727272; /* Adiciona um efeito visual de foco */
 }
-
-
-/* Seção de Passagens */
-
+/* Seção Passagens */
 .passagens {
   padding: 2rem 1rem;
   background-color: #f8f9fa;
@@ -224,92 +221,126 @@ body {
   color: #0056b3;   
 }
 
-.info {
-  padding: 1rem;
-  text-align: left;
-}
-
-.info h6 {
-  font-size: 14px;
-  color: #555;
-  margin: 10px 0;
-}
-
-.info p {
-  font-size: 14px;
-  color: #555;
-  margin: 10px 0;
-}
-
+/* Container do carrossel */
 .carousel-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  padding: 20px;
-  
+  position: relative;
+  max-width: 90%;
+  margin: auto;
+  overflow: hidden;
 }
 
+/* Botões de navegação */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    color: #666;
+    transition: color 0.3s;
+    padding: 10px;
+}
+
+
+
+.arrow:hover {
+    color: #000;
+}
+
+#prevBtn {
+    left: 10px;
+}
+
+#nextBtn {
+    right: 10px;
+}
+.arrow:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.arrow:hover {
+  color: #000;
+}
+
+
+/* Carrossel */
 .carousel {
-  overflow: hidden;
-  width: 100%;
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 10px;
+}
+
+/* Ocultar barra de rolagem */
+.carousel::-webkit-scrollbar {
+  display: none;
 }
 
 .carousel-track {
   display: flex;
-  transition: transform 0.3s ease-in-out;
-  max-width: 100%;
+  gap: 20px;
 }
 
+/* Cartões de passagens */
 .card-passagens {
-  background: white;
+  background: #fff;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin: 10px;
-  padding: 15px;
-  text-align: left;
-  min-width: 250px;
-  flex-wrap: wrap; /* Permite empilhamento em telas menores */
-  flex-direction: column;
-  justify-content: space-between;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 0 0 300px;
+  transition: transform 0.3s;
   cursor: pointer;
 }
 
 .card-passagens:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
 }
+
 .card-passagens img {
   width: 100%;
-  height: 150px;
+  height: 180px;
   object-fit: cover;
 }
 
+.card-passagens .info {
+  padding: 15px;
+  text-align: left;
+}
+
+.card-passagens h6 {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.card-passagens h5 {
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+
+.card-passagens p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
 .badge-passagens {
-  background: #4a22ff;
-  color: white;
+  display: inline-block;
+  background-color: #002f6c;
+  color: #fff;
   padding: 5px 10px;
   border-radius: 5px;
-  font-size: 14px;
-  display: inline-block;
-  margin-top: 10px;
+  font-size: 0.8rem;
+  margin-top: 5px;
 }
 
 .price-passagens {
-  text-align: center;
-  font-size: 18px;
-  color: #210375;
-  font-weight: bold;
-}
-
-
-
-#prevBtn {
-  left: 0;
-}
-
-#nextBtn {
-  right: 0;
+  font-size: 1.5rem;
+  color: #002f6c;
+  margin-top: 10px;
 }
 
 
@@ -387,17 +418,27 @@ body {
   border: none;
   padding: 10px;
   cursor: pointer;
-  border-radius: 50%;
+  outline: none;
+  border: none;
+  user-select: none;
+ 
 }
 
-.arrow.left {
+
+
+.arrow:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+
+#prevBtn {
   left: 10px;
 }
 
-.arrow.right {
+#nextBtn {
   right: 10px;
 }
-
 
 /* Seção Depoimento*/
 .depoimentos {
@@ -701,5 +742,20 @@ footer {
 
   footer p {
       font-size: 0.9rem;
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .carousel {
+      gap: 10px;
+  }
+
+  .card-passagens {
+      flex: 0 0 250px;
+  }
+
+  .arrow {
+      font-size: 1.5rem;
   }
 }
