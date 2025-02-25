@@ -205,6 +205,17 @@
                     </div>
                 </div>
                 <div class="card-passagens">
+                    <img src="Assets/safari2.webp" alt="Safari">
+                    <div class="info">
+                        <h6>Passagem</h6>
+                        <h5>Voo para Botsuana</h5>
+                        <p>Saindo do Rio de Janeiro</p>
+                        <span class="badge-passagens">Ida e Volta</span>
+                        <hr>
+                        <h3 class="price-passagens">R$ 3.545</h3>
+                    </div>
+                </div>    
+                <div class="card-passagens">
                     <img src="Assets/novayork.jpeg" alt="Nova York">
                     <div class="info">
                         <h6>Passagem</h6>
@@ -249,41 +260,30 @@
                     </div>
                 </div>    
                 <div class="card-passagens">
-                    <img src="Assets/safari2.webp" alt="Safari">
+                    <img src="Assets/curitiba.jpg" alt="Curitiba">
                     <div class="info">
                         <h6>Passagem</h6>
-                        <h5>Voo para Botsuana</h5>
-                        <p>Saindo do Rio de Janeiro</p>
+                        <h5>Voo para Curitiba</h5>
+                        <p>Saindo de São Paulo</p>
                         <span class="badge-passagens">Ida e Volta</span>
                         <hr>
-                        <h3 class="price-passagens">R$ 3.545</h3>
+                        <h3 class="price-passagens">R$ 1.110</h3>
                     </div>
                 </div>        
-                <div class="card-passagens">
-                    <img src="Assets/paris.jpeg" alt="Paris">
-                    <div class="info">
-                        <h6>Passagem</h6>
-                        <h5>Voo para Paris</h5>
-                        <p>Saindo do Rio de Janeiro</p>
-                        <span class="badge-passagens">Ida e Volta</span>
-                        <hr>
-                        <h3 class="price-passagens">R$ 4.090</h3>
-                    </div>       
-                </div>
-                <div class="card-passagens">
-                    <img src="Assets/paris.jpeg" alt="Paris">
-                    <div class="info">
-                        <h6>Passagem</h6>
-                        <h5>Voo para Paris</h5>
-                        <p>Saindo do Rio de Janeiro</p>
-                        <span class="badge-passagens">Ida e Volta</span>
-                        <hr>
-                        <h3 class="price-passagens">R$ 4.090</h3>
-                    </div>       
             </div>
-        </div>
+        </div>    
         <button id="nextBtn" class="arrow">&#10095;</button>
     </div>
+    <div class="carousel-pagination">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        
+    </div>
+    
 </section>
 
 
@@ -403,25 +403,43 @@
 </footer>
 
 <!-- Bootstrap JS e dependências -->
+
 <script>
+    document.addEventListener("DOMContentLoaded", function () {
     const track = document.querySelector('.carousel-track');
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
+    const dots = document.querySelectorAll('.dot');
+    
     let index = 0;
-    const cardWidth = document.querySelector('.card').offsetWidth + 20;
+    const cardWidth = document.querySelector('.card-passagens').offsetWidth + 15;
+    const maxIndex = dots.length - 1;
+
+    function updateCarousel() {
+        track.style.transform = `translateX(-${index * cardWidth}px)`;
+        updateDots();
+    }
+
+    function updateDots() {
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[index].classList.add('active');
+    }
 
     nextBtn.addEventListener('click', () => {
-        if (index < track.children.length - 3) {
+        if (index < maxIndex) {
             index++;
-            track.style.transform = `translateX(-${index * cardWidth}px)`;
+            updateCarousel();
         }
     });
 
     prevBtn.addEventListener('click', () => {
         if (index > 0) {
             index--;
-            track.style.transform = `translateX(-${index * cardWidth}px)`;
+            updateCarousel();
         }
+    });
+
+    updateCarousel();
     });
 
     function irParaPacotes() {
@@ -445,7 +463,6 @@
     });
 
     
-
 </script>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

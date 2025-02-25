@@ -208,6 +208,8 @@ body {
   outline: none; /* Remove o contorno de foco */
   box-shadow: 0 0 2px #727272; /* Adiciona um efeito visual de foco */
 }
+
+
 /* Seção Passagens */
 .passagens {
   padding: 2rem 1rem;
@@ -229,77 +231,78 @@ body {
   overflow: hidden;
 }
 
-/* Botões de navegação */
-.arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    user-select: none;
-    color: #666;
-    transition: color 0.3s;
-    padding: 10px;
+
+/* Ajustes no Carrossel */
+.carousel-container {
+  position: relative;
+  max-width: 90%;
+  margin: auto;
+  overflow: hidden;
+  padding: 20px 0;
 }
 
-
-
-.arrow:hover {
-    color: #000;
-}
-
-#prevBtn {
-    left: 10px;
-}
-
-#nextBtn {
-    right: 10px;
-}
-.arrow:focus {
-  outline: none;
-  box-shadow: none;
-}
-
-.arrow:hover {
-  color: #000;
-}
-
-
-/* Carrossel */
 .carousel {
   display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  gap: 20px;
-  padding: 10px;
-}
-
-/* Ocultar barra de rolagem */
-.carousel::-webkit-scrollbar {
-  display: none;
+  transition: transform 0.5s ease-in-out;
+  gap: 15px;
 }
 
 .carousel-track {
   display: flex;
+  transition: transform 0.5s ease-in-out;
   gap: 20px;
+}
+
+/* Estilização dos botões */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  color: rgb(0, 0, 0);
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: none;
+  transition: none;
+  z-index: 100; /* Garante que as setas fiquem acima dos cartões */
+  outline: none; /* Remove o contorno padrão */
+}
+.arrow:hover {
+  background:none;
+}
+.arrow:focus {
+  outline: none; /* Remove a borda de foco */
+  box-shadow: none; /* Remove qualquer efeito de sombra */
+}
+#prevBtn {
+  left: -15px; /* Ajusta a seta da esquerda */
+  
+}
+
+#nextBtn {
+  right: -15px; /* Ajusta a seta da direita */
+  
 }
 
 /* Cartões de passagens */
 .card-passagens {
+  min-width: 260px;
+  max-width: 300px;
+  flex: 0 0 auto;
+  text-align: center;
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  flex: 0 0 300px;
+  box-shadow: 0 4px 4px rgba(52, 52, 52, 0.1);
   transition: transform 0.3s;
   cursor: pointer;
 }
 
-.card-passagens:hover {
-  transform: scale(1.05);
-}
+
+
+
 
 .card-passagens img {
   width: 100%;
@@ -342,7 +345,30 @@ body {
   color: #002f6c;
   margin-top: 10px;
 }
+/* Contêiner do progresso */
+.carousel-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px; /* Espaço entre os cards e o progresso */
+}
 
+/* Ponto de progresso */
+.dot {
+  height: 8px;
+  width: 8px;
+  margin: 0 4px;
+  background-color: #ddd; /* Cor padrão dos pontos inativos */
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+/* Ponto ativo */
+.dot.active {
+  background-color: #0073e6; /* Cor do ponto ativo */
+  width: 20px; /* Aumenta a largura do ponto ativo */
+  border-radius: 10px; /* Forma oval quando ativo */
+}
 
 
 /* Destinos */
@@ -408,37 +434,7 @@ body {
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Setas */
-.arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  color: black;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  outline: none;
-  border: none;
-  user-select: none;
- 
-}
 
-
-
-.arrow:focus {
-  outline: none;
-  box-shadow: none;
-}
-
-
-#prevBtn {
-  left: 10px;
-}
-
-#nextBtn {
-  right: 10px;
-}
 
 /* Seção Depoimento*/
 .depoimentos {
@@ -534,179 +530,8 @@ gap: 0.5rem;
 white-space: nowrap;
 }
 
-.checkmark  {
-  color: #4CAF50; /* Cor do checkmark (verde) */
-  font-size: 22px;
-  content: "✔";
-  margin-right: 8px; /* Espaço entre o checkmark e o texto */
-}
-
-/* Seção Sobre Nós */
-.sobre-nos {
-background-color: #f9f9f9;
-padding: 50px 20px;
-}
-
-.sobre-nos-container {
-display: flex;
-align-items: center;
-gap: 30px;
-}
-
-.sobre-nos-imagem {
-width: 40%;
-border-radius: 10px;
-}
-
-.sobre-nos-texto {
-width: 60%;
-}
-
-.sobre-nos-texto h2 {
-color: #007bff;
-font-size: 2em;
-}
-
-.sobre-nos-texto p,
-.sobre-nos-texto ul {
-color: #555;
-list-style: none; /* Remove as bolinhas */
-padding: 0; /* Remove o recuo padrão */
-}
-
-.sobre-nos-texto ul li {
-margin-bottom: 10px;
-}
 
 
-
-
-.sobre-nos ul li:before {
-  content: "✔";
-  position: relative;
-  left: 0;
-  color: #ffd700;
-  font-size: 1.2em;
-}
-
-
-.contato {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  max-width: 900px;
-  margin: auto;
-  background: #92c8fb;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.info-contato {
-  width: 40%;
-}
-
-.info-contato h2 {
-  font-size: 28px;
-  margin-bottom: 15px;
-  
-}
-
-.info-contato p {
-  margin-bottom: 8px;
-  font-size: 16px;
-  color: #333;
-}
-
-.info-contato i {
-  color: rgb(3, 3, 81);
-  margin-right: 8px;
-}
-
-.pagamentos img {
-  width: 50px;
-  margin-right: 5px;
-}
-
-.certificados {
-  margin-top: 15px;
-  display: flex;
-  align-items: center;
-}
-
-.ssl {
-  background: #1c47e3;
-  color: white;
-  padding: 8px;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  border-radius: 5px;
-  margin-left: 10px;
-}
-
-.ssl i {
-  margin-right: 5px;
-}
-
-.formulario {
-  width: 55%;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-label {
-  font-size: 14px;
-  margin-bottom: 5px;
-  color: #333;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #6acbff;
-  border-radius: 5px;
-  margin-bottom: 15px;
-}
-
-textarea {
-  height: 100px;
-  resize: none;
-}
-
-.linha {
-  display: flex;
-  gap: 10px;
-}
-
-.linha div {
-  width: 50%;
-}
-
-button {
-  background-color: #272ef6;
-  color: white;
-  font-size: 16px;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-}
-
-button:hover {
-  background-color: #3339a1;
-}
-
-button i {
-  font-size: 18px;
-}
 
 
 /* Rodapé */
@@ -754,8 +579,17 @@ footer {
   .card-passagens {
       flex: 0 0 250px;
   }
-
   .arrow {
-      font-size: 1.5rem;
+    font-size: 18px;
+    padding: 10px;
+  }
+
+
+  #prevBtn {
+      left: -10px; /* Ajusta a posição em telas menores */
+  }
+
+  #nextBtn {
+      right: -10px;
   }
 }
