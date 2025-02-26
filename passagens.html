@@ -144,37 +144,7 @@
        let destino = document.getElementById("destino");
        let temp = origem.value;
        origem.value = destino.value;
-       destino.value = temp;
-   }
-   
-   // Efeito de seleção nos botões
-       document.querySelectorAll(".trip-btn").forEach(btn => {
-       btn.addEventListener("click", function() {
-           document.querySelectorAll(".trip-btn").forEach(b => b.classList.remove("active"));
-           this.classList.add("active");
-       });
-   });
-   
-
-    const track = document.querySelector('.carousel-track');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    let index = 0;
-    const cardWidth = document.querySelector('.card').offsetWidth + 20;
-
-    nextBtn.addEventListener('click', () => {
-        if (index < track.children.length - 3) {
-            index++;
-            track.style.transform = `translateX(-${index * cardWidth}px)`;
-        }
-    });
-
-    prevBtn.addEventListener('click', () => {
-        if (index > 0) {
-            index--;
-            track.style.transform = `translateX(-${index * cardWidth}px)`;
-        }
-    });
+       desti
 
     function irParaPacotes() {
         window.location.href = "pacotes.html";
