@@ -298,6 +298,7 @@ body {
   box-shadow: 0 4px 4px rgba(52, 52, 52, 0.1);
   transition: transform 0.3s;
   cursor: pointer;
+  transform: translateY(-5px); /* Elevação ao passar o mouse */
 }
 
 
@@ -389,7 +390,7 @@ body {
   gap: 10px;
   justify-content: center;
   flex-wrap: wrap; /* Permite empilhamento em telas menores */
-  cursor: pointer;
+ 
 }
 
 
@@ -399,7 +400,7 @@ body {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+ 
 }
 
 .card img {

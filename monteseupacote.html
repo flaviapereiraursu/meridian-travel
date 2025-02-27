@@ -32,10 +32,6 @@
             <ul class="navbar-nav">
                 <li class="nav-item active">
                     <a class="nav-link" href="index.html">Home <span class="sr-only">(Página atual)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="destinos.html">Destinos</a>
-                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="serviços.html">Serviços</a>
                 </li>
@@ -102,9 +98,7 @@
         window.location.href = "pacotes.html";
     }
     
-    function irParaDestinos() {
-        window.location.href = "destinos.html";
-    }
+
 
     document.querySelectorAll('.card-passagens').forEach(card => {
         card.addEventListener('click', () => {
@@ -112,11 +106,7 @@
         });
     });
 
-    document.querySelectorAll('.cards').forEach(card => {
-        card.addEventListener('click', () => {
-            window.location.href = "destinos.html";
-        });
-    });
+
 
 
 </script>
