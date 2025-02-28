@@ -9,9 +9,10 @@
     <meta name="author" content="Meridian Agência de Viagens">
     <title>Pacotes - Meridian Travel</title>
     <link rel="icon" type="image/x-icon" href="/Assets/meridianicon.ico">
-    <link rel="stylesheet" href="CSS/pacotes.css">
+    <link rel="stylesheet" href="CSS/monteseupacote.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+ 
 </head>
 <body>
     
@@ -59,11 +60,45 @@
 
 </header>
 
+<div class="content-wrapper">
+    <!-- Imagem à esquerda -->
+    <div class="image-container">
+        <img src="Assets/paisagem3.jpeg" class="img-preview" alt="Imagem inspiradora">
+    </div>
 
-<section class="pacotes">
-    <h2>Meu Pacote</h2>
-    <p>Monte o pacote perfeito para você.</p>
-</section>
+    <!-- Formulário e Ícone -->
+    <div class="form-container">
+        <div class="aviacao-container">
+
+            
+            <h2>Monte Seu Pacote</h2>
+            <img class="aviacao" src="Assets/aviao.svg" alt="Avião voando">
+            
+        </div>
+       
+
+        <form id="pacoteForm">
+            <label for="destino">Destino</label>
+            <input type="text" class="form-control" id="destino" placeholder="Digite o destino desejado" required>
+
+            <label for="hospedagem">Tipo de Hospedagem</label>
+            <select class="form-control" id="hospedagem">
+                <option>Hotel</option>
+                <option>Resort</option>
+                <option>Pousada</option>
+                <option>Hostel</option>
+            </select>
+            
+            <label for="atividades">Atividades</label>
+            <input type="text" class="form-control" id="atividades" placeholder="Passeios, trilhas, mergulho...">
+            
+            <button type="submit" class="btn btn-custom w-100">Criar Pacote</button>
+        </form>
+    </div>
+</div>
+
+
+
 
 
 
@@ -73,7 +108,16 @@
 </footer>
 
 <!-- Bootstrap JS e dependências -->
+
+
 <script>
+    document.getElementById("pacoteForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        const destino = document.getElementById("destino").value;
+        alert(`Pacote para ${destino} criado com sucesso!`);
+    });
+
+
     const track = document.querySelector('.carousel-track');
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
@@ -98,7 +142,9 @@
         window.location.href = "pacotes.html";
     }
     
-
+    function irParaDestinos() {
+        window.location.href = "destinos.html";
+    }
 
     document.querySelectorAll('.card-passagens').forEach(card => {
         card.addEventListener('click', () => {
@@ -106,16 +152,12 @@
         });
     });
 
-
-
-
 </script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </body>
 </html>
-
 

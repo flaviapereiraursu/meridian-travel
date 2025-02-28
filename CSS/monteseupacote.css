@@ -1,0 +1,225 @@
+/* Seção Pacotes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+  }
+  
+    
+  /* Ajusta a logo na navbar */
+  .logo {
+    height: 80px; /* Define a altura da logo */
+    width: auto; /* Mantém a proporção */
+  }
+  
+  /* Estilo para a lista de navegação */
+  .navbar-nav {
+    margin-left: auto; /* Move a lista para o lado direito */
+  }
+  
+  .nav-link {
+    color: #020f86; /* Cor dos links */
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link :hover {
+    color: #3703bb; /* Cor ao passar o mouse */
+  }
+  
+  .navbar {
+    padding: 10px 100px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para a navbar */
+  }
+.pacotes {
+    text-align: center;
+    padding: 50px;
+    background-color: #fff3e0;
+}
+
+.pacotes h2 {
+    color: #ff5722;
+}
+
+.pacotes p {
+    font-size: 1.2rem;
+}
+
+
+  /* Layout principal */
+  .content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    gap: 40px;
+  }
+  
+  /* Imagem lateral */
+  .image-container {
+    flex: 1;
+    max-width: 500px;
+  }
+  
+  .image-container img {
+    width: 60%;
+    height: 80%;
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Formulário */
+  .form-container {
+    flex: 1;
+    max-width: 400px;
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+  }
+  
+  /* Container do avião e trilha */
+  .aviacao-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  
+  /* Texto "Monte seu Pacote" */
+  .aviacao-container h2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #003366;
+  }
+  
+  /* Avião animado */
+  .aviacao {
+    position: absolute;
+    top: -80px;
+    left: -50px;
+    width: 80px;
+    height: auto;
+    animation: voando 4s linear infinite;
+  }
+  
+  /* Trilha do avião (linha tracejada) */
+  .trilha {
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    border-top: 2px dashed #00509E;
+    opacity: 0.7;
+    animation: fadeLine 4s linear infinite;
+  }
+  
+  /* Animação do avião */
+  @keyframes voando {
+    0% { left: -50px; opacity: 1; }
+    100% { left: 100%; opacity: 0; }
+  }
+  
+  /* Animação da trilha */
+  @keyframes fadeLine {
+    0% { width: 0; opacity: 1; }
+    100% { width: 100%; opacity: 0; }
+  }
+  
+  /* Campos do formulário */
+  .form-control {
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    transition: border 0.3s ease-in-out;
+  }
+  
+  .form-control:focus {
+    border: 1px solid #00509E;
+    box-shadow: 0px 0px 5px rgba(0, 80, 158, 0.4);
+  }
+  
+  /* Botão */
+  .btn-custom {
+    background: #FFD700;
+    color: #003366;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 12px;
+    border: none;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn-custom:hover {
+    background: #FFC107;
+    transform: scale(1.05);
+  }
+  
+  /* Rodapé */
+  footer {
+    text-align: center;
+    background: #003366;
+    color: white;
+    padding: 20px;
+    margin-top: 40px;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+  
+    .image-container, .form-container {
+        max-width: 100%;
+    }
+  }
+  
+
+/* Rodapé */
+
+footer {
+    text-align: center;
+    background: #09084f;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center; /* Centraliza o conteúdo */
+    padding: 10px 10px; /* Espaçamento interno */
+    margin-top: 10px; /* Espaçamento do conteúdo acima */
+  }
+  
+  
+  @media (max-width: 768px) {
+    .logo {
+        height: 40px; /* Ajusta o tamanho da logo para telas menores */
+    }
+  }
+  
+  
+  
+  /* Responsividade do Rodapé */
+  @media (max-width: 768px) {
+    footer {
+        padding: 15px 5px;
+    }
+  
+    footer h3 {
+        font-size: 1.2rem;
+    }
+  
+    footer p {
+        font-size: 0.9rem;
+    }
+  }
