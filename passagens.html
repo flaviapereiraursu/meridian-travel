@@ -7,164 +7,415 @@
     <meta name="description" content="Descubra experiências incríveis com a Meridian. Pacotes de viagem personalizados, destinos paradisíacos e suporte completo para sua jornada.">
     <meta name="keywords" content="viagens, pacotes de viagem, turismo, destinos, roteiros personalizados, agência de viagem, destinos paradisíacos, viagens personalizadas, Meridian">
     <meta name="author" content="Meridian Agência de Viagens">
-    <title>Passagens - Meridian Travel</title>
+    <title>Meridian Travel</title>
     <link rel="icon" type="image/x-icon" href="/Assets/meridianicon.ico">
     <link rel="stylesheet" href="CSS/passagens.css">
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
 </head>
 <body>
-
-<!-- Cabeçalho --> 
-<header>    
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <!-- Logo -->
-        <a class="navbar-brand" href="index.html">
-            <img src="Assets/meridianlogo.svg" alt="Logo Meridian" class="logo">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <!-- Cabeçalho -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <!-- Logo -->
+            <a class="navbar-brand" href="index.html">
+              <img src="Assets/meridianlogo.svg" alt="Logo Meridian" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
+              <span class="navbar-toggler-icon"></span>
+            </button>
         
-        <!-- Lista de navegação -->
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home<span class="sr-only">(Página atual)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="serviços.html">Serviços</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="passagens.html">Passagens</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="pacotes.html" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <!-- Lista de navegação -->
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home<span class="sr-only">(Página atual)</span></a>
+                    </li>
+                    <li class="nav-item">
+                         <a class="nav-link" href="serviços.html">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                         <a class="nav-link" href="passagens.html">Passagens</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="pacotes.html" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Pacotes
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="pacotes.html">Pacotes</a>
-                        <a class="dropdown-item" href="monteseupacote.html">Monte seu pacote</a>                
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="sobre.html">Sobre Nós</a>
-                </li> 
-                <li class="nav-item">
-                    <a class="nav-link" href="contato.html">Contato</a>
-                </li>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <a class="dropdown-item" href="pacotes.html">Pacotes</a>
+                          <a class="dropdown-item" href="monteseupacote.html">Monte seu pacote</a>                
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                          <a class="nav-link" href="sobre.html">Sobre Nós</a>
+                    </li> 
+                    <li class="nav-item">
+                          <a class="nav-link" href="contato.html">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Imagem de Fundo -->
-    <div class="banner-background">
-        <img src="Assets/travel.jpeg" alt="Viagens">
-    </div>
+  <!-- Seção Hero -->
    
+
+  <!-- Imagem de Fundo -->
+  <div class="banner-background">
+      <img src="Assets/travel.jpeg" alt="Viagens">
+  </div>
+
+  <!-- Seção buscar destinos --> 
    <!-- Banner Principal -->
-   <section class="banner">
-       <h1><strong>Passagens aéreas baratas</strong> para os melhores destinos</h1>
-       <div class="search-box">
-           <div class="trip-options">
-               <button class="trip-btn active">Ida e volta</button>
-               <button class="trip-btn">Só ida</button>
-               <button class="trip-btn">Vários destinos</button>
-           </div>
-           <div class="inputs">
-               <input type="text" id="origem" placeholder="Origem">
-               <button class="swap-btn" onclick="swapLocations()">⇄</button>
-               <input type="text" id="destino" placeholder="Destino">
-               <input type="date" placeholder="Ida">
-               <input type="date" placeholder="Volta">
-               <select class="select-travelers">
-                   <option>1 Viajante - Todas as classes</option>
-                   <option>2 Viajantes</option>
-                   <option>Classe Executiva</option>
-               </select>
-               <button class="search-btn">Buscar</button>
-           </div>
+  <section class="banner">
+  <h1><strong>Passagens com preços imbatíveis</strong> para os melhores destinos</h1> 
+     <div class="search-box">
+       <div class="trip-options">
+           <button class="trip-btn active">Ida e volta</button>
+           <button class="trip-btn">Só ida</button>
+           <button class="trip-btn">Vários destinos</button>
        </div>
-   </section>
+       <div class="inputs">
+           <input type="text" id="origem" placeholder="Origem">
+              <button class="swap-btn" onclick="swapLocations()">⇄</button>
+              <input type="text" id="destino" placeholder="Destino">
+              <input type="date" placeholder="Ida">
+              <input type="date" placeholder="Volta">
+              <select class="select-travelers">
+                  <option>1 Viajante - Todas as classes</option>
+                  <option>2 Viajantes</option>
+                  <option>Classe Executiva</option>
+              </select>
+              <button class="search-btn">Buscar</button>
+          </div>
+      </div>
+    </section>
+     
 
 
-<!-- Footer -->
-<footer>
-    <p>&copy; 2025 Meridian Agência de Viagem</p>
-</footer>
 
-<!-- Bootstrap JS e dependências -->
-<script>
+    <!--Seção Passagens Aéreas -->
+    <section id="passagens" class="passagens">
+         <h1>PASSAGENS AÉREAS MAIS BUSCADAS </h1>
+         <h5>Preços incríveis atualizados agora! Reserve já!</h5>
+            <div class="carousel-container" >
+                   <button id="prevBtn" class="arrow">&#10094;</button>
+                   <div class="carousel">
+                   <div class="carousel-track">
+                   <!-- Cards de Passagens -->
+                   <div class="card-passagens">
+                         <img src="Assets/salvadorba.jpeg" alt="Salvador">
+                         <div class="info">
+                            <h6>Passagem</h6>
+                            <h5>Voo para Salvador</h5>
+                            <p>Saindo do Rio de Janeiro</p>
+                            <span class="badge-passagens">Ida e Volta</span>
+                            <hr>
+                            <h4 class="price-passagens">R$ 899</h4>
+                    </div>
+                </div>
+                   <div class="card-passagens">
+                        <img src="Assets/barcelona.jpeg" alt="Barcelona">
+                        <div class="info">
+                           <h6>Passagem</h6>
+                           <h5>Voo para Barcelona</h5>
+                           <p>Saindo de São Paulo</p>
+                           <span class="badge-passagens">Ida e Volta</span>
+                           <hr>
+                           <h4 class="price-passagens">R$ 3.597</h4>
+                    </div>
+                </div>
+                  <div class="card-passagens">
+                        <img src="Assets/recife.jpeg" alt="Recife">
+                        <div class="info">
+                            <h6>Passagem</h6>
+                            <h5>Voo para Recife</h5>
+                            <p>Saindo do Rio de Janeiro</p>
+                            <span class="badge-passagens">Ida e Volta</span>
+                            <hr>
+                            <h4 class="price-passagens">R$ 1.272</h4>
+                    </div>
+                </div>
+                    <div class="card-passagens">
+                        <img src="Assets/safari.jpeg" alt="Safari">
+                        <div class="info">
+                            <h6>Passagem</h6>
+                            <h5>Voo para Botsuana</h5>
+                            <p>Saindo do Rio de Janeiro</p>
+                            <span class="badge-passagens">Ida e Volta</span>
+                            <hr>
+                            <h4 class="price-passagens">R$ 3.545</h4>
+                    </div>
+                </div>    
+                   <div class="card-passagens">
+                        <img src="Assets/novayork.jpeg" alt="Nova York">
+                        <div class="info">
+                           <h6>Passagem</h6>
+                           <h5>Voo para Nova York</h5>
+                           <p>Saindo de São Paulo</p>
+                           <span class="badge-passagens">Ida e Volta</span>
+                           <hr>
+                           <h4 class="price-passagens">R$ 3.229</h4>
+                    </div>
+                </div>
+                <div class="card-passagens">
+                       <img src="Assets/madrid.jpeg" alt="Madrid">
+                       <div class="info">
+                            <h6>Passagem</h6>
+                            <h5>Voo para Madrid</h5>
+                            <p>Saindo de Rio de Janeiro</p>
+                            <span class="badge-passagens">Ida e Volta</span>
+                            <hr>
+                            <h4 class="price-passagens">R$ 2.190</h4>
+                    </div>
+                </div>
+                <div class="card-passagens">
+                       <img src="Assets/roma.jpeg" alt="Roma">
+                       <div class="info">
+                            <h6>Passagem</h6>
+                            <h5>Voo para Roma</h5>
+                            <p>Saindo de São Paulo</p>
+                            <span class="badge-passagens">Ida e Volta</span>
+                            <hr>
+                            <h4 class="price-passagens">R$ 3.690</h4>
+                    </div>
+                </div>
+                <div class="card-passagens">
+                      <img src="Assets/paris.jpeg" alt="Paris">
+                      <div class="info">
+                            <h6>Passagem</h6>
+                            <h5>Voo para Paris</h5>
+                            <p>Saindo do Rio de Janeiro</p>
+                            <span class="badge-passagens">Ida e Volta</span>
+                            <hr>
+                            <h4 class="price-passagens">R$ 4.090</h4>
+                    </div>
+                </div>    
+                <div class="card-passagens">
+                       <img src="Assets/fernandodenoronha.jpeg" alt="Curitiba">
+                       <div class="info">
+                            <h6>Passagem</h6>
+                            <h5>Voo para Curitiba</h5>
+                            <p>Saindo de São Paulo</p>
+                            <span class="badge-passagens">Ida e Volta</span>
+                            <hr>
+                            <h4 class="price-passagens">R$ 1.110</h4>
+                    </div>
+                </div>        
+            </div>
+        </div>    
+        <button id="nextBtn" class="arrow">&#10095;</button>
+       </div>
+       <div class="carousel-pagination">
+           <span class="dot active"></span>
+           <span class="dot"></span>
+           <span class="dot"></span>
+           <span class="dot"></span>
+           <span class="dot"></span>
+           <span class="dot"></span>        
+        </div>
     
+    </section>
+
+
+    <!--Seção Passagens Nacionais -->
+    <section id="passagensnac" class="passagensnac">
+        <h1>PASSAGENS AÉREAS NACIONAIS</h1>
+        <h5>Aproveite as melhores ofertas e embarque na sua próxima aventura!</h5>
+        <div class="grid-container" id="grid-container">
+        <!-- Os primeiros 4 cards serão inseridos via JavaScript -->
+        </div>
+        <button class="btn-vermais" id="btn-vermais">Ver mais ofertas</button>
+    </section>
+
+
+    <!--Seção Passagens Internacionais -->
+    <section id="passagens-int" class="passagens-int">
+        <h1>PASSAGENS AÉREAS INTERNACIONAIS</h1>
+        <h5>Seu próximo destino internacional está aqui!</h5>
+        <div class="grid-container" id="grid-container-int">
+        </div>
+        <button class="btn-vermais" id="btn-vermais-int">Ver mais ofertas</button>
+    </section>
+
+
+
+
+    
+  
+
+   <!-- Footer -->
+   <footer>
+      <p>&copy; 2025 Meridian Agência de Viagem</p>
+   </footer>
+
    <!-- Bootstrap JS e dependências -->
-   
-   document.addEventListener("DOMContentLoaded", function () {
-    const track = document.querySelector('.carousel-track');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    const dots = document.querySelectorAll('.dot');
+
+    <script>
+        const destinos = [
+            { img: "Assets/brasilia.jpeg", title: "Voo para Brasília", origem: "Saindo de São Paulo", preco: "R$ 750", companhia: "GOL" },
+            { img: "Assets/natal.jpeg", title: "Voo para Natal", origem: "Saindo do Rio de Janeiro", preco: "R$ 1.200", companhia: "Azul" },
+            { img: "Assets/portoseguro.jpeg", title: "Voo para Porto Seguro", origem: "Saindo de Belo Horizonte", preco: "R$ 850", companhia: "LATAM" },
+            { img: "Assets/belem.jpeg", title: "Voo para Belém", origem: "Saindo de São Paulo", preco: "R$ 1.100", companhia: "GOL" },
+            { img: "Assets/cuiaba.jpeg", title: "Voo para Cuiabá", origem: "Saindo do Rio de Janeiro", preco: "R$ 950", companhia: "Azul" },
+            { img: "Assets/joaopessoa.jpeg", title: "Voo para João Pessoa", origem: "Saindo de Brasília", preco: "R$ 1.300", companhia: "LATAM" },
+            { img: "Assets/aracaju.jpeg", title: "Voo para Maceió", origem: "Saindo de São Paulo", preco: "R$ 890", companhia: "GOL" },
+            { img: "Assets/fozdoiguacu.jpeg", title: "Voo para Foz do Iguaçu", origem: "Saindo de Belo Horizonte", preco: "R$ 1.150", companhia: "Azul" },
+            
+        ];
+
+        let index = 0;
+        const container = document.getElementById("grid-container");
+        const btnVerMais = document.getElementById("btn-vermais");
+
+        function carregarCards() {
+            let fragment = document.createDocumentFragment();
+            let limite = Math.min(index + 4, destinos.length);
+            
+            for (; index < limite; index++) {
+                let card = document.createElement("div");
+                card.classList.add("card-passagens");
+                card.innerHTML = `
+                    <img src="${destinos[index].img}" alt="${destinos[index].title}">
+                    <div class="info">                        
+                        <h5><i class="fas fa-plane-departure"></i> ${destinos[index].title}</h5>
+                        <p>${destinos[index].origem}</p>
+                        <p>Por ${destinos[index].companhia}</p>
+                        <span class="badge-passagensnac">Ida e Volta</span>
+                        <hr>
+                        <p>Preço de ida e volta</p>
+                        <h4 class="price-passagensnac">${destinos[index].preco}</h4>
+                    </div>
+                `;
+                fragment.appendChild(card);
+            }
+
+            container.appendChild(fragment);
+            if (index >= destinos.length) btnVerMais.style.display = "none";
+        }
+
+        btnVerMais.addEventListener("click", carregarCards);
+        carregarCards(); // Carregar os primeiros 4 cards ao iniciar
+
+
+        const destinosInt = [
+            { img: "Assets/londres.jpeg", title: "Voo para Londres", origem: "Saindo de São Paulo", preco: "R$ 3.999", companhia: "British Airways" },
+            { img: "Assets/tokyo.jpeg", title: "Voo para Tóquio", origem: "Saindo do Rio de Janeiro", preco: "R$ 5.200", companhia: "Japan Airlines" },
+            { img: "Assets/dubai.jpeg", title: "Voo para Dubai", origem: "Saindo de São Paulo", preco: "R$ 4.750", companhia: "Emirates" },
+            { img: "Assets/sydney.jpeg", title: "Voo para Sydney", origem: "Saindo do Rio de Janeiro", preco: "R$ 6.300", companhia: "Qantas" },
+            { img: "Assets/berlim.jpeg", title: "Voo para Berlim", origem: "Saindo de São Paulo", preco: "R$ 3.890", companhia: "Lufthansa" },
+            { img: "Assets/cancun.jpeg", title: "Voo para Cancún", origem: "Saindo de Belo Horizonte", preco: "R$ 2.750", companhia: "AeroMexico" },
+            { img: "Assets/toronto.jpeg", title: "Voo para Toronto", origem: "Saindo de Brasília", preco: "R$ 3.400", companhia: "Air Canada" },
+            { img: "Assets/buenosaires.jpeg", title: "Voo para Buenos Aires", origem: "Saindo de Curitiba", preco: "R$ 1.500", companhia: "Aerolineas Argentinas" }
+        ];
+
+        let indexInt = 0;
+        const containerInt = document.getElementById("grid-container-int");
+        const btnVerMaisInt = document.getElementById("btn-vermais-int");
+
+        function carregarCardsInt() {
+            let fragment = document.createDocumentFragment();
+            let limite = Math.min(indexInt + 4, destinosInt.length);
+            
+            for (; indexInt < limite; indexInt++) {
+                let card = document.createElement("div");
+                card.classList.add("card-passagens");
+                card.innerHTML = `
+                    <img src="${destinosInt[indexInt].img}" alt="${destinosInt[indexInt].title}">
+                    <div class="info">
+                        <h5><i class="fas fa-plane-departure"></i> ${destinosInt[indexInt].title}</h5>                   
+                        <p>${destinosInt[indexInt].origem}</p>
+                        <p>Por ${destinosInt[indexInt].companhia}</p>
+                        <span class="badge-passagensint">Ida e Volta</span>                        
+                        <hr>
+                        <p>Preço de ida e volta</p>
+                        <h4 class="price-passagensint">${destinosInt[indexInt].preco}</h4>
+                    </div>
+                `;
+                fragment.appendChild(card);
+            }
+
+            containerInt.appendChild(fragment);
+            if (indexInt >= destinosInt.length) btnVerMaisInt.style.display = "none";
+        }
+
+        btnVerMaisInt.addEventListener("click", carregarCardsInt);
+        carregarCardsInt();
+
+
+
+
+
+
+
+
+        
+
+
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+        const track = document.querySelector('.carousel-track');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const dots = document.querySelectorAll('.dot');
     
-    let index = 0;
-    const cardWidth = document.querySelector('.card-passagens').offsetWidth + 15;
-    const maxIndex = dots.length - 1;
+        let index = 0;
+        const cardWidth = document.querySelector('.card-passagens').offsetWidth + 15;
+        const maxIndex = dots.length - 1;
 
-    function updateCarousel() {
-        track.style.transform = `translateX(-${index * cardWidth}px)`;
-        updateDots();
-    }
+        function updateCarousel() {
+           track.style.transform = `translateX(-${index * cardWidth}px)`;
+          updateDots();
+        }
 
-    function updateDots() {
-        dots.forEach(dot => dot.classList.remove('active'));
-        dots[index].classList.add('active');
-    }
+        function updateDots() {
+           dots.forEach(dot => dot.classList.remove('active'));
+         dots[index].classList.add('active');
+        }
 
-    nextBtn.addEventListener('click', () => {
-        if (index < maxIndex) {
+        nextBtn.addEventListener('click', () => {
+           if (index < maxIndex) {
             index++;
             updateCarousel();
         }
-    });
+        });
 
-    prevBtn.addEventListener('click', () => {
-        if (index > 0) {
+        prevBtn.addEventListener('click', () => {
+            if (index > 0) {
             index--;
             updateCarousel();
         }
-    });
+       });
 
-    updateCarousel();
-    });
+      updateCarousel();
+      });
 
-    function irParaPacotes() {
+    
+      function irParaPacotes() {
         window.location.href = "pacotes.html";
-    }
+      }
+    
+  
+
+    </script>
+
+
+
+
+
     
 
-    document.querySelectorAll('.card-passagens').forEach(card => {
-        card.addEventListener('click', () => {
-            window.location.href = "passagens.html";
-        });
-    });
-
-
-
    
-   
-       // Função para trocar a origem e o destino
-       function swapLocations() {
-       let origem = document.getElementById("origem");
-       let destino = document.getElementById("destino");
-       let temp = origem.value;
-       origem.value = destino.value;
-       desti
 
-</script>
- 
-<script src="script.js" defer></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+
+
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </body>
 </html>

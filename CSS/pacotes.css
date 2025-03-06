@@ -1,91 +1,881 @@
-/* Seção Pacotes */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f9;
-    color: #333;
-  }
-  
-    
-  /* Ajusta a logo na navbar */
-  .logo {
-    height: 80px; /* Define a altura da logo */
-    width: auto; /* Mantém a proporção */
-  }
-  
-  /* Estilo para a lista de navegação */
-  .navbar-nav {
-    margin-left: auto; /* Move a lista para o lado direito */
-  }
-  
-  .nav-link {
-    color: #020f86; /* Cor dos links */
-    font-size: 1rem;
-    transition: color 0.3s ease;
-  }
-  
-  .nav-link :hover {
-    color: #3703bb; /* Cor ao passar o mouse */
-  }
-  
-  .navbar {
-    padding: 10px 100px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para a navbar */
-  }
-.pacotes {
-    text-align: center;
-    padding: 50px;
-    background-color: #fff3e0;
+*
+:root {
+  --primary-color: #002f6c;
+  --secondary-color: #ff8c00;
+  --color-black: #000000;
+  --color-neutral-100: #F2F4F5;
+  --color-neutral-300: #DDE1E8;
+  --color-neutral-400: #C0C4CC;
+  --color-neutral-600: #72777F;
+  --color-neutral-700: #565A60;
+  --color-neutral-800: #323439;
+  --text-color: #333;
+  --bg-color:  #f9f9f9;
 }
 
-.pacotes h2 {
-    color: #ff5722;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.pacotes p {
-    font-size: 1.2rem;
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: var(--color-neutral-600);
+  color: #333;
 }
+
+
+
+/* Ajusta a logo na navbar */
+.logo {
+  height: 80px; /* Define a altura da logo */
+  width: auto; /* Mantém a proporção */
+}
+
+/* Estilo para a lista de navegação */
+.navbar-nav {
+  margin-left: auto; /* Move a lista para o lado direito */
+}
+
+.nav-link {
+  color: #020f86; /* Cor dos links */
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link :hover {
+  color: #3703bb; /* Cor ao passar o mouse */
+}
+
+.navbar {
+  padding: 10px 100px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para a navbar */
+}
+
+
+
+
+/* SEÇÃO PACOTES EXCLUSIVOS */
+.pacotes-exclusivos {
+  max-width: 1200px;
+  margin: auto;  
+  padding: 20px;
+}
+
+.pacotes-exclusivos h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  color: #555; 
+  text-align: left;
+  margin-left: 20px; /* Ajuste conforme necessário */
+}
+
+.pacotes-exclusivos h5 {
+  font-size: 20px;
+  color: #555;    
+  font-weight: bold;
+  margin-bottom: 10px;    
+  text-align: left;
+  margin-left: 20px; /* Ajuste conforme necessário */
+}
+
+.card-content p {
+  font-size: 14px; /* Reduz o tamanho do texto */
+  margin: 2px 0; /* Diminui os espaços acima e abaixo */
+  color: #555;  
+  margin-bottom: 6px; /* Diminui a distância entre os elementos */
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+.card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 270px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+.card-content {
+  padding: 15px;
+}
+
+/* Linha HR estilizada */
+.separator {
+  border: none;
+  height: 2px;
+  background-color: #ccc;
+  width: 100%;
+  position: relative;
+  margin: 20px 0;
+}
+
+/* Badge sobreposto à linha */
+.badge-discount {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:#002f6c;
+  background: #ffd700;
+  font-weight: bold;
+  padding: 5px 15px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+
+
+.badge-ex {
+  display: inline-block; /* Evita que o badge ocupe toda a largura */
+  background: #007bff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  display: inline-block;
+  margin-bottom: 10px;
+  max-width: fit-content; /* Faz com que o badge ocupe apenas o espaço necessário */
+}
+
+
+
+.card-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.rating {
+  font-size: 14px;
+  color: #ff9800;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.info {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+}
+.offer {
+  background: #5e2ca5;
+  color: white;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+.old-price {
+  text-decoration: line-through;
+  color: gray;
+  font-size: 14px;
+}
+
+/* Botão de carregar mais ofertas */
+.botao-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+
+
+
+
+
+
+/* PACOTES MAIS BUSCADOS */
+.pacotes-section {
+  padding: 2rem 1rem;
+  width: 90%;
+  max-width: 20010px;
+  margin: auto;
+  background-color: var(--bg-color);
+  position: relative;
+}
+  
+.pacotes-section h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #555; 
+    margin-left: 70px; /* Ajuste conforme necessário */
+      
+}
+
+.pacotes-section h5{
+    font-size: 20px;
+    color: #0056b3;    
+    font-weight: bold;
+    margin-bottom: 10px;    
+    text-align: left; 
+    font-size: 20px;
+    margin-left: 70px; /* Ajuste conforme necessário */
+    color: #555;
+}
+
+/* Container do carrossel */
+/* Garante que o carrossel ocupe toda a largura necessária */
+.carousel-container {
+  position: relative;
+  max-width: 90%;
+  margin: auto;
+  overflow: hidden;
+  padding: 5px 0;
+  justify-content: center;
+  
+}
+
+
+/* Ajustes no Carrossel */
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 10px; /* Reduz o espaço entre os cards */
+  align-items: stretch; 
+  padding-right: 20px; /* Evita espaço extra no final */
+}
+
+
+/* Ajuste no Track para manter alinhamento */
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 10px; /* Diminui o espaço entre os cards */
+  align-items: stretch;
+}
+
+/* Estilização dos botões */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  color: rgb(0, 0, 0);
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: none;
+  transition: none;
+  z-index: 100; /* Garante que as setas fiquem acima dos cartões */
+  outline: none; /* Remove o contorno padrão */
+}
+.arrow:hover {
+  background:none;
+}
+.arrow:focus {
+  outline: none; /* Remove a borda de foco */
+  box-shadow: none; /* Remove qualquer efeito de sombra */
+}
+#prevBtn {
+  left: -15px; /* Ajusta a seta da esquerda */
+  
+}
+
+/* Ajuste na seta para alinhá-la exatamente com o último card */
+#nextBtn {
+  position: absolute;
+  top: 50%;
+  right: 0px !important; /* Força a seta a ficar alinhada com o último card */
+  transform: translateY(-50%);
+  z-index: 10; /* Garante que a seta fique visível acima do carrossel */
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+/* Ajuste para garantir que a seta não empurre o carrossel */
+#nextBtn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Cartões de passagens */
+/* Garante que os cards fiquem do mesmo tamanho */
+.card-pacotes {
+  width: 280px; /* Largura fixa para todos os cards */
+  max-width: 300px;
+  flex: 0 0 auto;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden; /* Impede que a imagem ultrapasse os limites */
+  box-shadow: 0 4px 4px rgba(52, 52, 52, 0.1);
+  transition: transform 0.3s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Mantém os itens no topo */
+  text-align: left;
+  padding: 0; /* Remove padding que pode criar espaços indesejados */
+  max-height: 500px; /* Limita a altura total do card */
+  line-height: 1.1; /* Reduz o espaçamento entre as linhas */
+}
+
+/* Garante que o último card não tenha margem extra */
+.card-pacotes:last-child {
+  margin-right: 0;
+}
+
+
+/* Imagem no topo do card */
+.card-pacotes img {
+  width: 100%; /* Faz a imagem ocupar toda a largura do card */
+  height: 180px; /* Altura fixa para todas as imagens */
+  display: block; /* Remove espaços extras ao redor da imagem */
+  border-top-left-radius: 10px; /* Mantém o arredondamento da borda superior */
+  border-top-right-radius: 10px;
+}
+
+/* Informação dentro do card */
+.card-pacotes .info {
+  flex: 1; /* Faz com que todo o conteúdo ocupe o espaço igualmente */
+  padding: 15px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+
+
+/* Título e texto do card */
+.card-pacotes h6 {
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 0; /* Remove espaço acima*/
+  margin-bottom: 2px; /* Diminui a distância entre os elementos */
+}
+
+.card-pacotes h5 {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #555;
+  margin-top: 0; /* Remove espaço acima*/
+  margin-bottom: 4px; /* Diminui a distância entre os elementos */
+}
+
+.card-pacotes p {
+  font-size: 14px; /* Reduz o tamanho do texto */
+  margin: 2px 0; /* Diminui os espaços acima e abaixo */
+  color: #555;  
+  margin-bottom: 6px; /* Diminui a distância entre os elementos */
+}
+
+/* Badge */
+.badge-pacotes {
+  display: inline-block; /* Evita que o badge ocupe toda a largura */
+  background-color: #acacac;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  margin-top: 5px;
+  max-width: fit-content; /* Faz com que o badge ocupe apenas o espaço necessário */
+}
+
+
+/* Badge */
+.badge-pacotes2 {
+  display: inline-block; /* Evita que o badge ocupe toda a largura */
+  background: #007bff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  display: inline-block;
+  margin-bottom: 10px;
+  max-width: fit-content; /* Faz com que o badge ocupe apenas o espaço necessário */
+}
+
+.card-pacotesh h3{
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 2px; /* Diminui a distância entre os elementos */
+}
+
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.rating-score {
+  background-color: #1d0355;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;  /* Centraliza o grid */
+  align-items: center;
+  font-size: 14px;
+}
+
+.details {
+  font-size: 14px;
+  color: #555;
+  margin-top: 0; /* Remove o espaço extra no segundo parágrafo */
+}
+
+
+/* Preço */
+.price-pacotes {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  display: inline-flex; /* Mantém na mesma linha */
+  align-items: center; /* Alinha verticalmente */
+  gap: 4px; /* Espaço entre "R$" e o valor */
+  color: #210375;
+  font-weight: bold;
+  margin-top: 0; /* Remove espaço acima do preço */
+  margin-bottom: 2px; /* Pequeno espaço abaixo do preço */
+}
+
+.price-pacotes .moeda {
+  font-size: 14px; /* Tamanho menor para "R$" */
+ 
+}
+
+.price-pacotes .valor {
+  font-size: 22px; /* Tamanho maior para o preço */
+}
+
+
+
+/* Ajuste no Carrossel para garantir alinhamento */
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 10px;/* Reduz o espaçamento entre os cards */
+  align-items: stretch; /* Faz com que todos os cards fiquem do mesmo tamanho */
+  padding-right: 40px; /* Evita um espaço extra no final */
+}
+
+/* Ajuste no Track para manter alinhamento */
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 10px; /* Diminui o espaço entre os cards */
+  align-items: stretch; /* Garante que os cards tenham a mesma altura */
+}
+
+/* Ajuste no último card para remover espaçamento extra */
+.card-pacotes:last-child {
+  margin-right: 0; /* Garante que o último card não tenha margem extra */
+}
+
+
+/* Contêiner do progresso */
+/* Ajuste para os dots ficarem corretamente alinhados */
+.carousel-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px; /* Espaço entre os cards e o progresso */
+}
+
+/* Ponto de progresso */
+.dot {
+  height: 8px;
+  width: 8px;
+  margin: 0 4px;
+  background-color: #ddd; /* Cor padrão dos pontos inativos */
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+/* Ponto ativo */
+.dot.active {
+  background-color: #0073e6; /* Cor do ponto ativo */
+  width: 20px; /* Aumenta a largura do ponto ativo */
+  border-radius: 10px; /* Forma oval quando ativo */
+}
+
+
+
+
+/*SEÇÃO PACOTES NACIONAIS */
+.pacotes-nacionais {
+  max-width: 1200px;
+  margin: auto;  
+  padding: 20px;
+}
+
+.pacotes-nacionais h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  color: #555; 
+  text-align: left;
+  margin-left: 20px;
+}
+
+.pacotes-nacionais h5 {
+  font-size: 20px;
+  color: #555;    
+  font-weight: bold;
+  margin-bottom: 10px;    
+  text-align: left;
+  margin-left: 20px;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 270px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.separator {
+  border: none;
+  height: 2px;
+  background-color: #ccc;
+  width: 100%;
+  position: relative;
+  margin: 20px 0;
+}
+
+.badge-discount {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:#002f6c;
+  background: #ffd700;
+  font-weight: bold;
+  padding: 5px 15px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.badge-nacionais {
+  display: inline-block;
+  background: #007bff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  margin-bottom: 10px;
+  max-width: fit-content;
+}
+
+.card-nacionais {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.rating {
+  font-size: 14px;
+  color: #ff9800;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.info {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.offer {
+  background: #5e2ca5;
+  color: white;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: gray;
+  font-size: 14px;
+}
+
+.botao-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+
+
+/*SEÇÃO PACOTES INTERNACIONAIS */
+.pacotes-internacionais {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.pacotes-internacionais h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  color: #555;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.pacotes-internacionais h5 {
+  font-size: 20px;
+  color: #555;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 270px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.separator {
+  border: none;
+  height: 2px;
+  background-color: #ccc;
+  width: 100%;
+  position: relative;
+  margin: 20px 0;
+}
+
+.badge-discount {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #002f6c;
+  background: #ffd700;
+  font-weight: bold;
+  padding: 5px 15px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.badge-ex {
+  display: inline-block;
+  background: #007bff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  margin-bottom: 10px;
+  max-width: fit-content;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.rating {
+  font-size: 14px;
+  color: #ff9800;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.info {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: gray;
+  font-size: 14px;
+}
+
+.botao-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 /* Rodapé */
 
 footer {
-    text-align: center;
-    background: #09084f;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center; /* Centraliza o conteúdo */
-    padding: 10px 10px; /* Espaçamento interno */
-    margin-top: 10px; /* Espaçamento do conteúdo acima */
+  text-align: center;
+  background: #09084f;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center; /* Centraliza o conteúdo */
+  padding: 10px 10px; /* Espaçamento interno */
+  margin-top: 10px; /* Espaçamento do conteúdo acima */
+}
+
+
+@media (max-width: 768px) {
+  .logo {
+      height: 40px; /* Ajusta o tamanho da logo para telas menores */
   }
-  
-  
-  @media (max-width: 768px) {
-    .logo {
-        height: 40px; /* Ajusta o tamanho da logo para telas menores */
-    }
+}
+
+
+
+/* Responsividade do Rodapé */
+@media (max-width: 768px) {
+  footer {
+      padding: 15px 5px;
   }
-  
-  
-  
-  /* Responsividade do Rodapé */
-  @media (max-width: 768px) {
-    footer {
-        padding: 15px 5px;
-    }
-  
-    footer h3 {
-        font-size: 1.2rem;
-    }
-  
-    footer p {
-        font-size: 0.9rem;
-    }
+
+  footer h3 {
+      font-size: 1.2rem;
   }
+
+  footer p {
+      font-size: 0.9rem;
+  }
+}
+

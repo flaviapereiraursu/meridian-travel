@@ -1,258 +1,764 @@
-/* Seção Passagens */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f9;
-    color: #333;
-  }
-  
-    
-  /* Ajusta a logo na navbar */
-  .logo {
-    height: 80px; /* Define a altura da logo */
-    width: auto; /* Mantém a proporção */
-  }
-  
-  /* Estilo para a lista de navegação */
-  .navbar-nav {
-    margin-left: auto; /* Move a lista para o lado direito */
-  }
-  
-  .nav-link {
-    color: #020f86; /* Cor dos links */
-    font-size: 1rem;
-    transition: color 0.3s ease;
-  }
-  
-  .nav-link :hover {
-    color: #3703bb; /* Cor ao passar o mouse */
-  }
-  
-  .navbar {
-    padding: 10px 100px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para a navbar */
-  }
-
-.passagens {
-    text-align: center;
-    padding: 50px;
-    background-color: #e0f7fa;
+*
+:root {
+  --primary-color: #002f6c;
+  --secondary-color: #ff8c00;
+  --terciary-color: #0056b3;
+  --color-black: #000000;
+  --color-neutral-100: #F2F4F5;
+  --color-neutral-300: #DDE1E8;
+  --color-neutral-400: #C0C4CC;
+  --color-neutral-600: #72777F;
+  --color-neutral-700: #565A60;
+  --color-neutral-800: #323439;
+  --text-color: #333;
+  --bg-color:  #f9f9f9;
 }
 
-.passagens h2 {
-    color: #0056b3;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.passagens p {
-    font-size: 1.2rem;
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 
+/* Ajusta a logo na navbar */
+.logo {
+  height: 80px; /* Define a altura da logo */
+  width: auto; /* Mantém a proporção */
+}
+
+/* Estilo para a lista de navegação */
+.navbar-nav {
+  margin-left: auto; /* Move a lista para o lado direito */
+}
+
+.nav-link {
+  color: #020f86; /* Cor dos links */
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link :hover {
+  color: #3703bb; /* Cor ao passar o mouse */
+}
+
+.navbar {
+  padding: 10px 100px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para a navbar */
+}
+
+/* Seção Hero */
+.hero {
+    background: url('../Assets/grecia.jpeg') no-repeat center center/cover;
+    height: 60vh;
+   
+}
 
 /* Imagem de Fundo */
 .banner-background {
-    position: relative;
-    width: 100%;
-    height: 450px; /* Ajuste conforme necessário */
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 450px; /* Ajuste conforme necessário */
+  overflow: hidden;
 }
 
 .banner-background img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Banner Sobreposto */
 .banner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(255, 255, 255, 0.9); /* Fundo mais visível */
-  padding: 40px 20px; /* Aumenta o espaço interno */
-  border-radius: 20px;
-  text-align: center;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-  max-width: 1100px; /* Maior largura */
-  width: 95%;
-  min-height: 250px; /* Garante espaço para todos os campos */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background: rgba(255, 255, 255, 0.9); /* Fundo mais visível */
+padding: 40px 20px; /* Aumenta o espaço interno */
+border-radius: 20px;
+text-align: center;
+box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+max-width: 1100px; /* Maior largura */
+width: 95%;
+min-height: 250px; /* Garante espaço para todos os campos */
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
 }
 
 /* Texto do Banner */
 .banner h1 {
-    font-size: 28px;
-    font-weight: 600;
+  font-size: 28px;
+  font-weight: 600;
 }
 
 .banner h1 strong {
-    color: #1e40af;
+  color: #1e40af;
 }
 
 /* Caixa de Busca */
 .search-box {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 /* Botões de Opções */
 .trip-options {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
 .trip-btn {
-    background: none;
-    border: 2px solid #1e40af;
-    padding: 10px 15px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
+  background: none;
+  border: 2px solid #1e40af;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
 .trip-btn.active {
-    background: #1e40af;
-    color: white;
+  background: #1e40af;
+  color: white;
 }
 
 .trip-btn:hover {
-    background: #1e40af;
-    color: white;
+  background: #1e40af;
+  color: white;
 }
 
 /* Inputs Alinhados Lado a Lado */
 .inputs {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
+display: flex;
+gap: 10px;
+justify-content: center;
+align-items: center;
+flex-wrap: nowrap;
 }
 
 /* Campos */
 input, select {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    width: 160px;
-    transition: all 0.3s ease-in-out;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 160px;
+  transition: all 0.3s ease-in-out;
 }
 
 input:focus, select:focus {
-    border-color: #1e40af;
-    box-shadow: 0 0 5px rgba(30, 64, 175, 0.5);
+  border-color: #1e40af;
+  box-shadow: 0 0 5px rgba(30, 64, 175, 0.5);
 }
 
 /* Botão de Troca de Origem/Destino */
 .swap-btn {
-    background: #1e40af;
-    color: white;
-    border: none;
-    font-size: 18px;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background: #1e40af;
+  color: white;
+  border: none;
+  font-size: 18px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .swap-btn:hover {
-    background: #163375;
+  background: #163375;
 }
 
 /* Botão Buscar */
 .search-btn {
-    background: #1e40af;
-    color: white;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-    padding: 12px 20px;
-    min-width: 160px;
-    border-radius: 8px;
-}
-
-/* Responsividade */
-@media (max-width: 1024px) {
-    .inputs {
-        flex-wrap: wrap;
-    }
-
-    input, select {
-        width: 140px;
-    }
-}
-
-@media (max-width: 768px) {
-    .banner {
-        width: 95%;
-        padding: 20px;
-    }
-
-    .inputs {
-        flex-direction: column;
-    }
-
-    input, select, .search-btn {
-        width: 100%;
-    }
+  background: #1e40af;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 12px 20px;
+  min-width: 160px;
+  border-radius: 8px;
 }
 
 
+
+
+/* Seção Passagens Aéreas */
+.passagens {
+  padding: 2rem 1rem;
+  width: 90%;
+  max-width: 20010px;
+  margin: auto;
+  background-color: var(--bg-color);
+  position: relative;
+}
   
+.passagens h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #555; 
+    margin-left: 70px; /* Ajuste conforme necessário */
+      
+}
+
+.passagens h5{
+    font-size: 20px;
+    color: #0056b3;    
+    font-weight: bold;
+    margin-bottom: 10px;    
+    text-align: left; 
+    font-size: 20px;
+    margin-left: 70px; /* Ajuste conforme necessário */
+    color: #555;
+}
+
+/* Container do carrossel */
+/* Garante que o carrossel ocupe toda a largura necessária */
+.carousel-container {
+  position: relative;
+  max-width: 90%;
+  margin: auto;
+  overflow: hidden;
+  padding: 5px 0;
+}
+
+
+/* Ajustes no Carrossel */
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 10px; /* Reduz o espaço entre os cards */
+  align-items: stretch;
+  padding-right: 40px; /* Evita espaço extra no final */
+}
+
+
+/* Ajuste no Track para manter alinhamento */
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 10px; /* Diminui o espaço entre os cards */
+  align-items: stretch;
+}
+
+/* Estilização dos botões */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  color: rgb(0, 0, 0);
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: none;
+  transition: none;
+  z-index: 100; /* Garante que as setas fiquem acima dos cartões */
+  outline: none; /* Remove o contorno padrão */
+}
+.arrow:hover {
+  background:none;
+}
+.arrow:focus {
+  outline: none; /* Remove a borda de foco */
+  box-shadow: none; /* Remove qualquer efeito de sombra */
+}
+#prevBtn {
+  left: -15px; /* Ajusta a seta da esquerda */
+  
+}
+
+/* Ajuste na seta para alinhá-la exatamente com o último card */
+#nextBtn {
+  position: absolute;
+  top: 50%;
+  right: 0px !important; /* Força a seta a ficar alinhada com o último card */
+  transform: translateY(-50%);
+  z-index: 10; /* Garante que a seta fique visível acima do carrossel */
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+/* Ajuste para garantir que a seta não empurre o carrossel */
+#nextBtn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Cartões de passagens */
+/* Garante que os cards fiquem do mesmo tamanho */
+.card-passagens {
+  width: 280px; /* Garante que todos os cards tenham a mesma largura */
+  max-width: 300px;
+  flex: 0 0 auto;
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 4px rgba(52, 52, 52, 0.1);
+  transition: transform 0.3s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Garante que o último card não tenha margem extra */
+.card-passagens:last-child {
+  margin-right: 0;
+}
+
+
+/* Imagem no topo do card */
+.card-passagens img {
+  width: 100%;
+  height: 180px; /* Mantém todas as imagens com a mesma altura */
+  object-fit: cover;
+}
+
+/* Informação dentro do card */
+.card-passagens .info {
+  flex: 1; /* Faz com que todo o conteúdo ocupe o espaço igualmente */
+  padding: 15px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Título e texto do card */
+.card-passagens h6 {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.card-passagens h5 {
+  font-size: 1.2rem;
+  margin: 5px 0;
+  color: #555;
+}
+
+.card-passagens p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Badge */
+.badge-passagens {
+  display: inline-block; /* Evita que o badge ocupe toda a largura */
+  background-color: #002f6c;
+  color: #ffd700;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  margin-top: 5px;
+  max-width: fit-content; /* Faz com que o badge ocupe apenas o espaço necessário */
+}
+
+/* Preço */
+.price-passagens {
+  font-size: 18px;
+  color: #210375;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* Ajuste no Carrossel para garantir alinhamento */
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 10px;/* Reduz o espaçamento entre os cards */
+  align-items: stretch; /* Faz com que todos os cards fiquem do mesmo tamanho */
+  padding-right: 40px; /* Evita um espaço extra no final */
+}
+
+/* Ajuste no Track para manter alinhamento */
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 10px; /* Diminui o espaço entre os cards */
+  align-items: stretch; /* Garante que os cards tenham a mesma altura */
+}
+
+/* Ajuste no último card para remover espaçamento extra */
+.card-passagens:last-child {
+  margin-right: 0; /* Garante que o último card não tenha margem extra */
+}
+
+
+/* Contêiner do progresso */
+/* Ajuste para os dots ficarem corretamente alinhados */
+.carousel-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px; /* Espaço entre os cards e o progresso */
+}
+
+/* Ponto de progresso */
+.dot {
+  height: 8px;
+  width: 8px;
+  margin: 0 4px;
+  background-color: #ddd; /* Cor padrão dos pontos inativos */
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+/* Ponto ativo */
+.dot.active {
+  background-color: #0073e6; /* Cor do ponto ativo */
+  width: 20px; /* Aumenta a largura do ponto ativo */
+  border-radius: 10px; /* Forma oval quando ativo */
+}
+
+
+/* Seção passagen internacionais */
+/* Container principal */
+.container {
+    position: relative;
+    max-width: 90%;
+    margin: auto;
+    overflow: hidden;
+    padding: 5px 0;
+    margin-top: 20px;
+}
+
+/* Título principal */
+
+
+.grid-container-int {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+
+
+
+
+/* Estilização dos Cards */
+.card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height:420px; /* Mantém altura igual */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Conteúdo do Card */
+.card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    font-size: 1.2rem;
+    margin: 5px 0;
+    color: #555;
+
+}
+
+
+.card-passagens h5 {
+  font-size: 1.2rem;
+  margin: 5px 0;
+  color: #555;
+}
+
+
+/* Texto informativo */
+.card-content p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Badge de Ida e Volta */
+.badge-passagensint {
+    display: inline-block; /* Evita que o badge ocupe toda a largura */
+    background-color: #C0C4CC;
+    color:#323439;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    max-width: fit-content; /* Faz com que o badge ocupe apenas o espaço necessário */
+}
+
+/* Preço */
+.price-passagensint  {
+    font-size: 18px;
+    color: #210375;
+    font-weight: bold;
+    margin: 10px 0; 
+}
+
+.passagens-int {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.passagens-int h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    color: #555; 
+    text-align: left;
+
+}
+
+.passagens-int h5 {
+    font-size: 20px;
+    color: #555;    
+    font-weight: bold;
+    margin-bottom: 10px;    
+    text-align: left;  
+}
+
+/* Botão de carregar mais ofertas */
+.btn-vermais {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border: none;
+    background: #007BFF;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+    
+.btn-vermais:hover {
+    background: #0056b3;
+}
+
+
+
+
+
+/* Seção passagen nacionais */
+/* Container principal */
+.container {
+    position: relative;
+    max-width: 90%;
+    margin: auto;
+    overflow: hidden;
+    padding: 5px 0;
+}
+
+/* Título principal */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Estilização dos Cards */
+.card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height:420px; /* Mantém altura igual */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Conteúdo do Card */
+.card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+/* Ícone de avião antes do título */
+.card-content h5 {
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: left;
+    gap: 10px;
+    color: #555;
+}
+
+.card-content h5 i {    
+    color: #555;
+    font-size: 20px;
+}
+
+/* Texto informativo */
+.card-content p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
+
+
+/* Badge de Ida e Volta */
+.badge-passagensnac {
+    display: inline-block; /* Evita que o badge ocupe toda a largura */
+    background-color: #C0C4CC;
+    color:#323439;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    max-width: fit-content; /* Faz com que o badge ocupe apenas o espaço necessário */
+}
+
+/* Preço */
+.price-passagensnac  {
+    font-size: 18px;
+    color: #210375;
+    font-weight: bold;
+    margin: 10px 0; 
+}
+
+.passagensnac {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.passagensnac h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color:#555; 
+    text-align: left;  
+
+}
+
+.passagensnac h5 {
+    font-size: 20px;
+    color: #555;        
+    font-weight: bold;
+    margin-bottom: 10px;    
+    text-align: left;  
+}
+
+/* Botão de carregar mais ofertas */
+.btn-vermais {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border: none;
+    background: #007BFF;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+    
+.btn-vermais:hover {
+    background: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Rodapé */
-
 footer {
-    text-align: center;
-    background: #09084f;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center; /* Centraliza o conteúdo */
-    padding: 10px 10px; /* Espaçamento interno */
-    margin-top: 10px; /* Espaçamento do conteúdo acima */
+  text-align: center;
+  background: #09084f;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center; /* Centraliza o conteúdo */
+  padding: 10px 10px; /* Espaçamento interno */
+  margin-top: 10px; /* Espaçamento do conteúdo acima */
+}
+
+
+@media (max-width: 768px) {
+  .logo {
+      height: 40px; /* Ajusta o tamanho da logo para telas menores */
   }
-  
-  
-  @media (max-width: 768px) {
-    .logo {
-        height: 40px; /* Ajusta o tamanho da logo para telas menores */
-    }
+}
+
+
+
+/* Responsividade do Rodapé */
+@media (max-width: 768px) {
+  footer {
+      padding: 15px 5px;
   }
-  
-  
-  
-  /* Responsividade do Rodapé */
-  @media (max-width: 768px) {
-    footer {
-        padding: 15px 5px;
-    }
-  
-    footer h3 {
-        font-size: 1.2rem;
-    }
-  
-    footer p {
-        font-size: 0.9rem;
-    }
+
+  footer h3 {
+      font-size: 1.2rem;
   }
+
+  footer p {
+      font-size: 0.9rem;
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .carousel {
+      gap: 10px;
+  }
+
+  .card-passagens {
+      flex: 0 0 250px;
+  }
+  .arrow {
+    font-size: 18px;
+    padding: 10px;
+  }  
+}

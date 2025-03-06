@@ -1,0 +1,211 @@
+<!-- SEÇÃO PACOTES NACIONAIS -->
+<section id="pacotes-nacionais" class="pacotes-nacionais">
+    <h1>PACOTES NACIONAIS</h1>
+    <h5>Confira os melhores preços e viaje agora mesmo!</h5>    
+    <div class="cards-container" id="cards-nacionais-container">
+        <!-- Os primeiros quatro pacotes serão carregados aqui -->
+    </div>
+    <div class="botao-container">
+        <button class="btn" onclick="carregarPacotesNacionais()">Ver mais ofertas</button>
+    </div>
+</section>
+
+<style>
+    .pacotes-nacionais {
+        max-width: 1200px;
+        margin: auto;  
+        padding: 20px;
+    }
+
+    .pacotes-nacionais h1 {
+        font-size: 28px;
+        font-weight: bold;
+        margin-top: 50px;
+        margin-bottom: 10px;
+        color: #555; 
+        text-align: left;
+        margin-left: 20px;
+    }
+
+    .pacotes-nacionais h5 {
+        font-size: 20px;
+        color: #555;    
+        font-weight: bold;
+        margin-bottom: 10px;    
+        text-align: left;
+        margin-left: 20px;
+    }
+
+    .cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .card {
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        width: 270px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: left;
+    }
+
+    .card img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .card-content {
+        padding: 15px;
+    }
+
+    .separator {
+        border: none;
+        height: 2px;
+        background-color: #ccc;
+        width: 100%;
+        position: relative;
+        margin: 20px 0;
+    }
+
+    .badge-discount {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color:#002f6c;
+        background: #ffd700;
+        font-weight: bold;
+        padding: 5px 15px;
+        border-radius: 20px;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+
+    .badge-ex {
+        display: inline-block;
+        background: #007bff;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 12px;
+        margin-bottom: 10px;
+        max-width: fit-content;
+    }
+
+    .card-title {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+    .rating {
+        font-size: 14px;
+        color: #ff9800;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .info {
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 8px;
+    }
+
+    .offer {
+        background: #5e2ca5;
+        color: white;
+        display: inline-block;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    .price {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .old-price {
+        text-decoration: line-through;
+        color: gray;
+        font-size: 14px;
+    }
+
+    .botao-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .btn {
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: 0.3s ease-in-out;
+    }
+
+    .btn:hover {
+        background: #0056b3;
+    }
+</style>
+
+<script>
+    let pacotesExibidos = new Set();
+
+    function criarCardPacote(pacote) {
+        return `
+            <div class="card">
+                <img src="${pacote.imagem}" alt="${pacote.destino}">
+                <div class="card-content">
+                    <span class="badge-ex">${pacote.dias}</span>
+                    <div class="card-title">Pacotes para ${pacote.destino}</div>
+                    <div class="rating">
+                        <div class="rating-score">${pacote.rating}</div>
+                        <span>⭐⭐⭐⭐⭐</span>
+                    </div>                        
+                    <div class="info">Saindo de Brasília<br>Hotel + Aéreo</div>                   
+                    <div style="position: relative; width: 100%;">
+                        <hr class="separator">
+                        <span class="badge-discount">Economize ${pacote.economia}</span>
+                    </div>                      
+                    <div class="old-price">${pacote.precoAntigo}</div>
+                    <div class="price">${pacote.precoNovo}</div>
+                </div>
+            </div>`;
+    }
+
+    function carregarPacotesNacionais() {
+        let container = document.getElementById('cards-nacionais-container');
+        let html = "";
+        let pacotesDisponiveis = pacotesNacionais.filter(p => !pacotesExibidos.has(p.destino));
+        
+        if (pacotesDisponiveis.length < 4) return;
+        
+        for (let i = 0; i < 4; i++) {
+            let indiceAleatorio = Math.floor(Math.random() * pacotesDisponiveis.length);
+            let pacote = pacotesDisponiveis.splice(indiceAleatorio, 1)[0];
+            pacotesExibidos.add(pacote.destino);
+            html += criarCardPacote(pacote);
+        }
+        
+        container.innerHTML += html;
+        
+        if (pacotesExibidos.size >= pacotesNacionais.length) {
+            document.querySelector(".btn").style.display = "none";
+        }
+    }
+
+    carregarPacotesNacionais();
+</script>

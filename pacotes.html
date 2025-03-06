@@ -7,115 +7,599 @@
     <meta name="description" content="Descubra experiências incríveis com a Meridian. Pacotes de viagem personalizados, destinos paradisíacos e suporte completo para sua jornada.">
     <meta name="keywords" content="viagens, pacotes de viagem, turismo, destinos, roteiros personalizados, agência de viagem, destinos paradisíacos, viagens personalizadas, Meridian">
     <meta name="author" content="Meridian Agência de Viagens">
-    <title>Pacotes - Meridian Travel</title>
+    <title>Meridian Travel</title>
     <link rel="icon" type="image/x-icon" href="/Assets/meridianicon.ico">
     <link rel="stylesheet" href="CSS/pacotes.css">
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
 </head>
 <body>
+    <!-- Cabeçalho -->
+    <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html">
+            <img src="Assets/meridianlogo.svg" alt="Logo Meridian" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- Lista de navegação -->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home<span class="sr-only">(Página atual)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="serviços.html">Serviços</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="passagens.html">Passagens</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="pacotes.html" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Pacotes
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="pacotes.html">Pacotes</a>
+                        <a class="dropdown-item" href="monteseupacote.html">Monte seu pacote</a>                
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sobre.html">Sobre Nós</a>
+                </li> 
+                <li class="nav-item">
+                    <a class="nav-link" href="contato.html">Contato</a>
+                </li>
 
-<!-- Cabeçalho -->
-<header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <!-- Logo -->
-            <a class="navbar-brand" href="index.html">
-                <img src="Assets/meridianlogo.svg" alt="Logo Meridian" class="logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <!-- Lista de navegação -->
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home<span class="sr-only">(Página atual)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="serviços.html">Serviços</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="passagens.html">Passagens</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="pacotes.html" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Pacotes
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="pacotes.html">Pacotes</a>
-                            <a class="dropdown-item" href="monteseupacote.html">Monte seu pacote</a>                
+            </ul>
+        </div>
+    </nav>
+    </header>
+
+
+
+
+    <!--SEÇÃO PACOTES EXCLUSIVOs -->
+    <section id="pacotes-exclusivos" class="pacotes-exclusivos">
+        <h1> PACOTES EXCLUSIVOS</h1>
+        <h5> Confira os melhores preços e viaje que dá!</h5>    
+        <div class="cards-container" id="cards-container">
+            <!-- Os primeiros quatro pacotes -->
+        </div>
+        <div class="botao-container">
+            <button class="btn" onclick="carregarMais()">Ver mais ofertas</button>
+        </div>
+    </section>
+
+
+
+    <!--SEÇÃO PACOTES MAIS BUSCADOS -->    
+    <section id="pacotes" class="pacotes-section">
+        <h1>PACOTES MAIS BUSCADOS </h1>
+        <div class="carousel-container" >
+           <button id="prevBtn" class="arrow">&#10094;</button>
+           <div class="carousel">
+                <div class="carousel-track">
+                 <!-- Cards de Passagens -->
+                <div class="card-pacotes">
+                    <img src="Assets/portodegalinhas.jpeg" alt="Porto">
+                    <div class="info">
+                        <h3 class="badge-pacotes2">7 DIAS / 6 NOITES</h3>
+                        <h5>Pacote para Porto de Galinhas</h5>          
+                        <div class="rating">
+                        <div class="rating-score">10,0</div>
+                        <span>⭐⭐⭐⭐⭐</span>
                         </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="sobre.html">Sobre Nós</a>
-                    </li> 
-                    <li class="nav-item">
-                        <a class="nav-link" href="contato.html">Contato</a>
-                    </li>
-    
-                </ul>
+                        <p>Saindo do Rio de Janeiro</p>
+                        <p class="details">Hotel + Aéreo + Café da Manhã</p>
+                        <span class="badge-pacotes">Ida e Volta</span>
+                        <hr>
+                        <p>Preço final por pessoa</p>
+                        <h4 class="price-pacotes">
+                            <span class="moeda">R$</span>
+                            <span class="valor">1.899</span>
+                        </h4>                            
+                        <p>Taxas e impostos incluídos</p>
+                    </div>
+                </div>
+                <div class="card-pacotes">
+                    <img src="Assets/cancun.jpeg" alt="Cancun">
+                    <div class="info">
+                        <h3 class="badge-pacotes2">10 DIAS / 9 NOITES</h3>
+                        <h5>Pacote para Cancún</h5>          
+                        <div class="rating">
+                        <div class="rating-score">9,6</div>
+                        <span>⭐⭐⭐</span>
+                        </div>
+                        <p>Saindo do Rio de São Paulo</p>
+                        <p class="details">Hotel All Inclusive + Aéreo </p>
+                        <span class="badge-pacotes">Pacote All Inclusive</span>
+                        <hr>
+                        <p>Preço final por pessoa</p>
+                        <h4 class="price-pacotes">
+                            <span class="moeda">R$</span>
+                            <span class="valor">5.799</span>
+                        </h4>                            
+                        <p>Taxas e impostos incluídos</p>
+                    </div>
+                </div>
+                <div class="card-pacotes">
+                    <img src="Assets/gramado.jpeg" alt="Gramado">
+                    <div class="info">
+                        <h3 class="badge-pacotes2">5 DIAS / 4 NOITES</h3>
+                        <h5>Pacote para Gramado</h5>          
+                        <div class="rating">
+                        <div class="rating-score">9,7</div>
+                        <span>⭐⭐⭐⭐</span>
+                        </div>
+                        <p>Saindo do Rio de Janeiro</p>
+                        <p class="details">Hotel + Aéreo + Passeios </p>
+                        <span class="badge-pacotes">Café da Manhã Incluso</span>
+                        <hr>
+                        <p>Preço final por pessoa</p>
+                        <h4 class="price-pacotes">
+                            <span class="moeda">R$</span>
+                            <span class="valor">1.599</span>
+                        </h4>                            
+                        <p>Taxas e impostos incluídos</p>
+                    </div>
+                </div>
+                <div class="card-pacotes">
+                    <img src="Assets/paris.jpeg" alt="Paris">
+                    <div class="info">
+                        <h3 class="badge-pacotes2">12 DIAS / 11 NOITES</h3>
+                        <h5>Pacote para Paris</h5>          
+                        <div class="rating">
+                        <div class="rating-score">9,8</div>
+                        <span>⭐⭐⭐⭐⭐</span>
+                        </div>
+                        <p>Saindo do Rio de Janeiro</p>
+                        <p class="details">Hotel + Aéreo </p>
+                        <span class="badge-pacotes">Ida e Volta</span>
+                        <hr>
+                        <p>Preço final por pessoa</p>
+                        <h4 class="price-pacotes">
+                            <span class="moeda">R$</span>
+                            <span class="valor">7.899</span>
+                        </h4>                            
+                        <p>Taxas e impostos incluídos</p>
+                    </div>
+                </div>    
+                <div class="card-pacotes">
+                    <img src="Assets/novayork.jpeg" alt="Nova York">
+                    <div class="info">
+                        <h3 class="badge-pacotes2">8 DIAS / 7 NOITES</h3>
+                        <h5>Pacote para Salvador</h5>          
+                        <div class="rating">
+                        <div class="rating-score">9,9</div>
+                        <span>⭐⭐⭐⭐⭐</span>
+                        </div>
+                        <p>Saindo do Rio de Janeiro</p>
+                        <p class="details">Hotel + Aéreo + Tour pela cidade </p>
+                        <span class="badge-pacotes">Hospedagem no Times Square</span>
+                        <hr>
+                        <p>Preço final por pessoa</p>
+                        <h4 class="price-pacotes">
+                            <span class="moeda">R$</span>
+                            <span class="valor">8.699</span>
+                        </h4>                            
+                        <p>Taxas e impostos incluídos</p>
+                    </div>
+                </div>
+                <div class="card-pacotes">
+                    <img src="Assets/madrid.jpeg" alt="Madrid">
+                    <div class="info">
+                        <h3 class="badge-pacotes2">15 DIAS / 14 NOITES</h3>
+                        <h5>Pacote para Salvador</h5>          
+                        <div class="rating">
+                        <div class="rating-score">9,9</div>
+                        <span>⭐⭐⭐⭐⭐</span>
+                        </div>
+                        <p>Saindo do Rio de Janeiro</p>
+                        <p class="details">Hotel + Aéreo </p>
+                        <span class="badge-pacotes">Ida e Volta</span>
+                        <hr>
+                        <p>Preço final por pessoa</p>
+                        <h4 class="price-pacotes">
+                            <span class="moeda">R$</span>
+                            <span class="valor">899</span>
+                        </h4>                            
+                        <p>Taxas e impostos incluídos</p>
+                    </div>
+                </div>
+                <div class="card-pacotes">
+                    <img src="Assets/roma.jpeg" alt="Roma">
+                    <div class="info">
+                        <h3 class="badge-pacotes2">15 DIAS / 14 NOITES</h3>
+                        <h5>Pacote para Salvador</h5>          
+                        <div class="rating">
+                        <div class="rating-score">9,9</div>
+                        <span>⭐⭐⭐⭐⭐</span>
+                        </div>
+                        <p>Saindo do Rio de Janeiro</p>
+                        <p class="details">Hotel + Aéreo </p>
+                        <span class="badge-pacotes">Ida e Volta</span>
+                        <hr>
+                        <p>Preço final por pessoa</p>
+                        <h4 class="price-pacotes">
+                            <span class="moeda">R$</span>
+                            <span class="valor">899</span>
+                        </h4>                            
+                        <p>Taxas e impostos incluídos</p>
+                    </div>
+                </div>
+                <div class="card-pacotes">
+                    <img src="Assets/paris.jpeg" alt="Paris">
+                    <div class="info">
+                        <h3 class="badge-pacotes2">15 DIAS / 14 NOITES</h3>
+                        <h5>Pacote para Salvador</h5>          
+                        <div class="rating">
+                        <div class="rating-score">9,9</div>
+                        <span>⭐⭐⭐⭐⭐</span>
+                        </div>
+                        <p>Saindo do Rio de Janeiro</p>
+                        <p class="details">Hotel + Aéreo </p>
+                        <span class="badge-pacotes">Ida e Volta</span>
+                        <hr>
+                        <p>Preço final por pessoa</p>
+                        <h4 class="price-pacotes">
+                            <span class="moeda">R$</span>
+                            <span class="valor">899</span>
+                        </h4>                            
+                        <p>Taxas e impostos incluídos</p>
+                    </div>
+                </div>    
+                <div class="card-pacotes">
+                    <img src="Assets/fernandodenoronha.jpeg" alt="Curitiba">
+                    <div class="info">
+                        <h3 class="badge-pacotes2">15 DIAS / 14 NOITES</h3>
+                        <h5>Pacote para Salvador</h5>          
+                        <div class="rating">
+                        <div class="rating-score">9,9</div>
+                        <span>⭐⭐⭐⭐⭐</span>
+                        </div>
+                        <p>Saindo do Rio de Janeiro</p>
+                        <p class="details">Hotel + Aéreo </p>
+                        <span class="badge-pacotes">Ida e Volta</span>
+                        <hr>
+                        <p>Preço final por pessoa</p>
+                        <h4 class="price-pacotes">
+                            <span class="moeda">R$</span>
+                            <span class="valor">899</span>
+                        </h4>                            
+                        <p>Taxas e impostos incluídos</p>
+                    </div>
+                </div>        
             </div>
-        </nav>
+        </div>    
+           <button id="nextBtn" class="arrow">&#10095;</button>
+        </div>
+        <div class="carousel-pagination">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>        
+        </div>
+    
+    </section>
 
-</header>
+
+    <!-- SEÇÃO PACOTES NACIONAIS -->
+    <section id="pacotes-nacionais" class="pacotes-nacionais">
+        <h1>PACOTES NACIONAIS</h1>
+        <h5>Confira os melhores preços e viaje agora mesmo!</h5>    
+        <div class="cards-container" id="cards-nacionais-container">
+            <!-- Os primeiros quatro pacotes serão carregados aqui -->
+        </div>
+        <div class="botao-container">
+            <button class="btn" id="verMaisBtn" onclick="carregarPacotesNacionais()">Ver mais ofertas</button>
+        </div>
+    </section>
 
 
-<section class="pacotes">
-    <h2>Nossos Pacotes</h2>
-    <p>Escolha o pacote perfeito para você.</p>
-</section>
 
+    <!-- SEÇÃO PACOTES INTERNACIONAIS -->
+    <section id="pacotes-internacionais" class="pacotes-internacionais">
+        <h1>PACOTES INTERNACIONAIS</h1>
+        <h5>Confira os melhores preços e explore o mundo!</h5>    
+        <div class="cards-container" id="cards-internacionais-container">
+            <!-- Os primeiros quatro pacotes serão carregados aqui -->
+        </div>
+        <div class="botao-container">
+            <button class="btn" id="verMaisBtnInternacionais" onclick="carregarPacotesInternacionais()">Ver mais ofertas</button>
+        </div>
+    </section>
 
-
-<!-- Footer -->
-<footer>
-    <p>&copy; 2025 Meridian Agência de Viagem</p>
-</footer>
-
-<!-- Bootstrap JS e dependências -->
-<script>
-    const track = document.querySelector('.carousel-track');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    let index = 0;
-    const cardWidth = document.querySelector('.card').offsetWidth + 20;
-
-    nextBtn.addEventListener('click', () => {
-        if (index < track.children.length - 3) {
-            index++;
-            track.style.transform = `translateX(-${index * cardWidth}px)`;
-        }
-    });
-
-    prevBtn.addEventListener('click', () => {
-        if (index > 0) {
-            index--;
-            track.style.transform = `translateX(-${index * cardWidth}px)`;
-        }
-    });
-
-    function irParaPacotes() {
-        window.location.href = "pacotes.html";
-    }
+    
     
 
 
-    document.querySelectorAll('.card-passagens').forEach(card => {
-        card.addEventListener('click', () => {
-            window.location.href = "passagens.html";
+    
+ 
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Meridian Agência de Viagem</p>
+        </footer>
+    
+    <!-- Bootstrap JS e dependências -->
+    
+    <script>
+        //SEÇÃO PACOTES EXCLUSIVOS//
+        const pacotes = [
+            { destino: "Rio de Janeiro", dias: "4 DIAS / 3 NOITES", rating: "7.9", precoAntigo: "R$ 925", precoNovo: "R$ 826", economia: "R$99", imagem: "assets/rj.jpg" },
+            { destino: "São Paulo", dias: "5 DIAS / 4 NOITES", rating: "8.2", precoAntigo: "R$ 722", precoNovo: "R$ 622", economia: "R$100", imagem: "assets/roma.jpeg" },
+            { destino: "Gramado", dias: "6 DIAS / 5 NOITES", rating: "9.2", precoAntigo: "R$ 1.866", precoNovo: "R$ 1.598", economia: "R$268", imagem: "assets/safari.jpeg" },
+            { destino: "Natal", dias: "5 DIAS / 4 NOITES", rating: "8.4", precoAntigo: "R$ 1.282", precoNovo: "R$ 1.133", economia: "R$149", imagem: "assets/salvadorba.jpeg" },
+            { destino: "Fortaleza", dias: "4 DIAS / 3 NOITES", rating: "8.6", precoAntigo: "R$ 1.350", precoNovo: "R$ 1.190", economia: "R$160", imagem: "assets/sea.jpg" },
+            { destino: "Curitiba", dias: "5 DIAS / 4 NOITES", rating: "8.9", precoAntigo: "R$ 980", precoNovo: "R$ 850", economia: "R$130", imagem: "assets/tailandia.jpeg" },
+            { destino: "Salvador", dias: "6 DIAS / 5 NOITES", rating: "8.5", precoAntigo: "R$ 1.600", precoNovo: "R$ 1.450", economia: "R$150", imagem: "assets/turistaparis.jpeg" },
+            { destino: "Florianópolis", dias: "5 DIAS / 4 NOITES", rating: "9.0", precoAntigo: "R$ 1.400", precoNovo: "R$ 1.250", economia: "R$150", imagem: "assets/fozdoiguacu.jpeg" }
+        ];
+
+        const aeroportosExclusivos = ["São Paulo ", "Rio de Janeiro ", "Brasília ", "Belo Horizonte ", "Porto Alegre ", "Salvador ", "Recife ", "Fortaleza "];
+
+        let indexAtual = 0;
+
+        function criarCard(pacote) {
+            let aeroportoAleatorio = aeroportosExclusivos[Math.floor(Math.random() * aeroportosExclusivos.length)];
+            return `
+                <div class="card">
+                    <img src="${pacote.imagem}" alt="${pacote.destino}">
+                    <div class="card-content">
+                        <span class="badge-ex">${pacote.dias}</span>
+                        <div class="card-title">Pacotes para ${pacote.destino}</div>
+                        <div class="rating">
+                            <div class="rating-score">${pacote.rating}</div>
+                            <span>⭐⭐⭐⭐⭐</span>
+                        </div>                        
+                        <div class="info">Saindo de ${aeroportoAleatorio}<br>Hotel + Aéreo</div>                   
+                        <!-- Linha HR e Badge sobreposto -->
+                        <div style="position: relative; width: 100%;">
+                            <hr class="separator">
+                            <span class="badge-discount">Economize ${pacote.economia}</span>
+                        </div> 
+                        <p>Preço por pessoa</p>                     
+                        <div class="old-price">${pacote.precoAntigo}</div>
+                        <div class="price">${pacote.precoNovo}</div>
+                        
+                    </div>
+                </div>
+            `;
+        }
+
+        function carregarMais() {
+            let container = document.getElementById('cards-container');
+            let html = "";
+            for (let i = 0; i < 4; i++) {
+                if (indexAtual < pacotes.length) {
+                    html += criarCard(pacotes[indexAtual]);
+                    indexAtual++;
+                }
+            }
+            container.innerHTML += html;
+            if (indexAtual >= pacotes.length) {
+                document.querySelector(".btn").style.display = "none";
+            }
+        }
+
+        // Carregar os primeiros pacotes
+        carregarMais();   
+        
+        
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const track = document.querySelector('.carousel-track');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const dots = document.querySelectorAll('.dot');
+    
+        let index = 0;
+            const cardWidth = document.querySelector('.card-pacotes').offsetWidth + 15;
+            const maxIndex = dots.length - 1;
+
+        function updateCarousel() {
+           track.style.transform = `translateX(-${index * cardWidth}px)`;
+          updateDots();
+        }
+
+        function updateDots() {
+           dots.forEach(dot => dot.classList.remove('active'));
+         dots[index].classList.add('active');
+        }
+
+        nextBtn.addEventListener('click', () => {
+           if (index < maxIndex) {
+            index++;
+            updateCarousel();
+        }
         });
-    });
+
+        prevBtn.addEventListener('click', () => {
+            if (index > 0) {
+            index--;
+            updateCarousel();
+        }
+       });
+
+       updateCarousel();
+       });
+
+    
+      function irParaPacotes() {
+        window.location.href = "pacotes.html";
+      }
 
 
 
-</script>
+      //SEÇÃO PACOTES NACIONAIS//
+        const pacotesNacionais = [
+            { destino: "Rio de Janeiro", dias: "4 DIAS / 3 NOITES", rating: "7.9", precoAntigo: "R$ 925", precoNovo: "R$ 826", economia: "R$99", imagem: "assets/rj.jpg" },
+            { destino: "São Paulo", dias: "5 DIAS / 4 NOITES", rating: "8.2", precoAntigo: "R$ 722", precoNovo: "R$ 622", economia: "R$100", imagem: "assets/roma.jpeg" },
+            { destino: "Gramado", dias: "6 DIAS / 5 NOITES", rating: "9.2", precoAntigo: "R$ 1.866", precoNovo: "R$ 1.598", economia: "R$268", imagem: "assets/safari.jpeg" },
+            { destino: "Natal", dias: "5 DIAS / 4 NOITES", rating: "8.4", precoAntigo: "R$ 1.282", precoNovo: "R$ 1.133", economia: "R$149", imagem: "assets/salvadorba.jpeg" },
+            { destino: "Fortaleza", dias: "4 DIAS / 3 NOITES", rating: "8.6", precoAntigo: "R$ 1.350", precoNovo: "R$ 1.190", economia: "R$160", imagem: "assets/sea.jpg" },
+            { destino: "Curitiba", dias: "5 DIAS / 4 NOITES", rating: "8.9", precoAntigo: "R$ 980", precoNovo: "R$ 850", economia: "R$130", imagem: "assets/tailandia.jpeg" },
+            { destino: "Salvador", dias: "6 DIAS / 5 NOITES", rating: "8.5", precoAntigo: "R$ 1.600", precoNovo: "R$ 1.450", economia: "R$150", imagem: "assets/turistaparis.jpeg" },
+            { destino: "Florianópolis", dias: "5 DIAS / 4 NOITES", rating: "9.0", precoAntigo: "R$ 1.400", precoNovo: "R$ 1.250", economia: "R$150", imagem: "assets/fozdoiguacu.jpeg" }
+        ];
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        const aeroportosNacionais = ["São Paulo ", "Rio de Janeiro ", "Brasília ", "Belo Horizonte ", "Porto Alegre ", "Salvador ", "Recife ", "Fortaleza "];
 
+
+        
+    
+        let pacotesExibidos = new Set();
+
+        function criarCardPacote(pacote) {
+            let aeroportoAleatorio = aeroportosExclusivos[Math.floor(Math.random() * aeroportosExclusivos.length)];
+
+            return `
+                <div class="card">
+                <img src="${pacote.imagem}" alt="${pacote.destino}">
+                <div class="card-content">
+                    <span class="badge-ex">${pacote.dias}</span>
+                    <div class="card-title">Pacotes para ${pacote.destino}</div>
+                    <div class="rating">
+                        <div class="rating-score">${pacote.rating}</div>
+                        <span>⭐⭐⭐⭐⭐</span>
+                    </div>                        
+                    <div class="info">Saindo de ${aeroportoAleatorio}<br>Hotel + Aéreo</div>                   
+                    <div style="position: relative; width: 100%;">
+                        <hr class="separator">
+                        <span class="badge-discount">Economize ${pacote.economia}</span>
+                    </div>
+                    <p>Preço por pessoa</p>                       
+                    <div class="old-price">${pacote.precoAntigo}</div>
+                    <div class="price">${pacote.precoNovo}</div>
+                </div>
+            </div>`;
+        }
+    
+
+        function carregarPacotesNacionais() {
+            let container = document.getElementById('cards-nacionais-container');
+            let botao = document.getElementById('verMaisBtn');
+            let html = "";
+            let pacotesDisponiveis = pacotesNacionais.filter(p => !pacotesExibidos.has(p.destino));
+
+            let quantidadeMostrar = Math.min(4, pacotesDisponiveis.length);
+
+            for (let i = 0; i < 4; i++) {
+                let indiceAleatorio = Math.floor(Math.random() * pacotesDisponiveis.length);
+                let pacote = pacotesDisponiveis.splice(indiceAleatorio, 1)[0];
+                pacotesExibidos.add(pacote.destino);
+                html += criarCardPacote(pacote);
+            }
+
+            container.innerHTML += html;
+
+            if (pacotesExibidos.size >= pacotesNacionais.length) {
+                botao.style.display = "none";
+            }        
+            
+        }
+
+        carregarPacotesNacionais();
+
+
+    
+        // SEÇÃO PACOTES INTERNACIONAIS //
+        const pacotesInternacionais = [
+            { destino: "Paris", dias: "5 DIAS / 4 NOITES", rating: "9.5", precoAntigo: "R$ 5.500", precoNovo: "R$ 4.900", economia: "R$600",  imagem: "assets/paris.jpg" },
+            { destino: "Nova York", dias: "6 DIAS / 5 NOITES", rating: "9.0", precoAntigo: "R$ 7.200", precoNovo: "R$ 6.500", economia: "R$700", imagem: "assets/ny.jpg" },
+            { destino: "Tóquio", dias: "7 DIAS / 6 NOITES", rating: "9.8", precoAntigo: "R$ 9.500", precoNovo: "R$ 8.700", economia: "R$800", imagem: "assets/toquio.jpg" },
+            { destino: "Londres", dias: "5 DIAS / 4 NOITES", rating: "9.2", precoAntigo: "R$ 6.300", precoNovo: "R$ 5.700", economia: "R$600", imagem: "assets/londres.jpg" },
+            { destino: "Roma", dias: "6 DIAS / 5 NOITES", rating: "8.9", precoAntigo: "R$ 5.800", precoNovo: "R$ 5.200", economia: "R$600", imagem: "assets/roma.jpg" },
+            { destino: "Cancún", dias: "5 DIAS / 4 NOITES", rating: "9.4", precoAntigo: "R$ 4.900", precoNovo: "R$ 4.400", economia: "R$500", imagem: "assets/cancun.jpg" },
+            { destino: "Dubai", dias: "6 DIAS / 5 NOITES", rating: "9.7", precoAntigo: "R$ 8.000", precoNovo: "R$ 7.200", economia: "R$800", imagem: "assets/dubai.jpg" },
+            { destino: "Buenos Aires", dias: "4 DIAS / 3 NOITES", rating: "8.5", precoAntigo: "R$ 3.200", precoNovo: "R$ 2.800", economia: "R$400", imagem: "assets/buenosaires.jpg" }
+        ];
+
+        const aeroportos = ["São Paulo ", "Rio de Janeiro ", "Brasília", "Belo Horizonte ", "Porto Alegre ", "Salvador ", "Recife ", "Fortaleza "];
+
+        let pacotesInternacionaisExibidos = new Set();
+
+        function criarCardPacoteInternacional(pacote) {
+            let aeroportoAleatorio = aeroportos[Math.floor(Math.random() * aeroportos.length)];
+            return `
+                <div class="card">
+                <img src="${pacote.imagem}" alt="${pacote.destino}">
+                <div class="card-content">
+                    <span class="badge-ex">${pacote.dias}</span>
+                    <div class="card-title">Pacotes para ${pacote.destino}</div>
+                    <div class="rating">
+                        <div class="rating-score">${pacote.rating}</div>
+                        <span>⭐⭐⭐⭐⭐</span>
+                    </div>                        
+                    <div class="info">Saindo de ${aeroportoAleatorio}<br>Hotel + Aéreo</div>                   
+                    <div style="position: relative; width: 100%;">
+                        <hr class="separator">
+                        <span class="badge-discount">Economize ${pacote.economia}</span>
+                    </div>    
+                    <p>Preço por pessoa</p>                   
+                    <div class="old-price">${pacote.precoAntigo}</div>
+                    <div class="price">${pacote.precoNovo}</div>
+                </div>
+            </div>`;
+        }
+
+        function carregarPacotesInternacionais() {
+            let container = document.getElementById('cards-internacionais-container');
+            let botao = document.getElementById('verMaisBtnInternacionais');
+            let html = "";
+            let pacotesDisponiveis = pacotesInternacionais.filter(p => !pacotesInternacionaisExibidos.has(p.destino));
+            
+            let quantidadeMostrar = Math.min(4, pacotesDisponiveis.length);
+        
+            for (let i = 0; i < quantidadeMostrar; i++) {
+            let indiceAleatorio = Math.floor(Math.random() * pacotesDisponiveis.length);
+            let pacote = pacotesDisponiveis.splice(indiceAleatorio, 1)[0];
+            pacotesInternacionaisExibidos.add(pacote.destino);
+            html += criarCardPacoteInternacional(pacote);
+        }
+        
+            container.innerHTML += html;
+
+            if (pacotesInternacionaisExibidos.size >= pacotesInternacionais.length) {
+                botao.style.display = "none";
+            }
+        }
+
+        carregarPacotesInternacionais();
+
+    
+    
+            
+    </script>
+    
+
+    
+    
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
-
-
