@@ -59,19 +59,20 @@ body {
 
 /* SEÇÃO PACOTES EXCLUSIVOS */
 .pacotes-exclusivos {
-  max-width: 1200px;
-  margin: auto;  
+  max-width: 1800px;
+  margin-top: 100px; /* Aumente conforme necessário */
+  margin: 20px;  
   padding: 20px;
+  scroll-margin-top: 80px; /* Ajuste para compensar um cabeçalho fixo */
 }
 
 .pacotes-exclusivos h1 {
   font-size: 28px;
   font-weight: bold;
   margin-top: 50px;
-  margin-bottom: 10px;
-  color: #555; 
-  text-align: left;
-  margin-left: 20px; /* Ajuste conforme necessário */
+  margin-bottom: 20px;
+  color: #555;  
+  margin-left: 95px; /* Ajuste conforme necessário */
 }
 
 .pacotes-exclusivos h5 {
@@ -80,7 +81,7 @@ body {
   font-weight: bold;
   margin-bottom: 10px;    
   text-align: left;
-  margin-left: 20px; /* Ajuste conforme necessário */
+  margin-left: 95px; /* Ajuste conforme necessário */
 }
 
 .card-content p {
@@ -96,15 +97,24 @@ body {
   justify-content: center;
   gap: 15px;
 }
+
 .card {
-  background: white;
-  border-radius: 8px;
-  overflow: hidden;
-  width: 270px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 280px; /* Ajuste conforme necessário */
+  flex: 0 0 300px; /* Garante que todos tenham o mesmo tamanho */
   text-align: left;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 4px rgba(52, 52, 52, 0.1);
+  transition: transform 0.3s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative; /* Necessário para posicionar o badge */
+  
 }
+
 .card img {
   width: 100%;
   height: 150px;
@@ -143,7 +153,7 @@ body {
 
 .badge-ex {
   position: absolute;
-  top: 70px;  /* Distância do topo da imagem */
+  top: 160px;  /* Distância do topo da imagem */
   left: 10px; /* Distância da esquerda */ 
   font-weight: bold;
   border-radius: 5px;
@@ -163,11 +173,13 @@ body {
 
 
 
-.card-title {
-  font-size: 16px;
+.cardex-title {
+  font-size: 1.2rem;  
+  margin: 5px 0;
   font-weight: bold;
-  margin-bottom: 8px;
+  color: #555;
 }
+
 .rating {
   font-size: 14px;
   color: #ff9800;
@@ -237,31 +249,31 @@ body {
   margin: auto;
   background-color: var(--bg-color);
   position: relative;
+  
 }
   
 .pacotes-section h1 {
-    font-size: 28px;
-    font-weight: bold;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    color: #555; 
-    margin-left: 70px; /* Ajuste conforme necessário */
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-bottom: 5px;
+  color: #555;  
+  margin-left: 65px; /* Ajuste conforme necessário */
       
 }
 
 .pacotes-section h5{
-    font-size: 20px;
-    color: #0056b3;    
-    font-weight: bold;
-    margin-bottom: 10px;    
-    text-align: left; 
-    font-size: 20px;
-    margin-left: 70px; /* Ajuste conforme necessário */
-    color: #555;
+  font-size: 20px;    
+  font-weight: bold;
+  margin-bottom: 10px;    
+  text-align: left; 
+  font-size: 20px;
+  margin-left: 70px; /* Ajuste conforme necessário */
+  color: #555;
 }
 
 /* Container do carrossel */
-/* Garante que o carrossel ocupe toda a largura necessária */
+
 .carousel-container {
   position: relative;
   max-width: 90%;
@@ -340,7 +352,7 @@ body {
 }
 
 /* Cartões de passagens */
-/* Garante que os cards fiquem do mesmo tamanho */
+
 .card-pacotes {
   width: 280px; /* Largura fixa para todos os cards */
   max-width: 300px;
@@ -397,7 +409,7 @@ body {
 }
 
 .card-pacotes h5 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin: 5px 0;
   color: #555;
   margin-top: 0; /* Remove espaço acima*/
@@ -559,28 +571,31 @@ body {
 
 /*SEÇÃO PACOTES NACIONAIS */
 .pacotes-nacionais {
-  max-width: 1200px;
-  margin: auto;  
+  max-width: 1800px;
+  margin-top: 100px; /* Aumente conforme necessário */
+  margin: 20px;  
   padding: 20px;
+  scroll-margin-top: 80px; /* Ajuste para compensar um cabeçalho fixo */
+  
 }
 
 .pacotes-nacionais h1 {
   font-size: 28px;
   font-weight: bold;
   margin-top: 50px;
-  margin-bottom: 10px;
-  color: #555; 
-  text-align: left;
-  margin-left: 20px;
+  margin-bottom: 5px;
+  color: #555;  
+  margin-left: 95px; /* Ajuste conforme necessário */
 }
 
 .pacotes-nacionais h5 {
   font-size: 20px;
   color: #555;    
   font-weight: bold;
-  margin-bottom: 10px;    
-  text-align: left;
-  margin-left: 20px;
+  margin-bottom: 20px;    
+  text-align: left; 
+  font-size: 20px;
+  margin-left: 95px; /* Ajuste conforme necessário */
 }
 
 .cards-container {
@@ -654,10 +669,11 @@ body {
   margin-top: 0px;
 }
 
-.card-nacionais {
-  font-size: 16px;
+.cardnac-title {
+  font-size: 1.2rem;  
+  margin: 5px 0;
   font-weight: bold;
-  margin-bottom: 8px;
+  color: #555;
 }
 
 .rating {
@@ -721,19 +737,20 @@ body {
 
 /*SEÇÃO PACOTES INTERNACIONAIS */
 .pacotes-internacionais {
-  max-width: 1200px;
-  margin: auto;
+  max-width: 1800px;
+  margin-top: 100px; /* Aumente conforme necessário */
+  margin: 20px;  
   padding: 20px;
+  
 }
 
 .pacotes-internacionais h1 {
   font-size: 28px;
   font-weight: bold;
   margin-top: 50px;
-  margin-bottom: 10px;
-  color: #555;
-  text-align: left;
-  margin-left: 20px;
+  margin-bottom: 5px;
+  color: #555;  
+  margin-left: 90px; /* Ajuste conforme necessário */
 }
 
 .pacotes-internacionais h5 {
@@ -743,6 +760,7 @@ body {
   margin-bottom: 10px;
   text-align: left;
   margin-left: 20px;
+  margin-left: 90px; /* Ajuste conforme necessário */
 }
 
 .cards-container {
@@ -798,9 +816,9 @@ body {
   white-space: nowrap;
 }
 
-.badge-ex {
+.badge-int {
   position: absolute;
-  top: 170px;  /* Distância do topo da imagem */
+  top: 160px;  /* Distância do topo da imagem */
   left: 10px; /* Distância da esquerda */ 
   font-weight: bold;
   border-radius: 5px;
@@ -817,10 +835,11 @@ body {
   margin-top: 0px;
 }
 
-.card-title {
-  font-size: 16px;
+.cardint-title {
+  font-size: 1.2rem;  
+  margin: 5px 0;
   font-weight: bold;
-  margin-bottom: 8px;
+  color: #555;
 }
 
 .rating {
@@ -870,7 +889,6 @@ body {
 .btn:hover {
   background: #0056b3;
 }
-
 
 
 

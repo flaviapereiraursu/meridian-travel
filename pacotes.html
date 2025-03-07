@@ -368,7 +368,7 @@
                     <span class="badge-ex">${pacote.dias}</span>
                     <img src="${pacote.imagem}" alt="${pacote.destino}">
                     <div class="card-content">                        
-                        <div class="card-title">Pacotes para ${pacote.destino}</div>
+                        <div class="cardex-title">Pacotes para ${pacote.destino}</div>
                         <div class="rating">
                             <div class="rating-score">${pacote.rating}</div>
                             <span>⭐⭐⭐⭐⭐</span>
@@ -477,11 +477,10 @@
 
             return `
                 <div class="card">
-                <span class="badge-ex">${pacote.dias}</span>
+                <span class="badge-nacionais">${pacote.dias}</span>
                 <img src="${pacote.imagem}" alt="${pacote.destino}">
-                <div class="card-content">
-                    
-                    <div class="card-title">Pacotes para ${pacote.destino}</div>
+                <div class="card-content">                    
+                    <div class="cardnac-title">Pacotes para ${pacote.destino}</div>
                     <div class="rating">
                         <div class="rating-score">${pacote.rating}</div>
                         <span>⭐⭐⭐⭐⭐</span>
@@ -528,12 +527,12 @@
     
         // SEÇÃO PACOTES INTERNACIONAIS //
         const pacotesInternacionais = [
-            { destino: "Paris", dias: "5 DIAS / 4 NOITES", rating: "9.5", precoAntigo: "R$ 5.500", precoNovo: "R$ 4.900", economia: "R$600",  imagem: "../assets/paris.jpg" },
+            { destino: "Paris", dias: "5 DIAS / 4 NOITES", rating: "9.5", precoAntigo: "R$ 5.500", precoNovo: "R$ 4.900", economia: "R$600",  imagem: "../assets/paris.jpeg" },
             { destino: "Nova York", dias: "6 DIAS / 5 NOITES", rating: "9.0", precoAntigo: "R$ 7.200", precoNovo: "R$ 6.500", economia: "R$700", imagem: "../assets/ny.jpg" },
             { destino: "Tóquio", dias: "7 DIAS / 6 NOITES", rating: "9.8", precoAntigo: "R$ 9.500", precoNovo: "R$ 8.700", economia: "R$800", imagem: "../assets/toquio.jpg" },
             { destino: "Londres", dias: "5 DIAS / 4 NOITES", rating: "9.2", precoAntigo: "R$ 6.300", precoNovo: "R$ 5.700", economia: "R$600", imagem: "../assets/londres.jpg" },
-            { destino: "Roma", dias: "6 DIAS / 5 NOITES", rating: "8.9", precoAntigo: "R$ 5.800", precoNovo: "R$ 5.200", economia: "R$600", imagem: "../assets/roma.jpg" },
-            { destino: "Cancún", dias: "5 DIAS / 4 NOITES", rating: "9.4", precoAntigo: "R$ 4.900", precoNovo: "R$ 4.400", economia: "R$500", imagem: "../assets/cancun.jpg" },
+            { destino: "Roma", dias: "6 DIAS / 5 NOITES", rating: "8.9", precoAntigo: "R$ 5.800", precoNovo: "R$ 5.200", economia: "R$600", imagem: "../assets/roma.jpeg" },
+            { destino: "Cancún", dias: "5 DIAS / 4 NOITES", rating: "9.4", precoAntigo: "R$ 4.900", precoNovo: "R$ 4.400", economia: "R$500", imagem: "../assets/sea.jpg" },
             { destino: "Dubai", dias: "6 DIAS / 5 NOITES", rating: "9.7", precoAntigo: "R$ 8.000", precoNovo: "R$ 7.200", economia: "R$800", imagem: "../assets/dubai.jpg" },
             { destino: "Buenos Aires", dias: "4 DIAS / 3 NOITES", rating: "8.5", precoAntigo: "R$ 3.200", precoNovo: "R$ 2.800", economia: "R$400", imagem: "../assets/buenosaires.jpg" }
         ];
@@ -546,10 +545,10 @@
             let aeroportoAleatorio = aeroportos[Math.floor(Math.random() * aeroportos.length)];
             return `
                 <div class="card">
-                <span class="badge-ex">${pacote.dias}</span>
+                <span class="badge-int">${pacote.dias}</span>
                 <img src="${pacote.imagem}" alt="${pacote.destino}">
                 <div class="card-content">                    
-                    <div class="card-title">Pacotes para ${pacote.destino}</div>
+                    <div class="cardint-title">Pacotes para ${pacote.destino}</div>
                     <div class="rating">
                         <div class="rating-score">${pacote.rating}</div>
                         <span>⭐⭐⭐⭐⭐</span>
@@ -574,7 +573,7 @@
             
             let quantidadeMostrar = Math.min(4, pacotesDisponiveis.length);
         
-            for (let i = 0; i < quantidadeMostrar; i++) {
+            for (let i = 0; i < 4; i++) {
             let indiceAleatorio = Math.floor(Math.random() * pacotesDisponiveis.length);
             let pacote = pacotesDisponiveis.splice(indiceAleatorio, 1)[0];
             pacotesInternacionaisExibidos.add(pacote.destino);
