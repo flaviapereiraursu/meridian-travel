@@ -103,6 +103,7 @@ body {
   width: 270px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: left;
+  position: relative; /* Necessário para posicionar o badge */
 }
 .card img {
   width: 100%;
@@ -141,15 +142,23 @@ body {
 
 
 .badge-ex {
+  position: absolute;
+  top: 70px;  /* Distância do topo da imagem */
+  left: 10px; /* Distância da esquerda */ 
+  font-weight: bold;
+  border-radius: 5px;
   display: inline-block; /* Evita que o badge ocupe toda a largura */
   background: #007bff;
   color: white;
   padding: 5px 10px;
   border-radius: 5px;
-  font-size: 12px;
+  font-size: 14px;
   display: inline-block;
+  text-align: center; /* Centraliza o conteúdo dentro do card */
   margin-bottom: 10px;
   max-width: fit-content; /* Faz com que o badge ocupe apenas o espaço necessário */
+  margin-top: 0px;
+
 }
 
 
@@ -349,6 +358,7 @@ body {
   padding: 0; /* Remove padding que pode criar espaços indesejados */
   max-height: 500px; /* Limita a altura total do card */
   line-height: 1.1; /* Reduz o espaçamento entre as linhas */
+  position: relative; /* Necessário para posicionar o badge */
 }
 
 /* Garante que o último card não tenha margem extra */
@@ -411,20 +421,28 @@ body {
   font-size: 0.8rem;
   margin-top: 5px;
   max-width: fit-content; /* Faz com que o badge ocupe apenas o espaço necessário */
+  
 }
 
 
 /* Badge */
 .badge-pacotes2 {
+  position: absolute;
+  top: 160px;  /* Distância do topo da imagem */
+  left: 10px; /* Distância da esquerda */ 
+  font-weight: bold;
+  border-radius: 5px;
   display: inline-block; /* Evita que o badge ocupe toda a largura */
   background: #007bff;
   color: white;
   padding: 5px 10px;
   border-radius: 5px;
-  font-size: 12px;
+  font-size: 14px;
   display: inline-block;
+  text-align: center; /* Centraliza o conteúdo dentro do card */
   margin-bottom: 10px;
   max-width: fit-content; /* Faz com que o badge ocupe apenas o espaço necessário */
+  margin-top: 0px;
 }
 
 .card-pacotesh h3{
@@ -579,11 +597,14 @@ body {
   width: 270px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: left;
+  position: relative; /* Necessário para posicionar o badge */
 }
 
 .card img {
   width: 100%;
-  height: 150px;
+  height: 180px; /* Mantém todas as imagens com a mesma altura */
+  object-fit: cover;
+  display: block; /* Remove qualquer espaço extra abaixo da imagem */
   object-fit: cover;
 }
 
@@ -615,14 +636,22 @@ body {
 }
 
 .badge-nacionais {
-  display: inline-block;
+  position: absolute;
+  top: 160px;  /* Distância do topo da imagem */
+  left: 10px; /* Distância da esquerda */ 
+  font-weight: bold;
+  border-radius: 5px;
+  display: inline-block; /* Evita que o badge ocupe toda a largura */
   background: #007bff;
   color: white;
   padding: 5px 10px;
   border-radius: 5px;
-  font-size: 12px;
+  font-size: 14px;
+  display: inline-block;
+  text-align: center; /* Centraliza o conteúdo dentro do card */
   margin-bottom: 10px;
-  max-width: fit-content;
+  max-width: fit-content; /* Faz com que o badge ocupe apenas o espaço necessário */
+  margin-top: 0px;
 }
 
 .card-nacionais {
@@ -730,11 +759,15 @@ body {
   width: 270px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: left;
+  position: relative; /* Necessário para posicionar o badge */
+
 }
 
 .card img {
   width: 100%;
-  height: 150px;
+  height: 180px; /* Mantém todas as imagens com a mesma altura */
+  object-fit: cover;
+  display: block; /* Remove qualquer espaço extra abaixo da imagem */
   object-fit: cover;
 }
 
@@ -766,14 +799,22 @@ body {
 }
 
 .badge-ex {
-  display: inline-block;
+  position: absolute;
+  top: 170px;  /* Distância do topo da imagem */
+  left: 10px; /* Distância da esquerda */ 
+  font-weight: bold;
+  border-radius: 5px;
+  display: inline-block; /* Evita que o badge ocupe toda a largura */
   background: #007bff;
   color: white;
   padding: 5px 10px;
   border-radius: 5px;
-  font-size: 12px;
+  font-size: 14px;
+  display: inline-block;
+  text-align: center; /* Centraliza o conteúdo dentro do card */
   margin-bottom: 10px;
-  max-width: fit-content;
+  max-width: fit-content; /* Faz com que o badge ocupe apenas o espaço necessário */
+  margin-top: 0px;
 }
 
 .card-title {

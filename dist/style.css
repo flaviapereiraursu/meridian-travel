@@ -225,10 +225,11 @@ body {
 
 .card-content p {
   font-size: 14px; /* Reduz o tamanho do texto */
-  margin: 2px 0; /* Diminui os espaços acima e abaixo */
+  
   color: #555;  
-  margin-bottom: 6px; /* Diminui a distância entre os elementos */
-  margin-top: 20px /* Ajuste conforme necessário */
+  margin-bottom: 1px; /* Diminui a distância entre os elementos */
+  margin-left: 10px; /* Ajuste conforme necessário */
+  
   
 }
 
@@ -263,7 +264,7 @@ body {
   transition: background 0.3s ease; /* Transição suave no hover */
   justify-content: center;
   align-items: left;
-  margin-left: 60px; /* Ajuste conforme necessário */
+  margin-left: 80px; /* Ajuste conforme necessário */  
 }
 
 /* Efeito ao passar o mouse */
