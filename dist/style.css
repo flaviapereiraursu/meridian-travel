@@ -57,12 +57,17 @@ body {
 /* Seção Hero */
 .hero {
   background: url('../Assets/grecia.jpeg') no-repeat center center/cover;
-  height: 60vh;
+  min-height: 60vh; /* Mantém um tamanho mínimo sem limitar a expansão */
   text-align: left;
-  padding: 6rem 1.5rem 6rem;
+  padding: 4rem 1rem; /* Reduz padding em telas menores */
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
+  display: left;
   color: rgb(4, 18, 111);
+  padding-bottom: 4rem; /* Ajuste conforme necessário */
+  scroll-margin-top: 80px; /* Ajuste para compensar um cabeçalho fixo */
+  align-items: flex-end; /* Mantém o conteúdo alinhado na parte inferior */
+  position: relative; /* Garante que o próximo elemento respeite sua altura */
 }
 
 .hero h1 {
@@ -89,6 +94,7 @@ body {
   margin-top: 2rem; /* Espaço acima do botão */
   transition: background-color 0.3s ease;
   margin-left: 50px; /* Ajuste conforme necessário */
+  
 }
 
 .hero .button:hover {
@@ -98,34 +104,41 @@ body {
 /* SEÇÃO PACOTES POPULARES */
 .pacotes-exclusivos {
   max-width: 1800px;
+  margin-top: 100px; /* Aumente conforme necessário */
   margin: 20px;  
   padding: 20px;
+  scroll-margin-top: 80px; /* Ajuste para compensar um cabeçalho fixo */
 }
 
 .pacotes-exclusivos h1 {
   font-size: 28px;
   font-weight: bold;
   margin-top: 50px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   color: #555;  
   margin-left: 65px; /* Ajuste conforme necessário */
   
 }
 
+.pacotes-exclusivos::before {
+  content: "";
+  display: block;
+  clear: both;
+}
 
 .cards-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
-  
+  gap: 20px;
+  padding: 10px;
+  scroll-behavior: smooth;
 }
 
 
 .card {
-  width: 300px; /* Garante que todos os cards tenham a mesma largura */
-  max-width: 400px;
-  flex: 0 0 auto;
+  width: 280px; /* Ajuste conforme necessário */
+  flex: 0 0 300px; /* Garante que todos tenham o mesmo tamanho */
   text-align: left;
   background: #fff;
   border-radius: 10px;
@@ -136,8 +149,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative; /* Necessário para posicionar o badge */
+  
 }
-
 
 
 .card:hover {
@@ -147,40 +161,50 @@ body {
 
 
 .card img {
-  width: 250px;
-  height: 200px;
+  width: 100%;
+  height: 180px; /* Mantém todas as imagens com a mesma altura */
+  object-fit: cover;
+  display: block; /* Remove qualquer espaço extra abaixo da imagem */
   object-fit: cover;
 }
 
 
-.card-content {
-  padding: 1rem;    
+.badge-ex {  
+  position: absolute;
+  top: 170px;  /* Distância do topo da imagem */
+  left: 10px; /* Distância da esquerda */
   
-}
-
-
-
-.badge-ex {
+  
+  
+  font-weight: bold;
+  
+  border-radius: 5px;
   display: inline-block; /* Evita que o badge ocupe toda a largura */
   background: #007bff;
   color: white;
   padding: 5px 10px;
   border-radius: 5px;
-  font-size: 12px;
+  font-size: 14px;
   display: inline-block;
   text-align: center; /* Centraliza o conteúdo dentro do card */
   margin-bottom: 10px;
   max-width: fit-content; /* Faz com que o badge ocupe apenas o espaço necessário */
+  margin-top: 0px;
+  
 }
 
 .card-title {
-  font-size: 1.0rem;
+  font-size: 1.2rem;  
   margin: 5px 0;
   font-weight: bold;
   color: #555;
+ 
 
 }
 
+.card-content{
+  padding: 1.0rem;
+}
 .rating {
   display: flex;
   align-items: center;
@@ -207,29 +231,17 @@ body {
   margin: 2px 0; /* Diminui os espaços acima e abaixo */
   color: #555;  
   margin-bottom: 6px; /* Diminui a distância entre os elementos */
+  margin-top: 20px /* Ajuste conforme necessário */
   
 }
-
-
-
 
 .info {  
   padding: 8px;  
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-left: 0px; /* Ajuste conforme necessário */
-  
-  
+  margin-left: 0px; /* Ajuste conforme necessário */ 
 }
-
-.card-content p{
-  margin-top: 20px;  
-  margin-bottom: 0px;
-  margin-left: 10px; /* Ajuste conforme necessário */
-  
-}
-
 
 .price {
   font-size: 18px;
@@ -284,23 +296,23 @@ body {
 }
   
 .passagens h1 {
-    font-size: 28px;
-    font-weight: bold;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    color: #555; 
-    margin-left: 70px; /* Ajuste conforme necessário */
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #555; 
+  margin-left: 70px; /* Ajuste conforme necessário */
       
 }
 
 .passagens h5{
-    font-size: 20px;
-    color: #555;    
-    font-weight: bold;
-    margin-bottom: 10px;    
-    text-align: left; 
-    font-size: 20px;
-    margin-left: 70px; /* Ajuste conforme necessário */
+  font-size: 20px;
+  color: #555;    
+  font-weight: bold;
+  margin-bottom: 10px;    
+  text-align: left; 
+  font-size: 20px;
+  margin-left: 70px; /* Ajuste conforme necessário */
   
 }
 
@@ -521,7 +533,7 @@ body {
   color: #555;
 }
 
-.cards {
+.cards-destinos {
   display: flex;
   gap: 10px;
   justify-content: center;
@@ -530,7 +542,7 @@ body {
 }
 
 
-.card {
+.card-destinos {
   position: relative;
   width: 250px;
   border-radius: 10px;
@@ -539,13 +551,13 @@ body {
  
 }
 
-.card img {
+.card-destinos img {
   width: 100%;
   height: 150px;
   object-fit: cover;
 }
 
-.card-text {
+.card-text  {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -566,7 +578,7 @@ body {
   font-size: 0.9rem;
 }
 
-.card:hover {
+.card-destinos:hover {
   transform: translateY(-5px); /* Elevação ao passar o mouse */
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
@@ -688,6 +700,13 @@ footer {
   .logo {
       height: 40px; /* Ajusta o tamanho da logo para telas menores */
   }
+
+  .menu {
+    display: none; /* Esconder menu grande em telas menores */
+  }
+  .menu-mobile {
+    display: block;
+  }
 }
 
 
@@ -723,4 +742,16 @@ footer {
 
 
   
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 280px; /* Reduz a largura para caber melhor em telas menores */
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    width: 450px; /* Aumenta o tamanho para telas grandes */
+  }
 }

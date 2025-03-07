@@ -211,11 +211,11 @@
 
     <!-- Destinos Mais Buscados -->
     <section id="destinos" class="destinos">
-        <div class="container">
+        <div class="container-destinos">
           <h2>DESTINOS MAIS BUSCADOS</h2>
-        <div class="cards">
+        <div class="cards-destinos">
                 <!-- Card 1 -->
-                <div class="card">
+                <div class="card-destinos">
                     <img src="Assets/praias do rio.jpeg" alt="Rio de Janeiro">
                     <div class="card-text">
                         <h3>#1 Rio de Janeiro</h3>                        
@@ -223,7 +223,7 @@
                     </div>
                 </div>
                 <!-- Card 2 -->
-                <div class="card">
+                <div class="card-destinos">
                     <img src="Assets/orlando.jpeg" alt="Orlando">
                     <div class="card-text">
                         <h3>#2 Orlando</h3>
@@ -231,7 +231,7 @@
                     </div>
                 </div>
                 <!-- Card 3 -->
-                <div class="card">
+                <div class="card-destinos">
                     <img src="Assets/miaminoite.jpeg" alt="Miami">
                     <div class="card-text">
                         <h3>#3 Miami</h3>
@@ -239,7 +239,7 @@
                     </div>
                 </div>
                 <!-- Card 4 -->
-                <div class="card">
+                <div class="card-destinos">
                     <img src="Assets/chile.jpeg" alt="chile">
                     <div class="card-text">
                         <h3>#4 Santiago do Chile</h3>
@@ -402,9 +402,9 @@
             let aeroportoAleatorio = aeroportosPopulares[Math.floor(Math.random() * aeroportosPopulares.length)];
             return `
                 <div class="card">
+                    <span class="badge-ex">${pacote.dias}</span>
                     <img src="${pacote.imagem}" alt="${pacote.destino}">
-                    <div class="card-content">
-                        <span class="badge-ex">${pacote.dias}</span>
+                    <div class="card-content">                        
                         <div class="card-title">Pacotes para ${pacote.destino}</div>
                         <div class="rating">
                             <div class="rating-score">${pacote.rating}</div>
@@ -425,7 +425,7 @@
         function carregarMais() {
             let container = document.getElementById('cards-container');
             let html = "";
-            for (let i = 0; i < 5; i++) {
+            for (let i = 0; i < 4; i++) {
                 if (indexAtual < pacotes.length) {
                     html += criarCard(pacotes[indexAtual]);
                     indexAtual++;
