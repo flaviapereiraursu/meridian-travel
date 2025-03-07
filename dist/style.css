@@ -172,12 +172,8 @@ body {
 .badge-ex {  
   position: absolute;
   top: 170px;  /* Distância do topo da imagem */
-  left: 10px; /* Distância da esquerda */
-  
-  
-  
+  left: 10px; /* Distância da esquerda */ 
   font-weight: bold;
-  
   border-radius: 5px;
   display: inline-block; /* Evita que o badge ocupe toda a largura */
   background: #007bff;
@@ -205,6 +201,7 @@ body {
 .card-content{
   padding: 1.0rem;
 }
+
 .rating {
   display: flex;
   align-items: center;
