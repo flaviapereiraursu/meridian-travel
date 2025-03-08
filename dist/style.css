@@ -23,8 +23,16 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   background-color: var(--color-neutral-600);
-  color: #333;
+  color: #333;  
+  background-image: url('../Assets/world-map-bg.png'); /* Caminho da imagem */
+  background-size: cover; /* Faz a imagem cobrir toda a tela */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Evita repetição */
+  background-attachment: fixed; /* Mantém a imagem fixa ao rolar a página */
+  
 }
+
+
 
 
 
@@ -52,6 +60,7 @@ body {
 .navbar {
   padding: 10px 100px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para a navbar */
+  
 }
 
 /* Seção Hero */

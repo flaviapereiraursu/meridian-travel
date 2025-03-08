@@ -8,8 +8,14 @@
   body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f9;
+    
     color: #333;
+    background-image: url('../Assets/world-map-bg.png'); /* Caminho da imagem */
+    background-size: cover; /* Faz a imagem cobrir toda a tela */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição */
+    background-attachment: fixed; /* Mantém a imagem fixa ao rolar a página */
+  
   }
   
     
@@ -37,11 +43,12 @@
   .navbar {
     padding: 10px 100px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para a navbar */
+    
   }
-/* Estilos CSS para a seção de contato */
+ /* Estilos CSS para a seção de contato */
   .contato {
     padding: 40px 0; /* Aumenta o espaçamento vertical */
-    background-color: #f8f9fa; /* Cor de fundo suave */
+  
   }
 
   .contato .container {
@@ -70,47 +77,47 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
     }
 
-        .contato .formulario {
-            margin-bottom: 30px; /* Espaçamento inferior para o formulário */
-        }
+  .contato .formulario {
+      margin-bottom: 30px; /* Espaçamento inferior para o formulário */
+  }
 
-        .contato .formulario label {
-            font-weight: 500; /* Peso da fonte para os rótulos */
-            color: #343a40;
-        }
+  .contato .formulario label {
+      font-weight: 500; /* Peso da fonte para os rótulos */
+      color: #343a40;
+  }
 
-        .contato .formulario input,
-        .contato .formulario textarea {
-            border: 1px solid #ced4da; /* Borda mais clara */
-            border-radius: 4px; /* Borda arredondada */
-            padding: 10px;
-        }
+  .contato .formulario input,
+  .contato .formulario textarea {
+      border: 1px solid #ced4da; /* Borda mais clara */
+      border-radius: 4px; /* Borda arredondada */
+      padding: 10px;
+  }
 
-        .contato .formulario button {
-            background-color: #007bff; /* Cor de fundo do botão */
-            border-color: #007bff;
-            color: #fff;
-            padding: 12px 20px;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s ease; /* Transição suave */
-        }
+  .contato .formulario button {
+      background-color: #007bff; /* Cor de fundo do botão */
+      border-color: #007bff;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease; /* Transição suave */
+  }
 
-        .contato .formulario button:hover {
-            background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
-        }
+  .contato .formulario button:hover {
+      background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
+  }
 
-        /* Estilos responsivos */
-        @media (max-width: 768px) {
-            .contato {
-                flex-direction: column; /* Layout em coluna em telas menores */
-                align-items: center; /* Centraliza verticalmente */
-            }
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+      .contato {
+          flex-direction: column; /* Layout em coluna em telas menores */
+          align-items: center; /* Centraliza verticalmente */
+      }
 
-            .contato .imagem {
-                margin-bottom: 20px; /* Espaçamento inferior menor para a imagem */
-            }
-        }
+      .contato .imagem {
+          margin-bottom: 20px; /* Espaçamento inferior menor para a imagem */
+      }
+  }
 
 
 /* Rodapé */
