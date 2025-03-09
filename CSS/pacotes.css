@@ -22,7 +22,9 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: var(--color-neutral-600);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f9;
   color: #333;
 }
 
@@ -70,7 +72,7 @@ body {
   font-size: 28px;
   font-weight: bold;
   margin-top: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   color: #555;  
   margin-left: 95px; /* Ajuste conforme necessário */
 }
@@ -299,56 +301,76 @@ body {
 .carousel-track {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  gap: 10px; /* Diminui o espaço entre os cards */
+  gap: 20px; /* Diminui o espaço entre os cards */
   align-items: stretch;
+  
 }
 
 /* Estilização dos botões */
 .arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  color: rgb(0, 0, 0);
-  border: none;
-  font-size: 24px;
+  width: 40px;  /* Define a largura */
+  height: 40px; /* Define a altura */
+  background-color: #ccc; /* Fundo cinza */
+  border-radius: 50%; /* Deixa o botão circular */
+  border: none; /* Remove a borda */
+  font-size: 24px; /* Tamanho da seta */
+  color: #555; /* Cor da seta */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  padding: 15px;
-  border-radius: none;
-  transition: none;
-  z-index: 100; /* Garante que as setas fiquem acima dos cartões */
-  outline: none; /* Remove o contorno padrão */
+  transition: background 0.3s ease, transform 0.2s ease;
+  position: absolute; /* Para posicionamento */
+  top: 50%; /* Centraliza verticalmente */
+  transform: translateY(-50%); /* Ajuste fino para centralização */
+  z-index: 10; /* Garante que fique sobre os elementos */
 }
 .arrow:hover {
-  background:none;
+  background-color: #999; /* Tom mais escuro ao passar o mouse */
+  
 }
 .arrow:focus {
   outline: none; /* Remove a borda de foco */
   box-shadow: none; /* Remove qualquer efeito de sombra */
 }
 #prevBtn {
-  left: -15px; /* Ajusta a seta da esquerda */
+ 
+  left: 0; /* Alinha totalmente à esquerda */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   
 }
 
 /* Ajuste na seta para alinhá-la exatamente com o último card */
 #nextBtn {
-  position: absolute;
-  top: 50%;
-  right: 0px !important; /* Força a seta a ficar alinhada com o último card */
-  transform: translateY(-50%);
-  z-index: 10; /* Garante que a seta fique visível acima do carrossel */
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  padding: 5px;
+    position: absolute;
+    top: 50%;
+    right: 10px; /* Mantém a seta dentro do carrossel */
+    transform: translateY(-50%); /* Centraliza verticalmente */
+    background-color: #ccc; /* Fundo cinza */
+    color:#555 (0, 0, 0); /* Cor do ícone */
+    border: none;
+    border-radius: 50%; /* Deixa redonda */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10; /* Garante que fique acima dos cards */
 }
 
 /* Ajuste para garantir que a seta não empurre o carrossel */
 #nextBtn:focus {
   outline: none;
   box-shadow: none;
+}
+
+
+#nextBtn:hover{
+  background-color: #999; /* Tom mais escuro ao passar o mouse */
+  
 }
 
 /* Cartões de passagens */
