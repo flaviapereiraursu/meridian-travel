@@ -65,7 +65,7 @@ body {
 
 /* Seção Hero */
 .hero {
-  background: url('../Assets/grecia.jpeg') no-repeat center center/cover;
+  background: url('../Assets/greciahero.jpeg') no-repeat center center/cover;
   min-height: 60vh; /* Mantém um tamanho mínimo sem limitar a expansão */
   text-align: left;
   padding: 4rem 1rem; /* Reduz padding em telas menores */
