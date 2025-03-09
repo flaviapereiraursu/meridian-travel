@@ -6,7 +6,7 @@
   }
   
   body {
-    font-family: Arial, sans-serif;
+    font-family: montserrat, sans-serif;
     line-height: 1.6;
     
     color: #333;
@@ -47,38 +47,47 @@
   }
  /* Estilos CSS para a seção de contato */
   .contato {
-    padding: 40px 0; /* Aumenta o espaçamento vertical */
+    padding: 10px 0; /* Aumenta o espaçamento vertical */
+    margin-bottom: 0px;
+    
+    
   
   }
 
   .contato .container {
-    max-width: 960px; /* Largura máxima do container */
+    max-width: 960px; /* Largura máxima do container */    
+
+   
   }
 
-  .contato h2 {
-    color: #343a40; /* Cor do título */
-    margin-bottom: 20px;
+  .contato  h2 {
+    font-size: 2rem;  
+    margin: 5px 0;
+    font-weight: bold;
+    color: #09084f;  
+    margin-bottom: 0px;
+    margin-top: 100px;
   }
 
   .contato p {
-    color: #6c757d; /* Cor do parágrafo */
+    color: #555; /* Cor do parágrafo */
     margin-bottom: 30px;
+    margin-top: 10px;
   }
 
-  .contato .imagem {
-  text-align: left; /* Centraliza a imagem */
-  margin-bottom: 30px; /* Espaçamento inferior para a imagem */
-  }
+  
 
   .contato .imagem img {
     max-width: 100%; /* Largura máxima da imagem */
-    height: auto; /* Altura automática */
+    height: 70%; /* Altura automática */
     border-radius: 8px; /* Borda arredondada */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-top: 95px;
+   
     }
 
   .contato .formulario {
-      margin-bottom: 30px; /* Espaçamento inferior para o formulário */
+      margin-bottom: 5px; /* Espaçamento inferior para o formulário */
   }
 
   .contato .formulario label {
@@ -88,35 +97,35 @@
 
   .contato .formulario input,
   .contato .formulario textarea {
-      border: 1px solid #ced4da; /* Borda mais clara */
-      border-radius: 4px; /* Borda arredondada */
-      padding: 10px;
+    border: 1px solid #ced4da; /* Borda mais clara */
+    border-radius: 4px; /* Borda arredondada */
+    padding: 10px;
   }
 
   .contato .formulario button {
-      background-color: #007bff; /* Cor de fundo do botão */
-      border-color: #007bff;
-      color: #fff;
-      padding: 12px 20px;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s ease; /* Transição suave */
+    background-color: #007bff; /* Cor de fundo do botão */
+    border-color: #007bff;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transição suave */
   }
 
   .contato .formulario button:hover {
-      background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
+    background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
   }
 
   /* Estilos responsivos */
   @media (max-width: 768px) {
-      .contato {
-          flex-direction: column; /* Layout em coluna em telas menores */
-          align-items: center; /* Centraliza verticalmente */
-      }
+    .contato {
+        flex-direction: column; /* Layout em coluna em telas menores */
+        align-items: center; /* Centraliza verticalmente */
+    }
 
-      .contato .imagem {
-          margin-bottom: 20px; /* Espaçamento inferior menor para a imagem */
-      }
+    .contato .imagem {
+        margin-bottom: 20px; /* Espaçamento inferior menor para a imagem */
+    }
   }
 
 
@@ -126,10 +135,11 @@ footer {
     text-align: center;
     background: #09084f;
     color: #fff;
-    padding: 10px 0;
+    
     text-align: center; /* Centraliza o conteúdo */
     padding: 10px 10px; /* Espaçamento interno */
     margin-top: 10px; /* Espaçamento do conteúdo acima */
+    margin-bottom: 0px;
   }
   
   

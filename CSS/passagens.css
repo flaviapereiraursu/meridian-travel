@@ -360,6 +360,8 @@ input:focus, select:focus {
   color: #555;
 }
 
+
+
 .card-passagens p {
   font-size: 0.9rem;
   color: #555;
@@ -382,7 +384,8 @@ input:focus, select:focus {
   font-size: 18px;
   color: #210375;
   font-weight: bold;
-  margin: 10px 0;
+  margin: 5px 0;
+  
 }
 
 /* Ajuste no Carrossel para garantir alinhamento */
@@ -462,48 +465,46 @@ input:focus, select:focus {
 
 /* Estilização dos Cards */
 .card {
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    height:420px; /* Mantém altura igual */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: left;
-    transition: transform 0.3s;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  height:420px; /* Mantém altura igual */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  transition: transform 0.3s;
 }
 
 .card:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 /* Conteúdo do Card */
 .card-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 15px;
-    font-size: 1.2rem;
-    margin: 5px 0;
-    color: #555;
-
-}
-
-
-.card-passagens h5 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
   font-size: 1.2rem;
-  margin: 5px 0;
+  margin: 0px 0;
+  margin-bottom: 0;
   color: #555;
 }
 
 
-/* Texto informativo */
-.card-content p {
-  font-size: 0.9rem;
+.card-passagensint h5 {
+  font-size: 1.0rem;
+  margin: 0px 0;
   color: #555;
+  margin-bottom: 0px;
+
 }
+
+
+
 
 /* Badge de Ida e Volta */
 .badge-passagensint {
@@ -522,7 +523,8 @@ input:focus, select:focus {
     font-size: 18px;
     color: #210375;
     font-weight: bold;
-    margin: 10px 0; 
+    margin: 0px 0; 
+    margin-top: 0px; 
 }
 
 .passagens-int {
@@ -542,6 +544,13 @@ input:focus, select:focus {
 
 }
 
+.passagens-int p{
+  font-size: 14px;  
+  margin: 5px 0;
+  color: #555;
+  margin-bottom: 0px;
+}
+
 .passagens-int h5 {
     font-size: 20px;
     color: #555;    
@@ -551,16 +560,16 @@ input:focus, select:focus {
 }
 
 /* Botão de carregar mais ofertas */
-.btn-vermais {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 1.1em;
-    border: none;
-    background: #007BFF;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
-    text-align: center;
+.btn-vermais-int {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  border: none;
+  background: #02254a;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
 }
     
 .btn-vermais:hover {
@@ -574,127 +583,116 @@ input:focus, select:focus {
 /* Seção passagen nacionais */
 /* Container principal */
 .container {
-    position: relative;
-    max-width: 90%;
-    margin: auto;
-    overflow: hidden;
-    padding: 5px 0;
+  position: relative;
+  max-width: 90%;
+  margin: auto;
+  overflow: hidden;
+  padding: 5px 0;
 }
 
 /* Título principal */
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 20px;
 }
 
 /* Estilização dos Cards */
 .card {
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    height:420px; /* Mantém altura igual */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: left;
-    transition: transform 0.3s;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  height:420px; /* Mantém altura igual */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  transition: transform 0.3s;
 }
 
 .card:hover {
-    transform: scale(1.05);
-}
-
-/* Conteúdo do Card */
-.card-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 15px;
-}
-
-/* Ícone de avião antes do título */
-.card-content h5 {
-    font-size: 16px;
-    font-weight: bold;
-    display: flex;
-    align-items: left;
-    gap: 10px;
-    color: #555;
-}
-
-.card-content h5 i {    
-    color: #555;
-    font-size: 20px;
-}
-
-/* Texto informativo */
-.card-content p {
-    font-size: 14px;
-    color: #666;
-    margin: 5px 0;
+  transform: scale(1.05);
 }
 
 
 /* Badge de Ida e Volta */
 .badge-passagensnac {
-    display: inline-block; /* Evita que o badge ocupe toda a largura */
-    background-color: #C0C4CC;
-    color:#323439;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.8rem;
-    margin-top: 5px;
-    max-width: fit-content; /* Faz com que o badge ocupe apenas o espaço necessário */
+  display: inline-block; /* Evita que o badge ocupe toda a largura */
+  background-color: #C0C4CC;
+  color:#323439;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  margin-top: 5px;
+  max-width: fit-content; /* Faz com que o badge ocupe apenas o espaço necessário */
 }
 
 /* Preço */
 .price-passagensnac  {
-    font-size: 18px;
-    color: #210375;
-    font-weight: bold;
-    margin: 10px 0; 
+  font-size: 18px;
+  color: #210375;
+  font-weight: bold;
+  margin: 0px 0; 
+  margin-top: 0px;
 }
 
 .passagensnac {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    text-align: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
 }
 
 .passagensnac h1 {
-    font-size: 28px;
-    font-weight: bold;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    color:#555; 
-    text-align: left;  
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color:#555; 
+  text-align: left;  
+}
 
+.passagensnac h5 i {
+  font-size: 1.2rem;  
+  margin: 5px 0;
+  font-weight: bold;
+  color: #555;
+}
+
+.card-passagens {
+  font-size: 1.2rem;  
+  margin: 5px 0;
+  color: #555;
 }
 
 .passagensnac h5 {
-    font-size: 20px;
-    color: #555;        
-    font-weight: bold;
-    margin-bottom: 10px;    
-    text-align: left;  
+  font-size: 20px;
+  color: #555;        
+  font-weight: bold;
+  margin-bottom: 10px;    
+  text-align: left;  
+}
+
+.passagensnac p{
+  font-size: 14px;  
+  margin: 5px 0;
+  color: #555;
+  margin-bottom: 0px;
 }
 
 /* Botão de carregar mais ofertas */
 .btn-vermais {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 1.1em;
-    border: none;
-    background: #007BFF;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
-    text-align: center;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  border: none;
+  background: #007BFF;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
 }
     
 .btn-vermais:hover {
@@ -762,3 +760,4 @@ footer {
     padding: 10px;
   }  
 }
+
