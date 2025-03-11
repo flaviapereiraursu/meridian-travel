@@ -122,7 +122,7 @@ body {
 .pacotes-exclusivos h1 {
   font-size: 28px;
   font-weight: bold;
-  margin-top: 50px;
+  margin-top: 10px;
   margin-bottom: 20px;
   color: #555;  
   margin-left: 90px; /* Ajuste conforme necessário */
@@ -303,23 +303,13 @@ body {
 .passagens h1 {
   font-size: 28px;
   font-weight: bold;
-  margin-top: 20px;
   margin-bottom: 10px;
   color: #555; 
   margin-left: 70px; /* Ajuste conforme necessário */
       
 }
 
-.passagens h5{
-  font-size: 20px;
-  color: #555;    
-  font-weight: bold;
-  margin-bottom: 10px;    
-  text-align: left; 
-  font-size: 20px;
-  margin-left: 70px; /* Ajuste conforme necessário */
-  
-}
+
 
 /* Container do carrossel */
 /* Garante que o carrossel ocupe toda a largura necessária */
@@ -545,15 +535,16 @@ body {
 
 /* Destinos */
 .destinos {
-  padding: 60px 20px;
+  padding: 30px 30px;
   background-color: var(--bg-color);
   text-align: center;
 }
 
 .destinos h2 {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-size: 2rem;
   color: #555;
+  margin-top: 10px;
 }
 
 .cards-destinos {
@@ -619,6 +610,7 @@ background-color: var(--bg-color);
 font-size: 2rem;
 margin-bottom: 2rem;
 color: #555;
+margin-top: 10px;
 }
 
 .depoimentos-container {
@@ -703,6 +695,130 @@ white-space: nowrap;
 }
 
 
+.banners-promocionais {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+
+.banner {
+  flex: 1;
+  max-width: 300px; /* Diminua o tamanho da imagem */
+  transition: transform 0.3s ease-in-out;
+}
+
+.banner img {
+  width: 300px; /* Faz com que a imagem ocupe todo o espaço do banner */
+  height: 250px; /* Mantém a proporção da imagem */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.banner:hover {
+  transform: scale(1.05);
+}
+
+/* Container principal */
+.newsletter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f5ff;
+  
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 13000px;
+  margin-top: 100px; /* Aumente conforme necessário */
+  margin: 20px;  
+  padding: 20px;
+  gap: 50px;
+  margin-left: 160px;
+}
+
+/* Newsletter */
+.newsletter {
+  width: 50%;
+}
+
+.newsletter h2 {
+  color: #000080;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.newsletter-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex: 1;
+  font-size: 14px;
+}
+
+.newsletter-form button {
+  background-color: #ffd700;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.newsletter-form button:hover {
+  background-color: #ffcc00;
+}
+
+/* Termos */
+.termos {
+  font-size: 12px;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Caixa de promoção */
+.promo-box {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 50%;
+}
+
+.promo-box .desconto {
+  display: inline-block;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.promo-box h3 {
+  color: #000080;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.promo-box p {
+  font-size: 14px;
+  color: #333;
+}
+
+
+
+
 
 
 
@@ -776,5 +892,26 @@ footer {
 @media (min-width: 1024px) {
   .card {
     width: 450px; /* Aumenta o tamanho para telas grandes */
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .newsletter-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .newsletter, .promo-box {
+      width: 100%;
+  }
+
+  .newsletter-form {
+      flex-direction: column;
+  }
+
+  .newsletter-form input {
+      width: 100%;
   }
 }

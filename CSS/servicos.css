@@ -4,14 +4,19 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
+
   body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: var(--color-neutral-600);
+    color: #333;  
+    background-image: url('../Assets/world-map-bg.png'); /* Caminho da imagem */
+    background-size: cover; /* Faz a imagem cobrir toda a tela */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição */
+    background-attachment: fixed; /* Mantém a imagem fixa ao rolar a página */
+    
   }
-  
     
   /* Ajusta a logo na navbar */
   .logo {
@@ -40,24 +45,12 @@
   }
 
 
-.servicos {
-    text-align: center;
-    padding: 50px;
-    background-color: #f8f9fa;
-}
 
-.servicos h2 {
-    color: #0056b3;
-}
-
-.servicos p {
-    font-size: 1.2rem;
-}
 
 
 /* Hero Section */
 .hero-servicos {
-  background: url('banner.jpg') no-repeat center center/cover;
+  background: url('../Assets/conectividade.jpeg') no-repeat center center/cover;
   height: 50vh;
   display: flex;
   flex-direction: column;
@@ -65,81 +58,109 @@
   align-items: center;
   text-align: center;
   color: white;
-  padding: 20px;
+  padding: 10px;
+}
+
+.hero-servicos h2{
+  color: #3703bb; 
+  font-size: 2.5rem;
+
 }
 
 .hero-servicos h1 {
   font-size: 2.5rem;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(24, 2, 84, 0.6);
   padding: 10px 20px;
+  margin-top: 205px;
   border-radius: 5px;
 }
 
-/* Seção de Serviços */
-.servicos {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  padding: 50px 20px;
-}
 
-.servico {
-  background: #f4f4f4;
-  padding: 20px;
-  border-radius: 10px;
+/* Seção principal */
+.oferecemos {
   text-align: center;
-  width: 30%;
-  min-width: 280px;
-  margin: 10px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 50px auto;
+  margin-left: 160px;
 }
 
-.servico h2 {
-  font-size: 1.8rem;
-  color: #004aad;
+
+
+
+.oferecemos h1{
+  font-size: 2rem;  
+  margin: 5px 0;
+  font-weight: bold;
+  color: #020f86;  
+  margin-bottom: 0px;
+  margin-top: 100px;
+
 }
 
-/* Seção "Monte seu Pacote" */
-.monte-seu-pacote {
-  text-align: center;
-  padding: 60px 20px;
-  background: #e8f0fe;
+
+.oferecemos h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #09084f; 
 }
 
-.monte-seu-pacote h2 {
-  font-size: 2rem;
-  color: #003366;
+.oferecemos p {
+  font-size: 16px;
+  color: #555;
+  margin: 15px auto 30px;
+  max-width: 750px;
 }
 
-/* Destacando Slow Travel */
-.slow-travel {
+/* Layout em grade */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Cartões */
+.card {
   background: white;
   padding: 20px;
   border-radius: 10px;
-  display: inline-block;
-  margin-top: 20px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
 }
 
-.slow-travel h3 {
-  font-size: 1.5rem;
-  color: #007bff;
+.card:hover {
+  transform: translateY(-5px);
 }
 
-.botao {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
-  background: #007bff;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
+/* Ícones */
+.card i {
+  font-size: 40px;
+  color: #0099ff;
+  margin-bottom: 10px;
 }
 
-.botao:hover {
-  background: #0056b3;
+/* Título dos cartões */
+.card h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
 }
+
+/* Texto do cartão */
+.card p {
+  font-size: 14px;
+  color: #666;
+}
+
+
+
+
+
+
+
+
 
 
 /* Rodapé */
@@ -177,3 +198,18 @@ footer {
         font-size: 0.9rem;
     }
   }
+
+
+  
+/* Responsividade */
+@media (max-width: 900px) {
+  .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+      grid-template-columns: 1fr;
+  }
+}

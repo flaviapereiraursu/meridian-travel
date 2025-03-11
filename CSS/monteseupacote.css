@@ -116,71 +116,246 @@
     height: auto;
     animation: voando 4s linear infinite;
   }
+
+  /* Banner Canais Oficiais */
+.banner-canais {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* Logo e título */
+.info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.info img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.info h2 {
+  font-size: 18px;
+  color: #0052cc;
+  font-weight: bold;
+}
+
+/* Alerta */
+.alerta {
+  text-align: right;
+}
+
+.alerta p {
+  font-size: 14px;
+  color: #000;
+}
+
+.alerta span {
+  color: #ff9800;
+  font-weight: bold;
+}
+
+/* Botão Saiba Mais */
+.btn-saiba-mais {
+  background: none;
+  border: 2px solid #0052cc;
+  color: #0052cc;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-saiba-mais:hover {
+  background: #0052cc;
+  color: white;
+}
+
+
+/* FAQ */
+.faq {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: 20px auto;
+  text-align: left;
+}
+
+/* Título */
+.faq h2 {
+  font-size: 22px;
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Perguntas */
+.faq-item {
+  border-top: 1px solid #ddd;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+/* Última pergunta com borda inferior */
+.faq-item:last-child {
+  border-bottom: 1px solid #ddd;
+}
+
+/* Questões */
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  padding: 10px 0;
+  transition: color 0.3s ease;
+}
+
+/* Ícone da seta */
+.faq-question i {
+  transition: transform 0.3s ease;
+}
+
+/* Respostas (inicialmente escondidas) */
+.faq-answer {
+  font-size: 14px;
+  color: #666;
+  display: none;
+  margin-top: 5px;
+  padding: 10px 0;
+}
+
+/* Quando a FAQ estiver ativa */
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+.faq-item.active .faq-question i {
+  transform: rotate(180deg);
+}
+
+/* Seta com transição suave */
+.faq-question i {
+  transition: transform 0.3s ease;
+}
+
+
+
+
   
+/* Campos do formulário */
+.form-control {
+  border-radius: 8px;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  transition: border 0.3s ease-in-out;
+}
+
+.form-control:focus {
+  border: 1px solid #00509E;
+  box-shadow: 0px 0px 5px rgba(0, 80, 158, 0.4);
+}
+
+/* Botão */
+.btn-custom {
+  background: #FFD700;
+  color: #003366;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 12px;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-custom:hover {
+  background: #FFC107;
+  transform: scale(1.05);
+}
+
+/* Banner principal */
+.banner-pagamento {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #ff8c00, #4d6bee, #022b68);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: 20px auto;
+  text-align: left;
+}
+
+/* Texto da esquerda */
+.texto h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Espaço entre os elementos */
  
-  
-  /* Animação do avião */
-  @keyframes voando {
-    0% { left: -50px; opacity: 1; }
-    100% { left: 100%; opacity: 0; }
-  }
-  
-  /* Animação da trilha */
-  @keyframes fadeLine {
-    0% { width: 0; opacity: 1; }
-    100% { width: 100%; opacity: 0; }
-  }
-  
-  /* Campos do formulário */
-  .form-control {
-    border-radius: 8px;
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    transition: border 0.3s ease-in-out;
-  }
-  
-  .form-control:focus {
-    border: 1px solid #00509E;
-    box-shadow: 0px 0px 5px rgba(0, 80, 158, 0.4);
-  }
-  
-  /* Botão */
-  .btn-custom {
-    background: #FFD700;
-    color: #003366;
-    font-weight: bold;
-    border-radius: 8px;
-    padding: 12px;
-    border: none;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .btn-custom:hover {
-    background: #FFC107;
-    transform: scale(1.05);
-  }
-  
-  /* Rodapé */
-  footer {
-    text-align: center;
-    background: #003366;
-    color: white;
-    padding: 20px;
-    margin-top: 40px;
-  }
-  
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .content-wrapper {
-        flex-direction: column;
-        text-align: center;
-    }
-  
-    .image-container, .form-container {
-        max-width: 100%;
-    }
-  }
+}
+
+/* Destacando o número maior */
+.texto h2 strong {
+  font-size: 70px;
+  line-height: 1;
+}
+
+
+/* Opções de pagamento */
+.pagamentos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 50px;
+}
+
+.pagamentos p {
+  font-size: 14px;
+  margin-bottom: 10px;
+  margin-right: 50px;
+}
+
+/* Ícones de pagamento */
+.formas {
+  display: flex;
+  gap: 15px;
+}
+
+.forma {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.forma i {
+  font-size: 40px;
+}
+
   
 
 /* Rodapé */
@@ -204,17 +379,63 @@ footer {
   
   
   
-  /* Responsividade do Rodapé */
-  @media (max-width: 768px) {
-    footer {
-        padding: 15px 5px;
-    }
-  
-    footer h3 {
-        font-size: 1.2rem;
-    }
-  
-    footer p {
-        font-size: 0.9rem;
-    }
+/* Responsividade do Rodapé */
+@media (max-width: 768px) {
+  footer {
+      padding: 15px 5px;
   }
+
+  footer h3 {
+      font-size: 1.2rem;
+  }
+
+  footer p {
+      font-size: 0.9rem;
+  }
+}
+
+  /* Responsividade */
+@media (max-width: 768px) {
+  .banner-canais {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      padding: 15px;
+  }
+
+  .alerta {
+      text-align: center;
+      margin-top: 10px;
+  }
+
+  .faq h2 {
+      text-align: center;
+  }
+}
+
+
+  
+/* Animação do avião */
+@keyframes voando {
+  0% { left: -50px; opacity: 1; }
+  100% { left: 100%; opacity: 0; }
+}
+
+
+/* Animação da trilha */
+@keyframes fadeLine {
+  0% { width: 0; opacity: 1; }
+  100% { width: 100%; opacity: 0; }
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .faq {
+      width: 90%;
+  }
+
+  .faq h2 {
+      font-size: 20px;
+  }
+}

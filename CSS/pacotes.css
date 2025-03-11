@@ -912,6 +912,138 @@ body {
   background: #0056b3;
 }
 
+/* Container principal */
+.agente-container {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 1200px;
+  margin-top: 100px; /* Aumente conforme necessário */
+  margin: 20px;  
+  padding: 20px;  
+  gap: 50px;
+  margin-left: 180px;
+}
+
+/* Banner do Photoshop */
+.banner img {
+  width: 100%;
+  max-width: 400px; /* Ajuste o tamanho conforme necessário */
+  height: auto;
+  border-radius: 15px;
+}
+
+/* Opções de Atendimento */
+.agente-opcoes {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.opcao {
+  flex: 1;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 120px;
+}
+
+.opcao:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Ícones */
+.opcao i {
+  font-size: 24px;
+  color: #270073;
+  margin-bottom: 5px;
+}
+
+.opcao h4 {
+  font-size: 14px;
+  color: #270073;
+  margin: 5px 0;
+}
+
+.opcao p {
+  font-size: 12px;
+  color: #666;
+}
+
+/* Banner principal */
+.banner-pagamento {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #ff8c00, #4d6bee, #022b68);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: 20px auto;
+  text-align: left;
+}
+
+/* Texto da esquerda */
+.texto h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Espaço entre os elementos */
+ 
+}
+
+/* Destacando o número maior */
+.texto h2 strong {
+  font-size: 70px;
+  line-height: 1;
+}
+
+
+/* Opções de pagamento */
+.pagamentos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 50px;
+}
+
+.pagamentos p {
+  font-size: 14px;
+  margin-bottom: 10px;
+  margin-right: 50px;
+}
+
+/* Ícones de pagamento */
+.formas {
+  display: flex;
+  gap: 15px;
+}
+
+.forma {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.forma i {
+  font-size: 40px;
+}
+
 
 
 
@@ -957,6 +1089,55 @@ footer {
 
   footer p {
       font-size: 0.9rem;
+  }
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .agente-container {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+  }
+
+  .banner img {
+      max-width: 100%;
+  }
+
+  .agente-opcoes {
+      justify-content: space-around;
+      width: 100%;
+  }
+
+  .opcao {
+      flex: 1 1 calc(50% - 10px);
+  }
+}
+
+@media (max-width: 480px) {
+  .opcao {
+      flex: 1 1 100%;
+  }
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .banner-pagamento {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+  }
+
+  .pagamentos {
+      align-items: center;
+      margin-top: 15px;
+  }
+
+  .formas {
+      flex-direction: column;
+      align-items: center;
   }
 }
 

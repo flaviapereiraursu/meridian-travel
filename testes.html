@@ -1,211 +1,198 @@
-<!-- SEÇÃO PACOTES NACIONAIS -->
-<section id="pacotes-nacionais" class="pacotes-nacionais">
-    <h1>PACOTES NACIONAIS</h1>
-    <h5>Confira os melhores preços e viaje agora mesmo!</h5>    
-    <div class="cards-container" id="cards-nacionais-container">
-        <!-- Os primeiros quatro pacotes serão carregados aqui -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Descrição -->
+    <meta name="description" content="Descubra experiências incríveis com a Meridian. Pacotes de viagem personalizados, destinos paradisíacos e suporte completo para sua jornada.">
+    <meta name="keywords" content="viagens, pacotes de viagem, turismo, destinos, roteiros personalizados, agência de viagem, destinos paradisíacos, viagens personalizadas, Meridian">
+    <meta name="author" content="Meridian Agência de Viagens">
+    <title>Pacotes - Meridian Travel</title>
+    <link rel="icon" type="image/x-icon" href="/Assets/meridianicon.ico">
+    <link rel="stylesheet" href="CSS/monteseupacote.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">
+            <img src="Assets/meridianlogo.svg" alt="Logo Meridian" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(Página atual)</span></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="serviços.html">Serviços</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="passagens.html">Passagens</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="pacotes.html" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Pacotes
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="pacotes.html">Pacotes</a>
+                        <a class="dropdown-item" href="monteseupacote.html">Monte seu pacote</a>                
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sobre.html">Sobre Nós</a>
+                </li> 
+                <li class="nav-item">
+                    <a class="nav-link" href="contato.html">Contato</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<div class="content-wrapper">
+    <!-- Imagem à esquerda -->
+    <div class="image-container">
+        <img src="Assets/paisagem3.jpeg" class="img-preview" alt="Imagem inspiradora">
     </div>
-    <div class="botao-container">
-        <button class="btn" onclick="carregarPacotesNacionais()">Ver mais ofertas</button>
+
+    <!-- Formulário e Ícone -->
+    <div class="form-container">
+        <div class="aviacao-container">
+
+            
+            <h2>Monte Seu Pacote</h2>
+            <img class="aviacao" src="Assets/aviao.svg" alt="Avião voando">
+            
+        </div>
+       
+
+        <form id="pacoteForm">
+            <label for="destino">Destino</label>
+            <input type="text" class="form-control" id="destino" placeholder="Digite o destino desejado" required>
+
+            <label for="hospedagem">Tipo de Hospedagem</label>
+            <select class="form-control" id="hospedagem">
+                <option>Hotel</option>
+                <option>Resort</option>
+                <option>Pousada</option>
+                <option>Hostel</option>
+            </select>
+            
+            <label for="atividades">Atividades</label>
+            <input type="text" class="form-control" id="atividades" placeholder="Passeios, trilhas, mergulho...">
+            
+            <button type="submit" class="btn btn-custom w-100">Criar Pacote</button>
+        </form>
+    </div>
+</div>
+
+
+
+<!-- Banner Canais Oficiais -->
+<section class="banner-canais">
+    <div class="info">
+        <img src="Assets/viajanet-logo.png" alt="Canais Oficiais ViajaNet">
+        <h2>Canais Oficiais Meridian</h2>
+    </div>
+    <div class="alerta">
+        <p>Conheça nossos canais oficiais.<br><span>Evite perfis e sites falsos.</span></p>
+        <button class="btn-saiba-mais">Saiba mais</button>
     </div>
 </section>
 
-<style>
-    .pacotes-nacionais {
-        max-width: 1200px;
-        margin: auto;  
-        padding: 20px;
-    }
 
-    .pacotes-nacionais h1 {
-        font-size: 28px;
-        font-weight: bold;
-        margin-top: 50px;
-        margin-bottom: 10px;
-        color: #555; 
-        text-align: left;
-        margin-left: 20px;
-    }
+<!-- Seção de Perguntas Frequentes -->
+<section class="faq">
+    <h2>Perguntas Frequentes sobre ViajaNet</h2>
 
-    .pacotes-nacionais h5 {
-        font-size: 20px;
-        color: #555;    
-        font-weight: bold;
-        margin-bottom: 10px;    
-        text-align: left;
-        margin-left: 20px;
-    }
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>Que ofertas de viagem posso encontrar no ViajaNet?</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+            Seja bem-vindo ao novo site do ViajaNet. Agora você pode encontrar tudo para sua viagem ideal. Procure as melhores ofertas em passagens aéreas, hotéis, pacotes de viagem, aluguel de carros e muito mais!
+        </div>
+    </div>
 
-    .cards-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>Como comprar viagens pelo telefone?</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+            Você pode entrar em contato com nossa central de atendimento para comprar passagens e pacotes personalizados.
+        </div>
+    </div>
 
-    .card {
-        background: white;
-        border-radius: 8px;
-        overflow: hidden;
-        width: 270px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        text-align: left;
-    }
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>Como posso verificar minha reserva?</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+            Em <strong>minhas viagens</strong> você pode ver o status e os detalhes de suas reservas, verificar a bagagem permitida em seu voo e descobrir quais vistos e documentos você precisa para viajar.
+        </div>
+    </div>
 
-    .card img {
-        width: 100%;
-        height: 150px;
-        object-fit: cover;
-    }
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>Quais são os horários de funcionamento da Central de Atendimento?</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+            <strong>Televendas:</strong> Domingo a Domingo: Das 8h às 23:59h.<br>
+            <strong>Pós-vendas:</strong><br>
+            - Segunda a Sexta: Das 9h às 19h.<br>
+            - Sábado, Domingo e Feriados: Das 9h às 15h.
+        </div>
+    </div>
+</section>
 
-    .card-content {
-        padding: 15px;
-    }
+<footer>
+    <p>&copy; 2025 Meridian Agência de Viagem</p>
+</footer>
 
-    .separator {
-        border: none;
-        height: 2px;
-        background-color: #ccc;
-        width: 100%;
-        position: relative;
-        margin: 20px 0;
-    }
-
-    .badge-discount {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color:#002f6c;
-        background: #ffd700;
-        font-weight: bold;
-        padding: 5px 15px;
-        border-radius: 20px;
-        text-transform: uppercase;
-        white-space: nowrap;
-    }
-
-    .badge-ex {
-        display: inline-block;
-        background: #007bff;
-        color: white;
-        padding: 5px 10px;
-        border-radius: 5px;
-        font-size: 12px;
-        margin-bottom: 10px;
-        max-width: fit-content;
-    }
-
-    .card-title {
-        font-size: 16px;
-        font-weight: bold;
-        margin-bottom: 8px;
-    }
-
-    .rating {
-        font-size: 14px;
-        color: #ff9800;
-        font-weight: bold;
-        margin-bottom: 5px;
-    }
-
-    .info {
-        font-size: 14px;
-        color: #555;
-        margin-bottom: 8px;
-    }
-
-    .offer {
-        background: #5e2ca5;
-        color: white;
-        display: inline-block;
-        padding: 5px 10px;
-        border-radius: 5px;
-        font-size: 12px;
-        margin-bottom: 5px;
-    }
-
-    .price {
-        font-size: 18px;
-        font-weight: bold;
-        color: #333;
-    }
-
-    .old-price {
-        text-decoration: line-through;
-        color: gray;
-        font-size: 14px;
-    }
-
-    .botao-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        margin-top: 20px;
-    }
-
-    .btn {
-        background: #007bff;
-        color: white;
-        border: none;
-        padding: 12px 20px;
-        cursor: pointer;
-        border-radius: 5px;
-        font-size: 16px;
-        transition: 0.3s ease-in-out;
-    }
-
-    .btn:hover {
-        background: #0056b3;
-    }
-</style>
-
+<!-- JavaScript -->
 <script>
-    let pacotesExibidos = new Set();
+document.addEventListener("DOMContentLoaded", function () {
+    const faqItems = document.querySelectorAll(".faq-item");
 
-    function criarCardPacote(pacote) {
-        return `
-            <div class="card">
-                <img src="${pacote.imagem}" alt="${pacote.destino}">
-                <div class="card-content">
-                    <span class="badge-ex">${pacote.dias}</span>
-                    <div class="card-title">Pacotes para ${pacote.destino}</div>
-                    <div class="rating">
-                        <div class="rating-score">${pacote.rating}</div>
-                        <span>⭐⭐⭐⭐⭐</span>
-                    </div>                        
-                    <div class="info">Saindo de Brasília<br>Hotel + Aéreo</div>                   
-                    <div style="position: relative; width: 100%;">
-                        <hr class="separator">
-                        <span class="badge-discount">Economize ${pacote.economia}</span>
-                    </div>                      
-                    <div class="old-price">${pacote.precoAntigo}</div>
-                    <div class="price">${pacote.precoNovo}</div>
-                </div>
-            </div>`;
-    }
+    faqItems.forEach(item => {
+        item.addEventListener("click", () => {
+            const answer = item.querySelector(".faq-answer");
+            const icon = item.querySelector("i");
 
-    function carregarPacotesNacionais() {
-        let container = document.getElementById('cards-nacionais-container');
-        let html = "";
-        let pacotesDisponiveis = pacotesNacionais.filter(p => !pacotesExibidos.has(p.destino));
-        
-        if (pacotesDisponiveis.length < 4) return;
-        
-        for (let i = 0; i < 4; i++) {
-            let indiceAleatorio = Math.floor(Math.random() * pacotesDisponiveis.length);
-            let pacote = pacotesDisponiveis.splice(indiceAleatorio, 1)[0];
-            pacotesExibidos.add(pacote.destino);
-            html += criarCardPacote(pacote);
-        }
-        
-        container.innerHTML += html;
-        
-        if (pacotesExibidos.size >= pacotesNacionais.length) {
-            document.querySelector(".btn").style.display = "none";
-        }
-    }
+            // Fecha todas as perguntas antes de abrir a clicada
+            faqItems.forEach(faq => {
+                if (faq !== item) {
+                    faq.classList.remove("active");
+                    faq.querySelector(".faq-answer").style.display = "none";
+                    faq.querySelector("i").style.transform = "rotate(0deg)";
+                }
+            });
 
-    carregarPacotesNacionais();
+            // Alterna a visibilidade da resposta e a rotação da seta
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                icon.style.transform = "rotate(0deg)";
+            } else {
+                answer.style.display = "block";
+                icon.style.transform = "rotate(180deg)";
+            }
+        });
+    });
+});
 </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
