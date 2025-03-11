@@ -48,10 +48,8 @@
  /* Estilos CSS para a seção de contato */
   .contato {
     padding: 10px 0; /* Aumenta o espaçamento vertical */
-    margin-bottom: 0px;
+    margin-bottom: 0px; 
     
-    
-  
   }
 
   .contato .container {
