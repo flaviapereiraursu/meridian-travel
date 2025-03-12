@@ -15,186 +15,233 @@
 </head>
 <body>
     
-<header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html">
-            <img src="Assets/meridianlogo.svg" alt="Logo Meridian" class="logo">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only">(Página atual)</span></a>
-                <li class="nav-item">
-                    <a class="nav-link" href="serviços.html">Serviços</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="passagens.html">Passagens</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="pacotes.html" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Pacotes
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="pacotes.html">Pacotes</a>
-                        <a class="dropdown-item" href="monteseupacote.html">Monte seu pacote</a>                
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="sobre.html">Sobre Nós</a>
-                </li> 
-                <li class="nav-item">
-                    <a class="nav-link" href="contato.html">Contato</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</header>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">
+                <img src="Assets/meridianlogo.svg" alt="Logo Meridian" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(Página atual)</span></a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="serviços.html">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="passagens.html">Passagens</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="pacotes.html" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Pacotes
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="pacotes.html">Pacotes</a>
+                            <a class="dropdown-item" href="monteseupacote.html">Monte seu pacote</a>                
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre.html">Sobre Nós</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.html">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-<div class="content-wrapper">
-    <!-- Imagem à esquerda -->
-    <div class="image-container">
-        <img src="Assets/paisagem3.jpeg" class="img-preview" alt="Imagem inspiradora">
+    <div class="content-wrapper">
+        <!-- Imagem à esquerda -->
+        <div class="image-container">
+            <img src="../Assets/mala amarela.jpg" class="img-left" alt="Imagem esquerda">
+           
+        </div>
+
+        <!-- Formulário -->
+        <div class="form-container">            
+                <h2>Monte Seu Pacote</h2>       
+                
+
+            <form id="pacoteForm">
+                <label for="destino">Destino</label>
+                <input type="text" class="form-control" id="destino" placeholder="Digite o destino desejado" required>
+
+                <label for="hospedagem">Tipo de Hospedagem</label>
+                <select class="form-control" id="hospedagem">
+                    <option>Hotel</option>
+                    <option>Resort</option>
+                    <option>Pousada</option>
+                    <option>Hostel</option>
+                </select>
+                
+                <label for="atividades">Atividades</label>
+                <input type="text" class="form-control" id="atividades" placeholder="Passeios, trilhas, mergulho...">
+                
+                <button type="submit" class="btn btn-custom w-100">Criar Pacote</button>
+            </form>
+        </div>
     </div>
 
-    <!-- Formulário e Ícone -->
-    <div class="form-container">
-        <div class="aviacao-container">
 
+
+
+
+    <!-- Banner Pacotes Prontos -->
+    <section class="banner-canais">
+        <div class="info">
+            <img src="Assets/traveltourist.svg" alt="Travel">
+            <h2>Conheça nossos pacotes prontos.<strong> Viaje com conforto e segurança.</strong></h2>
             
-            <h2>Monte Seu Pacote</h2>
-            <img class="aviacao" src="Assets/aviao.svg" alt="Avião voando">
-            
         </div>
-       
-
-        <form id="pacoteForm">
-            <label for="destino">Destino</label>
-            <input type="text" class="form-control" id="destino" placeholder="Digite o destino desejado" required>
-
-            <label for="hospedagem">Tipo de Hospedagem</label>
-            <select class="form-control" id="hospedagem">
-                <option>Hotel</option>
-                <option>Resort</option>
-                <option>Pousada</option>
-                <option>Hostel</option>
-            </select>
-            
-            <label for="atividades">Atividades</label>
-            <input type="text" class="form-control" id="atividades" placeholder="Passeios, trilhas, mergulho...">
-            
-            <button type="submit" class="btn btn-custom w-100">Criar Pacote</button>
-        </form>
-    </div>
-</div>
-
-
-
-
-
-<!-- Banner Canais Oficiais -->
-<section class="banner-canais">
-    <div class="info">
-        <img src="Assets/meridianicon.ico" alt="Canais Oficiais Meridian">
-        <h2>Canais Oficiais Meridian</h2>
-    </div>
-    <div class="alerta">
-        <p>Conheça nossos pacotes prontos.<br><span>Viaje com conforto e segurança.</span></p>
-        <button class="btn-saiba-mais">Saiba mais</button>
-    </div>
-</section>
-
-
-<!-- Seção de Perguntas Frequentes -->
-<section class="faq">
-    <h2>Perguntas Frequentes sobre Meridian</h2>
-
-    <div class="faq-item">
-        <div class="faq-question">
-            <span>Que ofertas de viagem posso encontrar no Meridian?</span>
-            <i class="fas fa-chevron-down"></i>
+        <div class="alerta">            
+            <button class="btn-saiba-mais" id="saibaMaisBtn">Saiba mais</button>
         </div>
-        <div class="faq-answer">
-            Seja bem-vindo ao novo site do Meridian. Agora você pode encontrar tudo para sua viagem ideal. Procure as melhores ofertas em passagens aéreas, hotéis, pacotes de viagem, aluguel de carros e muito mais!
-        </div>
-    </div>
+    </section>
 
-    <div class="faq-item">
-        <div class="faq-question">
-            <span>Como comprar viagens pelo telefone?</span>
-            <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-            Você pode entrar em contato com nossa central de atendimento para comprar passagens e pacotes personalizados.
-        </div>
-    </div>
 
-    <div class="faq-item">
-        <div class="faq-question">
-            <span>Como posso verificar minha reserva?</span>
-            <i class="fas fa-chevron-down"></i>
+    <!-- Seção de Perguntas Frequentes -->
+    <section class="faq">
+        <h2>Perguntas Frequentes sobre Meridian</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Que ofertas de viagem posso encontrar na Meridian?</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                Seja bem-vindo ao novo site da Meridian. Agora você pode encontrar tudo para sua viagem ideal. Procure as melhores ofertas em passagens aéreas, hotéis, pacotes de viagem, aluguel de carros e muito mais!
+            </div>
         </div>
-        <div class="faq-answer">
-            Em <strong>minhas viagens</strong> você pode ver o status e os detalhes de suas reservas, verificar a bagagem permitida em seu voo e descobrir quais vistos e documentos você precisa para viajar.
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Como comprar viagens pelo telefone?</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                Você pode entrar em contato com nossa central de atendimento para comprar passagens e pacotes personalizados.
+            </div>
         </div>
-    </div>
 
-    <div class="faq-item">
-        <div class="faq-question">
-            <span>Quais são os horários de funcionamento da Central de Atendimento?</span>
-            <i class="fas fa-chevron-down"></i>
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Como posso verificar minha reserva?</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                Em <strong>minhas viagens</strong> você pode ver o status e os detalhes de suas reservas, verificar a bagagem permitida em seu voo e descobrir quais vistos e documentos você precisa para viajar.
+            </div>
         </div>
-        <div class="faq-answer">
-            <strong>Televendas:</strong> Domingo a Domingo: Das 8h às 23:59h.<br>
-            <strong>Pós-vendas:</strong><br>
-            - Segunda a Sexta: Das 9h às 19h.<br>
-            - Sábado, Domingo e Feriados: Das 9h às 15h.
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Quais são os horários de funcionamento da Central de Atendimento?</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <strong>Televendas:</strong> Domingo a Domingo: Das 8h às 23:59h.<br>
+                <strong>Pós-vendas:</strong><br>
+                - Segunda a Sexta: Das 9h às 19h.<br>
+                - Sábado, Domingo e Feriados: Das 9h às 15h.
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<footer>
-    <p>&copy; 2025 Meridian Agência de Viagem</p>
-</footer>
+    <footer>
+        <p>&copy; 2025 Meridian Agência de Viagem</p>
+    </footer>
 
-<!-- JavaScript -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const faqItems = document.querySelectorAll(".faq-item");
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const faqItems = document.querySelectorAll(".faq-item");
 
-    faqItems.forEach(item => {
-        item.addEventListener("click", () => {
-            const answer = item.querySelector(".faq-answer");
-            const icon = item.querySelector("i");
+            faqItems.forEach(item => {
+                item.addEventListener("click", () => {
+                    const answer = item.querySelector(".faq-answer");
+                    const icon = item.querySelector("i");
 
-            // Fecha todas as perguntas antes de abrir a clicada
-            faqItems.forEach(faq => {
-                if (faq !== item) {
-                    faq.classList.remove("active");
-                    faq.querySelector(".faq-answer").style.display = "none";
-                    faq.querySelector("i").style.transform = "rotate(0deg)";
-                }
+                    // Fecha todas as perguntas antes de abrir a clicada
+                    faqItems.forEach(faq => {
+                        if (faq !== item) {
+                            faq.classList.remove("active");
+                            faq.querySelector(".faq-answer").style.display = "none";
+                            faq.querySelector("i").style.transform = "rotate(0deg)";
+                        }
+                    });
+
+                    // Alterna a visibilidade da resposta e a rotação da seta
+                    if (answer.style.display === "block") {
+                        answer.style.display = "none";
+                        icon.style.transform = "rotate(0deg)";
+                    } else {
+                        answer.style.display = "block";
+                        icon.style.transform = "rotate(180deg)";
+                    }
+                });
             });
-
-            // Alterna a visibilidade da resposta e a rotação da seta
-            if (answer.style.display === "block") {
-                answer.style.display = "none";
-                icon.style.transform = "rotate(0deg)";
-            } else {
-                answer.style.display = "block";
-                icon.style.transform = "rotate(180deg)";
-            }
         });
-    });
-});
-</script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Captura o formulário
+            const form = document.getElementById("pacoteForm");
+
+            form.addEventListener("submit", function (event) {
+                event.preventDefault(); // Impede o recarregamento da página
+
+                // Captura os valores do formulário
+                const destino = document.getElementById("destino").value;
+                const hospedagem = document.getElementById("hospedagem").value;
+                const atividades = document.getElementById("atividades").value;
+
+                // Verifica se o campo destino está preenchido
+                if (destino.trim() === "") {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'Atenção!',
+                        text: 'Por favor, digite um destino antes de criar o pacote.',
+                        confirmButtonColor: '#3085d6'
+                    });
+                    return;
+                }
+
+                // Exibir alerta de sucesso com ícone de avião
+                Swal.fire({
+                    title: "Pacote criado com sucesso!",            
+                    icon: "success",
+                    confirmButtonText: "OK",
+                    confirmButtonColor: "#003366",
+                    customClass: {
+                        popup: 'animated fadeIn'
+                    },
+                    showClass: {
+                        popup: 'swal2-show'
+                    },
+                    hideClass: {
+                        popup: 'swal2-hide'
+                    },
+                
+                });
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("saibaMaisBtn").addEventListener("click", function() {
+                window.location.href = "pacotes.html";
+            });
+        });
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
 
 </body>
 </html>

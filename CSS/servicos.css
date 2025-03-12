@@ -128,6 +128,7 @@
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s ease-in-out;
+  margin-bottom: 5px;
 }
 
 .card:hover {
@@ -136,9 +137,10 @@
 
 /* Ícones */
 .card i {
-  font-size: 40px;
+  font-size: 60px;
   color: #0099ff;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  margin-top: 10px;
 }
 
 /* Título dos cartões */
@@ -213,3 +215,4 @@ footer {
       grid-template-columns: 1fr;
   }
 }
+

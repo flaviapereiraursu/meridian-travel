@@ -93,29 +93,15 @@
     position: relative;
   }
   
-  /* Container do avião e trilha */
-  .aviacao-container {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 10px;
-  }
-  
-  /* Texto "Monte seu Pacote" */
-  .aviacao-container h2 {
-    font-size: 2em;
+  .form-container h2{
+    font-size: 24px;
+    color: #0052cc;
     font-weight: bold;
-    color: #003366;
+    margin-left: 10px;
   }
   
-  /* Avião animado */
-  .aviacao {
-    position: absolute;
-    top: -80px;
-    left: -50px;
-    width: 80px;
-    height: auto;
-    animation: voando 4s linear infinite;
-  }
+  
+
 
   /* Banner Canais Oficiais */
 .banner-canais {
@@ -139,15 +125,17 @@
 }
 
 .info img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  border-radius: 10%;
+  margin-left: 30px;
 }
 
 .info h2 {
   font-size: 18px;
   color: #0052cc;
   font-weight: bold;
+  margin-left: 10px;
 }
 
 /* Alerta */
@@ -175,10 +163,11 @@
   border-radius: 20px;
   cursor: pointer;
   transition: 0.3s;
+  margin-right: 30px;
 }
 
 .btn-saiba-mais:hover {
-  background: #0052cc;
+  background: #003366;
   color: white;
 }
 
