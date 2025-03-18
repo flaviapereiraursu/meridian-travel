@@ -58,7 +58,7 @@ body {
 
 /* Fundo com imagens */
 .background-container {
-  background:url('../Assets/viagem1.jpeg'); /* Substitua pelo caminho correto */
+  background:url('../Assets/world2.jpeg'); /* Substitua pelo caminho correto */
   background-size: cover;
   background-position: center;
  
@@ -420,7 +420,7 @@ input, select {
 .price {
   font-size: 18px;
   font-weight: bold;
-  color: #333;
+  color: #210375;
 }
 .old-price {
   text-decoration: line-through;
@@ -938,7 +938,7 @@ input, select {
 .price {
   font-size: 18px;
   font-weight: bold;
-  color: #333;
+  color: #210375;
 }
 
 .old-price {
@@ -1094,7 +1094,8 @@ input, select {
 .price {
   font-size: 18px;
   font-weight: bold;
-  color: #333;
+  color: #210375;
+
 }
 
 .old-price {
