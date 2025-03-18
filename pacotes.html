@@ -61,6 +61,75 @@
     </header>
 
 
+    <div class="background-container">
+        
+        <div class="banner">
+            
+            <div class="search-box">
+                <h2><span>Pacotes com preços imbatíveis</span> para os melhores destinos</h2>
+                <div class="tab-options">
+                    <button class="tab active">Aéreo + Hotel</button>
+                    <button class="tab">Combo Meridian</button>
+                </div>
+                <div class="search-fields">
+                    <input type="text" placeholder="Origem">
+                    <button class="swap-btn" onclick="swapLocations()">⇄</button>
+                    <input type="text" placeholder="Destino">
+                    <input type="date" placeholder="Início">
+                    <input type="date" placeholder="Fim">
+                    
+                    <!-- Dropdown de viajantes -->
+                    <div class="dropdown2">
+                        <button class="dropdown2-toggle" onclick="toggleDropdown()">
+                            <span id="quarto-info">1 Quarto - 2 Viajantes</span>
+                            <i class="fas fa-user"></i>
+                        </button>
+                        
+                        <div class="dropdown2-menu" id="dropdownMenu">
+                            <div class="option">
+                                <p><strong>Quartos</strong><br>Adicione os quartos</p>
+                                <div class="counter">
+                                    <button onclick="adjustValue('quartos', -1)">−</button>
+                                    <span id="quartos">1</span>
+                                    <button onclick="adjustValue('quartos', 1)">+</button>
+                                </div>
+                            </div>
+                            <div class="option">
+                                <p><strong>Adultos</strong><br>Acima de 18 anos</p>
+                                <div class="counter">
+                                    <button onclick="adjustValue('adultos', -1)">−</button>
+                                    <span id="adultos">2</span>
+                                    <button onclick="adjustValue('adultos', 1)">+</button>
+                                </div>
+                            </div>
+                            <div class="option">
+                                <p><strong>Crianças</strong><br>De 0 a 17 anos</p>
+                                <div class="counter">
+                                    <button onclick="adjustValue('criancas', -1)">−</button>
+                                    <span id="criancas">0</span>
+                                    <button onclick="adjustValue('criancas', 1)">+</button>
+                                </div>
+                            </div>
+                            <div class="actions">
+                                <button class="clear-btn" onclick="resetValues()">Limpar</button>
+                                <button class="apply-btn" onclick="applySelection()">Aplicar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="search-btn">Buscar</button>
+                </div>
+            </div>
+        </div>
+     
+    </div>
+
+
+
+
+
+
+
 
 
     <!--SEÇÃO PACOTES EXCLUSIVOs -->
@@ -345,7 +414,7 @@
 
     <section class="agente-container">
         <!-- Banner retangular criado no Photoshop -->
-        <div class="banner">
+        <div class="banner2">
             <img src="Assets/banner-agente.png" alt="Meu Agente Meridian">
         </div>
 
@@ -644,7 +713,34 @@
 
         carregarPacotesInternacionais();
 
-    
+        function toggleDropdown() {
+            document.getElementById("dropdownMenu").style.display = 
+            document.getElementById("dropdownMenu").style.display === "block" ? "none" : "block";
+        }
+
+        function adjustValue(type, amount) {
+            let element = document.getElementById(type);
+            let value = parseInt(element.innerText);
+            
+            if (value + amount >= 0) {
+                element.innerText = value + amount;
+            }
+        }
+
+        function applySelection() {
+            let quartos = document.getElementById("quartos").innerText;
+            let adultos = document.getElementById("adultos").innerText;
+            let criancas = document.getElementById("criancas").innerText;
+            
+            document.getElementById("quarto-info").innerText = `${quartos} Quarto - ${parseInt(adultos) + parseInt(criancas)} Viajantes`;
+            document.getElementById("dropdownMenu").style.display = "none";
+        }
+
+
+
+
+
+        
     
             
     </script>
