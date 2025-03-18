@@ -83,7 +83,6 @@ body {
   font-size: 2rem;
   margin-bottom: 1rem;
   margin-left: 50px; /* Ajuste conforme necessário */
-  
 }
 
 .hero p {
@@ -538,13 +537,14 @@ body {
 .destinos {
   padding: 30px 30px;
   background-color: var(--bg-color);
+  background: #000080;
   text-align: center;
 }
 
 .destinos h2 {
   margin-bottom: 20px;
   font-size: 2rem;
-  color: #555;
+  color: #ffffff;
   margin-top: 10px;
 }
 
