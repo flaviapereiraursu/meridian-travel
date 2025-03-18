@@ -60,8 +60,7 @@ body {
 .background-container {
   background:url('../Assets/world2.jpeg'); /* Substitua pelo caminho correto */
   background-size: cover;
-  background-position: center;
- 
+  background-position: center; 
   width: 100%;
   height: 450px; /* Ajuste conforme necessário */
   display: flex;
@@ -336,6 +335,7 @@ input, select {
   height: 150px;
   object-fit: cover;
 }
+
 .card-content {
   padding: 15px;
 }
